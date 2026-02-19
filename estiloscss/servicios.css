@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header{
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("imagenes/servicios.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* MENU */
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 70px;
+    margin-left: -90px;
+}
+
+.logo span{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.navbar{
+    margin-left: auto;
+    margin-right: -130px;
+}
+
+.navbar ul li{
+    float: left;
+}
+
+.navbar ul li a{
+    color: white;
+    font-size: 14px;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: #1E90FF;
+}
+
+/* HEADER CONTENT */
+.header-content{
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.header-content p{
+    font-size: 18px;
+    color: #e2e8f0;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* SERVICES SECTION */
+.services{
+    padding: 90px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card{
+    background: white;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding: 35px 25px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+    border-color: #1E90FF;
+}
+
+.service-card h2{
+    font-size: 22px;
+    color: #1E90FF;
+    margin-bottom: 15px;
+}
+
+.service-card p{
+    font-size: 16px;
+    color: #000;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+.footer{
+    background: #006aff;
