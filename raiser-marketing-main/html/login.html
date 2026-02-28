@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../estiloscss/login.css">
+</head>
+<body>
+
+    <!-- Botón de inicio -->
+    <a href="../html/index.html" class="home-btn">🏠</a>
+
+    <div class="login-container">
+        <form action="login.php" method="POST" class="login-form">
+            <h2>Iniciar Sesión</h2>
+
+            <div class="input-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <button type="submit" class="btn-login">Ingresar</button>
+
+            <p class="registro-link">
+                ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
