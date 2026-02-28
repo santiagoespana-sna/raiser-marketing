@@ -44,7 +44,7 @@
     font-size: 18px;
     max-width: 500px;
     margin-bottom: 30px;
-    color: #e2e8f0;
+    color: #FF8C00;
 }
 
 .header-buttons{
@@ -55,7 +55,7 @@
 .btn-2{
     display: inline-block;
     padding: 12px 30px;
-    border: 2px solid white;
+    border: 2px solid #FF8C00;
     color: white;
     border-radius: 8px;
     transition: 0.3s;
@@ -143,7 +143,7 @@
 }
 
 .logo span{
-    color: #FFFDFC;
+    color: #FF8C00;
     font-size: 20px;
     font-weight: 800;
     margin-left: 10px;
@@ -177,7 +177,7 @@
 }
 
 .menu .navbar ul li a:hover{
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 
@@ -218,13 +218,13 @@
 .btn-1{
     display: inline-block;
     padding: 11px 35px;
-    background-color: #1E90FF;
-    color: #FFFDFC;
+    background-color: #FF8C00;
+    color: #FF8C00;
     text-transform: uppercase;
 }
 
 .btn-1:hover{
-    background-color: #00FFFF;
+    background-color: #FF8C00;
 }
 
 .coffee {
@@ -240,7 +240,7 @@
 .coffee-content h2 {
     font-size: 45px;
     line-height: 60px;
-    color: #1E90FF;
+    color: #FF8C00;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
@@ -304,7 +304,7 @@
 .btn-1 {
     display: inline-block;
     padding: 12px 30px;
-    background: #1E90FF;
+    background: #FF8C00;
     color: white;
     font-weight: 600;
     text-decoration: none;
@@ -313,7 +313,7 @@
 }
 
 .btn-1:hover {
-    background: #0b63c7;
+    background: #FF8C00;
     transform: scale(1.05);
 }
 
