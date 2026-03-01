@@ -57,7 +57,7 @@
 }
 
 .menu .navbar ul li a:hover {
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 /* ================= HERO ================= */
@@ -226,7 +226,7 @@
 }
 
 .menu .navbar ul li a:hover{
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 
@@ -264,16 +264,19 @@
 }
 
 
-.btn-1{
+.btn-1 {
     display: inline-block;
     padding: 11px 35px;
-    background-color: #1E90FF;
+    background-color: #FF8C00;
     color: #FFFDFC;
     text-transform: uppercase;
+    transition: all 0.3s ease; /* 👈 importante */
 }
 
-.btn-1:hover{
-    background-color: #00FFFF;
+.btn-1:hover {
+    background-color: #FF8C00;
+    transform: translateY(-5px); /* 👈 se eleva */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* 👈 sombra */
 }
 /* ================= ABOUT PREVIEW ================= */
 
@@ -286,7 +289,7 @@
 .about-preview h2 {
     font-size: 40px;
     margin-bottom: 20px;
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 .about-preview p {
@@ -302,7 +305,7 @@
 
 /* ===== VARIABLES ===== */
 :root {
-    --primary: #2563eb;
+    --primary: #FF8C00;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --bg-light: #f8fafc;
@@ -325,7 +328,7 @@
 .section-title h2 {
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
-    color: #1E90FF;
+    color: #FF8C00;
     margin-bottom: 15px;
 }
 
@@ -380,7 +383,7 @@
 .feature-content h3 {
     font-size: clamp(22px, 2.5vw, 28px);
     margin-bottom: 20px;
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 .feature-content p {
@@ -510,7 +513,7 @@
 .service-content h3 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 
@@ -526,7 +529,7 @@
 .service-content .btn {
     display: inline-block;
     padding: 14px 28px;
-    background: #2563eb;
+    background: #FF8C00;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -535,7 +538,7 @@
 }
 
 .service-content .btn:hover {
-    background: #1e40af;
+    background: #FF8C00;
     transform: translateY(-3px);
 }
 
@@ -559,7 +562,7 @@
 .services-preview h2 {
     font-size: 40px;
     margin-bottom: 50px;
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 .services-group {
@@ -617,7 +620,7 @@
 .benefits-content h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #1E90FF;
+    color: #FF8C00;
 }
 
 .benefits-content p {
@@ -629,7 +632,7 @@
 /* ================= FOOTER ================= */
 
 .footer {
-    background: #006aff;
+    background: #FF8C00;
     padding: 70px 0 30px 0;
     color: #FFFDFC;
 }
