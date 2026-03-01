@@ -2,20 +2,20 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background: transparent;
+    background: #FF8C00; 
 }
 
 .contact-section {
     max-width: 900px;
-    margin: 50px auto;
-    background: transparent;
+    margin: 10px auto;
+    background: negra ;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 22px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
 }
 
 .contact-section h2 {
@@ -66,7 +66,7 @@ body {
 
 .contact-card i {
     font-size: 40px;
-    color: #000a63;
+    color: #FF8C00;
     margin-bottom: 10px;
 }
 
@@ -75,7 +75,7 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 14px;
-    background: #033157;
+    background: #FF8C00;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -84,11 +84,19 @@ body {
 }
 .contact-action:hover,
 .contact-action:focus {
-    background: #023b64;
+    background:  #FF8C00 ;
     transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
 }
 .contact-action:active {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
 }
 
 .contact-form {
@@ -103,10 +111,14 @@ body {
     border: 1px solid rgb(14, 16, 141);
     border-radius: 8px;
     font-size: 16px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .contact-form button {
-    background: #01325a;
+    background: #FF8C00;
     color: #fff;
     padding: 12px;
     border: none;
@@ -117,7 +129,7 @@ body {
 
 }
 .contact-form button:hover {
-    background: #033457;
+    background: #e6eff5ff;
 }
 
 /* Animated dark-blue background */
@@ -162,7 +174,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 12px;
-    background: #0078d7;
+    background: #FF8C00;
     color: white;
     font-weight: 600;
 }
@@ -191,7 +203,7 @@ body {
 }
 .chat-message.user {
     align-self: flex-end;
-    background: #0078d7;
+    background: #FF8C00;
     color: white;
 }
 .chat-message.bot {
