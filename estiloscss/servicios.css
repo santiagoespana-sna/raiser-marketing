@@ -264,16 +264,19 @@
 }
 
 
-.btn-1{
+.btn-1 {
     display: inline-block;
     padding: 11px 35px;
     background-color: #FF8C00;
     color: #FFFDFC;
     text-transform: uppercase;
+    transition: all 0.3s ease; /* 👈 importante */
 }
 
-.btn-1:hover{
+.btn-1:hover {
     background-color: #FF8C00;
+    transform: translateY(-5px); /* 👈 se eleva */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* 👈 sombra */
 }
 /* ================= ABOUT PREVIEW ================= */
 
@@ -629,7 +632,7 @@
 /* ================= FOOTER ================= */
 
 .footer {
-    background: #006aff;
+    background: #FF8C00;
     padding: 70px 0 30px 0;
     color: #FFFDFC;
 }
