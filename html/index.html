@@ -6,60 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raise Marketing</title>
     <link rel="stylesheet" href="../estiloscss/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header class="header">
 
-        <video autoplay muted loop class="video-bg">
-            <source src="../animaciones/172170-846731303_small.mp4" type="video/mp4">
-        </video>
+        <div class="menu">
+            <div class="menu-content container">
 
-        <div class="menu container">
-            <a href="index.html" class="logo">
-                <img src="../imagenes/image.png" alt="Logo">
-                <span>Biznova corp</span>
-            </a>
+                <a href="index.html" class="logo">
+                    <img src="../imagenes/image.png" alt="">
+                    <span>Biznova corp</span>
+                </a>
 
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="../imagenes/image.png" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
-                    <li><a href="servicios.html">SERVICIOS</a></li>
-                    <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
-                    <li><a href="reseñas.html">RESEÑAS</a></li>
-                    <li><a href="Contacto.html">CONTACTO</a></li>
-                    <li><a href="login.html">INICIAR SESION</a></li>
-                    <li><a href="login.html">INICIAR SESION</a></li>
-                </ul>
-            </nav>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
+                        <li><a href="reseñas.html">RESEÑAS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                        <li><a href="login.html">INICIAR SESIÓN</a></li>
+                    </ul>
+                </nav>
 
+            </div>
         </div>
 
-        <div class="header-content container">
+        <div class="header-content">
 
-            <div class="header-text">
-                <h1>Raise Marketing</h1>
-                <p>
-                    Impulsamos marcas con estrategias digitales modernas,
-                    creativas y enfocadas en resultados reales.
-                </p>
+            <div class="hero-container container">
 
-                <div class="header-buttons">
-                    <a href="#" class="btn-1">Empezar</a>
-                    <a href="#" class="btn-2">Mas informacion</a>
+                <!-- Imagen decorativa izquierda -->
+
+
+                <!-- Texto derecha -->
+                <div class="hero-text">
+                    <h1>Raise Marketing</h1>
+                    <p>
+                        Impulsamos marcas con estrategias digitales modernas,
+                        creativas y enfocadas en resultados reales.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-1">Empezar</a>
+                        <a href="#" class="btn-2">Más información</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="header-img">
-                <img src="../imagenes/servicio3.jpg" alt="Imagen principal" class="header-image">
             </div>
-
-        </div>
 
         </div>
 
@@ -71,8 +69,10 @@
 
         <div class="coffee-content container">
             <h2>¿Quienes somos?</h2>
-            <p class="txt-p">En Raise Marketing, somos arquitectos de crecimiento digital. Nos especializamos en potenciar su negocio
-                a través de estrategias disruptivas que fusionan creatividad, análisis de datos y ejecución técnica de alto nivel>
+            <p class="txt-p">En Raise Marketing, somos arquitectos de crecimiento digital. Nos especializamos en
+                potenciar su negocio
+                a través de estrategias disruptivas que fusionan creatividad, análisis de datos y ejecución técnica de
+                alto nivel</p>
 
             <div class="coffee-group">
                 <a href="mision.html" class="coffee-1">
@@ -104,76 +104,100 @@
     </section>
 
     <main class="services">
-        <div class="services-content container">
-            <h2>Nuestros Servicios</h2>
+        <div class="container services-layout">
 
-            <div class="services-group">
+            <!-- TARJETA IZQUIERDA -->
+            <div class="service-card reveal-left">
+                <div class="service-card-inner">
+                    <img src="../imagenes/servicios1.jpg" alt="Servicio estratégico">
 
-                <a href="servicios.html" class="services-1">
-                    <img src="../imagenes/servicios1.jpg" alt="">
-                    <h3>Posicionamiento y Crecimiento</h3>
-                </a>
+                    <h3>Posicionamiento Estratégico</h3>
 
-                <a href="servicios.html" class="services-1">
-                    <img src="../imagenes/servicio2.jpg" alt="">
-                    <h3>Estrategia de Contenido</h3>
-                </a>
-
-                <a href="servicios.html" class="services-1">
-                    <img src="../imagenes/servicio3.jpg" alt="">
-                    <h3>Estrategia de Fidelización</h3>
-                </a>
-
+                    <p>
+                        Impulsamos tu marca con estrategias digitales
+                        enfocadas en crecimiento real y resultados medibles.
+                    </p>
+                </div>
             </div>
 
-            <p>Analizamos tu negocio, tu público objetivo y tu competencia para crear estrategias digitales
-                personalizadas, enfocadas en mejorar tu alcance, atraer más clientes y lograr resultados reales.</p>
-            <a href="/html/servicios.html" class="btn-1">informacion</a>
+            <!-- TEXTO DERECHO -->
+            <div class="service-info reveal-right">
+                <h2>Nuestro Servicio</h2>
+
+                <p>
+                    Analizamos tu negocio, tu competencia y tu público objetivo
+                    para diseñar una estrategia digital personalizada que te permita
+                    aumentar tu visibilidad, atraer clientes ideales y escalar tu marca.
+                </p>
+
+                <p>
+                    No trabajamos con suposiciones. Utilizamos datos, métricas
+                    y planificación estratégica para garantizar resultados
+                    sostenibles a largo plazo.
+                </p>
+
+                <a href="/html/servicios.html" class="service-btn">
+                    Ver Servicios
+                </a>
+            </div>
 
         </div>
-
     </main>
 
 
     <section class="benefits">
-        <div class="benefits-content container">
+        <div class="container">
 
             <div class="benefits-box">
 
-                <div class="benefits-left">
+                <!-- IZQUIERDA -->
+                <div class="benefits-left reveal">
                     <h2>¿Por qué elegir Raise Marketing?</h2>
+
                     <p>
                         No solo creamos contenido. Diseñamos estrategias digitales enfocadas en crecimiento real,
                         posicionamiento y resultados medibles para tu negocio.
                     </p>
 
                     <ul class="benefits-list">
-                        <li>📌 Estrategias personalizadas para tu marca</li>
-                        <li>📈 Aumento de alcance y clientes potenciales</li>
-                        <li>🎨 Contenido creativo con identidad profesional</li>
-                        <li>📊 Reportes claros y seguimiento constante</li>
-                        <li>🚀 Optimización para destacar frente a la competencia</li>
+                        <li>Estrategias personalizadas para tu marca</li>
+                        <li>Aumento de alcance y clientes potenciales</li>
+                        <li>Contenido creativo con identidad profesional</li>
+                        <li>Reportes claros y seguimiento constante</li>
+                        <li>Optimización para destacar frente a la competencia</li>
                     </ul>
 
-                    <a href="#" class="btn-1">Quiero una estrategia</a>
+                    <a href="#" class="btn-benefits reveal">
+                        Impulsar mi marca ahora
+                    </a>
                 </div>
 
-                <div class="benefits-right">
-                    <div class="compare-card">
-                        <h3>Raise Marketing</h3>
-                        <p>✔ Estrategias reales y medibles</p>
-                        <p>✔ Diseño moderno y profesional</p>
-                        <p>✔ Acompañamiento y soporte</p>
-                        <p>✔ Crecimiento constante</p>
+                <!-- DERECHA -->
+                <div class="benefits-right reveal">
+
+                    <div class="compare-wrapper">
+
+                        <div class="compare-card raise reveal">
+                            <span class="badge">Más elegido</span>
+                            <h3>Raise Marketing</h3>
+                            <p>✔ Estrategias reales y medibles</p>
+                            <p>✔ Diseño moderno y profesional</p>
+                            <p>✔ Acompañamiento constante</p>
+                            <p>✔ Crecimiento sostenible</p>
+                        </div>
+
+                        <div class="vs reveal">VS</div>
+
+                        <div class="compare-card other reveal">
+                            <h3>Otras agencias</h3>
+                            <p>✘ Contenido sin estrategia</p>
+                            <p>✘ Diseños repetitivos</p>
+                            <p>✘ Sin seguimiento real</p>
+                            <p>✘ Resultados inconsistentes</p>
+                        </div>
+
                     </div>
 
-                    <div class="compare-card ">
-                        <h3>Otras agencias</h3>
-                        <p>✘ Contenido sin estrategia</p>
-                        <p>✘ Diseños repetidos</p>
-                        <p>✘ Sin seguimiento real</p>
-                        <p>✘ Resultados lentos</p>
-                    </div>
                 </div>
 
             </div>
@@ -183,34 +207,46 @@
 
 
 
-    <section class="team container">
-        <h2>Nuestro Equipo</h2>
-        <p>Conoce al equipo que hace crecer tu marca con estrategias digitales efectivas.</p>
+    <section class="team">
+        <div class="team-header reveal">
+            <h2>Nuestro Equipo</h2>
+            <p>Conoce al equipo que hace crecer tu marca con estrategias digitales efectivas.</p>
+        </div>
 
         <div class="team-members">
-            <div class="team-card">
-                <img src="imagenes/servicio3.jpg" alt="Miembro 1">
+            <div class="team-card reveal">
+                <div class="team-img">
+                    <img src="../imagenes/quienes somos1.jpg" alt="Tatiana Camilo">
+                </div>
                 <h3>Tatiana Camilo</h3>
-                <p>Diseñadora Gráfica</p>
+                <span>Diseñadora Gráfica</span>
             </div>
-            <div class="team-card">
-                <img src="imagenes/miembro3.jpg" alt="Miembro 2">
+
+            <div class="team-card reveal">
+                <div class="team-img">
+                    <img src="../imagenes/quienes somos1.jpg" alt="Santiago España">
+                </div>
                 <h3>Santiago España</h3>
-                <p>Especialista de Contenido</p>
+                <span>Especialista de Contenido</span>
             </div>
-            <div class="team-card">
-                <img src="imagenes/miembro4.jpg" alt="Miembro 3">
+
+            <div class="team-card reveal">
+                <div class="team-img">
+                    <img src="../imagenes/image.png" alt="Luis Idrobo">
+                </div>
                 <h3>Luis Idrobo</h3>
-                <p>Community Manager</p>
+                <span>Community Manager</span>
             </div>
-            <div class="team-card">
-                <img src="imagenes/miembro5.jpg" alt="Miembro 4">
+
+            <div class="team-card reveal">
+                <div class="team-img">
+                    <img src="../imagenes/quienes somos2.jpg" alt="Marubi Figuera">
+                </div>
                 <h3>Marubi Figuera</h3>
-                <p>Analista de Marketing</p>
+                <span>Analista de Marketing</span>
             </div>
         </div>
     </section>
-
 
 
 
@@ -316,6 +352,8 @@
 
         </div>
     </footer>
+
+    <script src="../archivosjs/index.js"></script>
 
 </body>
 
