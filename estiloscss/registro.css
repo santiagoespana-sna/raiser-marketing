@@ -7,10 +7,11 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #006aff, #00c6ff);
+    background: linear-gradient(135deg, #ffa600ff, #0c0900ff);
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .home-btn {
@@ -18,7 +19,7 @@ body {
     top: 20px;
     left: 20px;
     background: #ffffff;
-    color: #006aff;
+    color: #FF8C00;
     font-size: 22px;
     text-decoration: none;
     padding: 8px 12px;
@@ -29,7 +30,7 @@ body {
 }
 
 .home-btn:hover {
-    background: #006aff;
+    background: #FF8C00;
     color: #ffffff;
 }
 
@@ -80,7 +81,7 @@ body {
     width: 100%;
     padding: 12px;
     border: none;
-    background: #006aff;
+    background: #FF8C00;
     color: #fff;
     font-size: 16px;
     border-radius: 5px;
