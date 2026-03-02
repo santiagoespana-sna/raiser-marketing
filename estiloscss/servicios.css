@@ -312,7 +312,7 @@ html, body {
 
 /* ================= ABOUT PREVIEW ================= */
 .card {
-    background: rgba(255, 255, 255, 0.212);
+    background: rgba(221, 218, 218, 0.212);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0,0,0,0.1);
@@ -389,7 +389,7 @@ html, body {
 :root {
     --primary: #FF8C00;
     --text-dark: #1e293b;
-    --text-light: #64748b;
+    --text-light: #000000;
     --bg-light: #eef2ff;
     --card-bg: #eef2ff;
 }
@@ -964,24 +964,30 @@ html, body {
     }
 }
 
-/* ================= RESPONSIVE ================= */
-.reveal, .reveal-left, .reveal-right {
+.reveal,
+.reveal-left,
+.reveal-right {
     opacity: 0;
-    /* 1. Usar 3D activa la tarjeta de video y quita el lag */
-    transform: translate3d(0, 30px, 0); 
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-    
-    /* 2. Una transición más rápida se siente menos pesada */
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                opacity 0.5s linear;
+    transition: all 0.8s ease;
 }
 
-/* 3. Reduce la distancia del movimiento (menos píxeles = más fluidez) */
-.reveal-left { transform: translate3d(-30px, 0, 0); }
-.reveal-right { transform: translate3d(30px, 0, 0); }
+/* Desde abajo */
+.reveal {
+    transform: translateY(50px);
+}
 
+/* Desde izquierda */
+.reveal-left {
+    transform: translateX(-60px);
+}
+
+/* Desde derecha */
+.reveal-right {
+    transform: translateX(60px);
+}
+
+/* Estado visible */
 .active {
-    opacity: 1 !important;
-    transform: translate3d(0, 0, 0) !important;
+    opacity: 1;
+    transform: translate(0, 0);
 }
