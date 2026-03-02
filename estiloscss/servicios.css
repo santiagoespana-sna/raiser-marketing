@@ -1,11 +1,4 @@
-/* ================= RESET ================= */
-body{
-    font-family: 'Poppins', sans-serif;
-}
-html, body {
-    overflow-x: hidden;
-}
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,303 +6,203 @@ html, body {
     list-style: none;
 }
 
-.container {
-    max-width: 1200px;
+.container{
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px; /* espacio lateral elegante */
 }
 
 /* ================= NAVBAR ================= */
-.menu {
-    width: 100%;
-    background-color: #000000;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-}
-
-.menu-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.header {
+    background-color: #F28C28; /* naranja */
+    min-height: 90vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.menu {
-    background-color: #000000;
-    position: absolute;
+/* ================= MENU CORREGIDO ================= */
+.menu{
+    width: 100%;
+    background: #111;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    z-index: 1000;
+}
+
+
+.menu-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
-    z-index: 10;
+    position: relative;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
+/* Logo controlado */
 
-.logo img {
-    width: 70px;
-}
 
 .logo span {
-    color: #FFFDFC;
-    font-size: 20px;
-    font-weight: 800;
-    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 8px;
+    
 }
 
-.menu .navbar ul {
+/* NAV centrado correctamente */
+
+
+.menu .navbar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu ul{
     display: flex;
+    gap: 35px;
+    flex-wrap: nowrap; /* 🔥 importante */
 }
 
-.menu .navbar ul li a {
-    font-size: 13px;
-    padding: 20px;
-    color: #FFFDFC;
-    font-weight: 600;
+.menu .navbar ul li a{
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
     transition: 0.3s;
+    white-space: nowrap;  
+    /*  */
 }
 
 .menu .navbar ul li a:hover {
-    color: #FF8C00;
+    color: #F28C28;
 }
 
-/* ================= HERO ================= */
-
-.header-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 80vh;
-    position: relative;
-    z-index: 2;
-}
-
-
-
-.hero-text {
-    flex: 1;
-    text-align: left;
-}
-
-.header-text{
-    flex: 1;
-    color: white;
-}
-
-.header-text h1{
-    font-size: 55px;
-    line-height: 65px;
-    margin-bottom: 20px;
-}
-
-.header-text p{
-    font-size: 18px;
-    max-width: 500px;
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-
-.header-buttons{
-    display: flex;
-    gap: 15px;
-}
-
-.btn-2{
-    display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid white;
-    color: white;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn-2:hover{
-    background: white;
-    color: rgb(255, 255, 255);
-}
-
-.header-img{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.header-image {
-    width: 500px;
-    height: 330px;
-    object-fit: cover; /* Mantiene proporción sin deformar */
-    border-radius: 12px;
-}
-
-.header{
-    position: relative;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.video-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.header::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #F28C28;
-    z-index: -1;
-}
-
-.header{
-    position: relative;
-}
-
-.menu .navbar{
-    margin-left: auto;
-
-}
-
-
-.logo img{
-    width: 100px; /* tamaño del logo */
-    height: auto;
-    display: block;
-
-}
-
-.logo span{
-    color: #FFFDFC;
-    font-size: 20px;
-    font-weight: 800;
-    margin-left: 10px;
-}
+/* ================= LOGO ================= */
 
 .logo{
     display: flex;
     align-items: center;
+    gap: 8px;
+    color: #f28c28;
+    font-weight: 700;
+    transform: translateX(-195px);  /* más a la izquierda */
 }
 
-.menu .navbar ul{
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+.logo span {
+    color: #F28C28;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+/* ================= HERO CENTRADO ================= */
+
+
+
+
+
+.header-content{
+    
+    background-color: #f28c28;
+    background-image: url("../imagenes/header.png");
+    background-repeat: no-repeat;
+    background-position: 85% 10%; /* imagen a la derecha */
+    background-size: 750px; /* controla el tamaño */
+    
+    padding: 160px 0;
+}
+
+
+
+.hero-container{
     display: flex;
     align-items: center;
-}
-
-
-
-.menu .navbar ul li{
+    justify-content: flex-start;
     position: relative;
-    
+
+    padding-left: 120px; /* 🔥 mueve todo el bloque */
 }
 
-/* aqui podemos cambiar el tamaño de la fuente del menu */
-.menu .navbar ul li a {
-    font-size: 18px; /* Antes era 13px */
-    padding: 15px 25px; /* Ajustamos el espacio entre ellos */
-    color: #FFFDFC;
-    display: block;
-    font-weight: 700; /* Lo hacemos un poco más grueso */
-    transition: 0.3s;
-}
-.menu .navbar ul li a:hover{
-    color: #000000;
+/* Imagen decorativa */
+ 
+
+.hero-image img{
+    width: 600px;
+    opacity: 0.10; /* efecto detrás */
 }
 
+/* Texto izquierda */
+.hero-text{
+    width: 600px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
 
-#menu{
-    display: none;
+    transform: translateX(-200px); /* 🔥 mueve todo el bloque */
 }
 
-.menu-icono{
-    width: 25px;
-}
-
-.menu label{
-    cursor: pointer;
-    display: none;
-}
-
-
-
-.header-content h1{
+.hero-text h1{
     font-size: 75px;
-    line-height: 80px;
-    color: #FFFDFC;
-    text-transform: uppercase;
-    margin-bottom: 35px;
-}
-.abrir-menu{
-    display: none;
-
+    color: #fff;
+    font-family: 'Brush Script MT', cursive;
 }
 
+.hero-text p{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.6;
+}
 
-.btn-1 {
+.hero-buttons{
+    margin-top: 30px;
+}
+
+.btn-1{
+    background: #fff;
+    color: #f28c28;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+
+/* ================= BOTONES (OPCIONAL) ================= */
+
+.header-buttons {
+    margin-top: 30px;
+}
+
+/* ================= BOTONES GLOBALES ================= */
+
+/* ================= BOTONES BASE ================= */
+
+/* ================= BOTONES BLANCOS ================= */
+
+.header .btn-1,
+.btn-2 {
     display: inline-block;
     padding: 14px 40px;
-    background-color: #ff9800; /* Un naranja más brillante */
-    color: white;
-    font-weight: 800;
-    text-transform: uppercase;
-    border: 2px solid #ffffff; /* Borde blanco para que resalte del gris */
-    border-radius: 8px;
+    border-radius: 50px;
+    background: white;
+    color: #FF8C00;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #FF8C00;
     transition: all 0.3s ease;
 }
 
-.btn-1:hover {
-    background-color: rgba(0, 0, 0, 0.836);
-    color: #f3f2f0;
-    transform: scale(1.05); /* Efecto de agrandado suave al pasar el mouse */
+.btn-1:hover,
+.btn-2:hover {
+    background: #FF8C00;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
-/* Cuando lo presionas */
-.btn-1:active {
-    transform: translateY(0);
-    background-color: #cc7000;
-}
-/* EFECTO DE MOVIMIENTO HACIA ARRIBA */
-
-.btn-1:hover, .btn-2:hover {
-    /* Mueve el botón 5 píxeles hacia arriba */
-    transform: translateY(-8px) scale(1.05) !important;
-    
-    /* Añade una sombra para que parezca que flota de verdad */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    
-    /* Mantenemos el color que ya elegiste para el hover */
-    background-color: rgba(0, 0, 0, 0.836);
-    color: #f3f2f0;
-}
-
-/* EFECTO PARA LOS LINKS DEL MENÚ (Inicio, Nosotros, etc) */
-.menu .navbar ul li a {
-    transition: 0.3s;
-    display: inline-block; /* Necesario para que el movimiento funcione */
-}
-
-.menu .navbar ul li a:hover {
-    transform: translateY(-3px); /* Un salto más pequeño para el menú */
-    color: #000000;
-}
-
 /* ================= ABOUT PREVIEW ================= */
 .card {
     background: rgba(255, 255, 255, 0.212);
@@ -729,31 +622,40 @@ html, body {
 /* ================= FOOTER ================= */
 
 .footer{
+    width: 100%;
     background: #FF8C00;
-    padding: 90px 0 30px 0; /* más alto */
+    padding: 90px 0 10px 0;
     color: #FFFDFC;
 }
 
+/* Contenedor centrado */
+.footer-content{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Grid adaptable */
 .footer-box{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px; /* más separación */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
     align-items: start;
 }
 
-/* TITULOS MÁS GRANDES */
+/* TITULOS */
 .footer h3{
-    font-size: 22px; /* antes 18px */
+    font-size: 22px;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #FFFDFC;
 }
 
-/* TEXTO MÁS GRANDE */
+/* TEXTO */
 .footer p{
-    font-size: 16px; /* antes 14px */
+    font-size: 16px;
     line-height: 1.8;
-    color: #f3f3f3;
+    color: #cbd5e1;
     margin-bottom: 14px;
 }
 
@@ -771,15 +673,16 @@ html, body {
 .footer-links ul li a{
     text-decoration: none;
     color: #cbd5e1;
-    font-size: 16px; /* antes 14px */
+    font-size: 16px;
     transition: 0.3s;
 }
 
 .footer-links ul li a:hover{
     color: #FFFDFC;
+    padding-left: 5px;
 }
 
-/* REDES MÁS GRANDES */
+/* REDES */
 .footer-social{
     display: flex;
     gap: 14px;
@@ -791,15 +694,16 @@ html, body {
     text-decoration: none;
     color: #FFFDFC;
     border: 1px solid #FFFDFC;
-    padding: 10px 16px; /* más grande */
+    padding: 10px 16px;
     border-radius: 12px;
-    font-size: 15px; /* antes 13px */
+    font-size: 15px;
     transition: 0.3s;
 }
 
 .footer-social a:hover{
     background: #FFFDFC;
-    color: #006aff;
+    color: #00ff08;
+    transform: translateY(-3px);
 }
 
 /* CONTACTO */
@@ -807,10 +711,10 @@ html, body {
     color: #FFFDFC;
 }
 
-/* MAPA MÁS GRANDE */
+/* MAPA */
 .footer-map iframe{
     width: 100%;
-    height: 280px; /* antes no tenía tamaño fijo */
+    height: 260px;
     border-radius: 15px;
     border: 2px solid #FFFDFC;
 }
@@ -821,8 +725,14 @@ html, body {
     border-top: 1px solid rgba(255,255,255,0.3);
     padding-top: 25px;
     text-align: center;
-    font-size: 15px; /* antes 13px */
+    font-size: 15px;
     color: #e2e8f0;
+}
+
+.footer-content{
+    max-width: 1600px; /* más ancho que tu container normal */
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
 /* RESPONSIVE */
