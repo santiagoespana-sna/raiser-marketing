@@ -1,118 +1,211 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    max-width: 1200px;
+.container{
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 40px; /* espacio lateral elegante */
 }
 
-/* HEADER */
+
+
+
+/* ================= HEADER ESTILO MINIMALISTA ================= */
+
 .header {
+    background-color: #F28C28; /* naranja */
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= MENU CORREGIDO ================= */
+.menu{
+    width: 100%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.menu-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
     position: relative;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
 }
 
-.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
+/* Logo controlado */
 
-.header::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: -1;
-}
-
-/* MENU */
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.menu .navbar {
-    margin-left: auto;
-    margin-right: -130px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 70px;
-    height: auto;
-    display: block;
-    margin-left: -90px;
-}
 
 .logo span {
-    color: #FFFDFC;
-    font-size: 20px;
-    font-weight: 800;
-    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 8px;
+    
 }
 
-.menu .navbar ul li {
-    float: left;
+/* NAV centrado correctamente */
+
+
+.menu .navbar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.menu .navbar ul li a {
+.menu ul{
+    display: flex;
+    gap: 35px;
+    flex-wrap: nowrap; /* 🔥 importante */
+}
+
+.menu .navbar ul li a{
+    color: #fff;
     font-size: 14px;
-    padding: 20px;
-    color: white;
-    display: block;
-    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    white-space: nowrap;  
+    /*  */
 }
 
 .menu .navbar ul li a:hover {
     color: #F28C28;
 }
 
-/* HEADER CONTENT */
-.header-content {
-    text-align: center;
-    width: 100%;
-    padding-top: 120px;
+/* ================= LOGO ================= */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f28c28;
+    font-weight: 700;
+    transform: translateX(-95px);
+}
+.logo img {
+    width: 70px;
+    height: auto;
 }
 
-.header-content h1 {
-    font-size: 65px;
+.logo span {
+    color: #F28C28;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+/* ================= HERO CENTRADO ================= */
+
+
+
+
+
+.header-content{
+    
+    background-color: #f28c28;
+    background-image: url("../imagenes/header.png");
+    background-repeat: no-repeat;
+    background-position: 85% 10%; /* imagen a la derecha */
+    background-size: 750px; /* controla el tamaño */
+    
+    padding: 160px 0;
+}
+
+
+
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    padding-left: 220px; /* 🔥 mueve todo el bloque */
+}
+
+/* Imagen decorativa */
+ 
+
+.hero-image img{
+    width: 600px;
+    opacity: 0.10; /* efecto detrás */
+}
+
+/* Texto izquierda */
+.hero-text{
+    width: 600px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+
+    transform: translateX(-200px); /* 🔥 mueve todo el bloque */
+}
+
+.hero-text h1{
+    font-size: 75px;
+    color: #fff;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.hero-text p{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.hero-buttons{
+    margin-top: 30px;
+}
+
+.btn-1{
+    background: #fff;
+    color: #f28c28;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+
+/* ================= BOTONES (OPCIONAL) ================= */
+
+.header-buttons {
+    margin-top: 30px;
+}
+
+/* ================= BOTONES GLOBALES ================= */
+
+/* ================= BOTONES BASE ================= */
+
+/* ================= BOTONES BLANCOS ================= */
+
+.header .btn-1,
+.btn-2 {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    background: white;
+    color: #FF8C00;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #FF8C00;
+    transition: all 0.3s ease;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    background: #FF8C00;
     color: white;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
-
-.header-content p {
-    font-size: 17px;
-    color: aliceblue;
-    max-width: 900px;
-    margin: auto;
-    line-height: 1.7;
-}
-
 /* TESTIMONIALS */
 .testimonials {
     padding: 100px 20px;
