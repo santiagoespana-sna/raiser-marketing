@@ -2,13 +2,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background: #FF8C00; 
+    background: #ffffff; 
 }
 
 .contact-section {
     max-width: 900px;
     margin: 10px auto;
-    background: negra ;
+    background: #e6e3e3; 
     padding: 40px;
     border-radius: 22px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
