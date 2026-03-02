@@ -11,39 +11,38 @@
 </head>
 
 <body>
-    <header class="header">
+    <!-- MENU FUERA DEL HEADER -->
+    <div class="menu">
+        <div class="menu-content container">
 
-        <div class="menu">
-            <div class="menu-content container">
+            <a href="index.html" class="logo">
+                <img src="../imagenes/image.png" alt="">
+                <span>Biznova corp</span>
+            </a>
 
-                <a href="index.html" class="logo">
-                    <img src="../imagenes/image.png" alt="">
-                    <span>Biznova corp</span>
-                </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
+                    <li><a href="reseñas.html">RESEÑAS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="login.html">INICIAR SESIÓN</a></li>
+                </ul>
+            </nav>
 
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">INICIO</a></li>
-                        <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
-                        <li><a href="servicios.html">SERVICIOS</a></li>
-                        <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
-                        <li><a href="reseñas.html">RESEÑAS</a></li>
-                        <li><a href="contacto.html">CONTACTO</a></li>
-                        <li><a href="login.html">INICIAR SESIÓN</a></li>
-                    </ul>
-                </nav>
-
-            </div>
         </div>
+    </div>
+
+
+    <!-- HEADER SOLO CON HERO -->
+    <header class="header">
 
         <div class="header-content">
 
             <div class="hero-container container">
 
-                <!-- Imagen decorativa izquierda -->
-
-
-                <!-- Texto derecha -->
                 <div class="hero-text">
                     <h1>Raise Marketing</h1>
                     <p>
@@ -52,8 +51,8 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#" class="btn-1">Empezar</a>
-                        <a href="#" class="btn-2">Más información</a>
+                        <a href="login.html" class="btn-1">INICIA SESION</a>
+                        <a href="admin.html" class="btn-2">ADMIN</a>
                     </div>
                 </div>
 
@@ -98,7 +97,7 @@
 
 
             </div>
-            <a href="#" class="btn-1">informacion</a>
+            <a href="nosotros.html" class="btn-1">informacion</a>
         </div>
 
     </section>
@@ -148,10 +147,10 @@
     <section class="benefits">
         <div class="container">
 
-            <div class="benefits-box">
+            <div class="benefits-box reveal">
 
                 <!-- IZQUIERDA -->
-                <div class="benefits-left reveal">
+                <div class="benefits-left">
                     <h2>¿Por qué elegir Raise Marketing?</h2>
 
                     <p>
@@ -167,17 +166,17 @@
                         <li>Optimización para destacar frente a la competencia</li>
                     </ul>
 
-                    <a href="#" class="btn-benefits reveal">
+                    <a href="#" class="btn-benefits">
                         Impulsar mi marca ahora
                     </a>
                 </div>
 
                 <!-- DERECHA -->
-                <div class="benefits-right reveal">
+                <div class="benefits-right">
 
                     <div class="compare-wrapper">
 
-                        <div class="compare-card raise reveal">
+                        <div class="compare-card raise animate-left">
                             <span class="badge">Más elegido</span>
                             <h3>Raise Marketing</h3>
                             <p>✔ Estrategias reales y medibles</p>
@@ -186,9 +185,9 @@
                             <p>✔ Crecimiento sostenible</p>
                         </div>
 
-                        <div class="vs reveal">VS</div>
+                        <div class="vs animate-drop">VS</div>
 
-                        <div class="compare-card other reveal">
+                        <div class="compare-card other animate-right">
                             <h3>Otras agencias</h3>
                             <p>✘ Contenido sin estrategia</p>
                             <p>✘ Diseños repetitivos</p>
@@ -204,7 +203,6 @@
 
         </div>
     </section>
-
 
 
     <section class="team">
@@ -249,52 +247,53 @@
     </section>
 
 
-
-
-
-    <section class="testimonials container">
-        <h2>Testimonios</h2>
-        <p>Lo que dicen nuestros clientes sobre trabajar con Raise Marketing.</p>
+    <section class="testimonials">
+        <h2 class="reveal">Testimonios</h2>
+        <p class="reveal">
+            Lo que dicen nuestros clientes sobre trabajar con Raise Marketing.
+        </p>
 
         <div class="testimonials-content">
-
-            <div class="testimonial-card">
+            <div class="testimonial-card reveal">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">
-                    "Raise Marketing transformó completamente nuestras redes. Aumentamos ventas y seguidores en menos de
-                    1 mes."
+                    "Raise Marketing transformó completamente nuestras redes.
+                    Aumentamos ventas y seguidores en menos de 1 mes."
                 </p>
-                <h3>- Laura Martínez</h3>
+                <h3>Laura Martínez</h3>
                 <span>Emprendedora</span>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card reveal">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">
-                    "Excelente servicio, diseños modernos y atención rápida. Se nota que trabajan con estrategia real."
+                    "Excelente servicio, diseños modernos y atención rápida.
+                    Se nota que trabajan con estrategia real."
                 </p>
-                <h3>- Andrés Gómez</h3>
+                <h3>Andrés Gómez</h3>
                 <span>Dueño de negocio</span>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card reveal">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">
-                    "Los mejores en marketing digital. Me gustó que todo fue claro, profesional y con resultados
-                    medibles."
+                    "Los mejores en marketing digital. Me gustó que todo fue
+                    claro, profesional y con resultados medibles."
                 </p>
-                <h3>- Daniela Ruiz</h3>
+                <h3>Daniela Ruiz</h3>
                 <span>Marca personal</span>
             </div>
-
         </div>
 
-        <a href="#" class="btn-1">Ver más opiniones</a>
+        <a href="reseñas.html" class="btn-1 reveal">Ver más opiniones</a>
     </section>
 
 
+
+    
     <footer class="footer" id="contacto">
-        <div class="footer-content container">
+
+        <div class="footer-content">
 
             <div class="footer-box">
 
@@ -333,13 +332,13 @@
                     <p><b>✉ Correo:</b> contacto@raisemarketing.com</p>
                 </div>
 
-                <!-- Columna 4 (Mapa) -->
+                <!-- Columna 4 -->
                 <div class="footer-map">
                     <h3>Ubicación SENA</h3>
 
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.916333573657!2d-74.079987!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a1a3b6c3c7%3A0x6b3f9c1f9c1f9c1f!2sSENA!5e0!3m2!1ses!2sco!4v1234567890"
-                        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.916333573657!2d-74.079987!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2f768!4f13.1!3m3!1m2!1s0x8e3f99a1a3b6c3c7%3A0x6b3f9c1f9c1f9c1f!2sSENA!5e0!3m2!1ses!2sco!4v1234567890"
+                        allowfullscreen="" loading="lazy">
                     </iframe>
 
                 </div>
@@ -351,10 +350,13 @@
             </div>
 
         </div>
-    </footer>
 
+    </footer>
     <script src="../archivosjs/index.js"></script>
 
 </body>
 
 </html>
+
+<!--  -->
+<!--  -->
