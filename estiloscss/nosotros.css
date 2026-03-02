@@ -12,9 +12,6 @@
     padding: 0 40px; /* espacio lateral elegante */
 }
 
-
-
-
 /* ================= HEADER ESTILO MINIMALISTA ================= */
 
 .header {
@@ -53,7 +50,6 @@
 }
 
 /* NAV centrado correctamente */
-
 
 .menu .navbar{
     position: absolute;
@@ -103,10 +99,6 @@
 }
 
 /* ================= HERO CENTRADO ================= */
-
-
-
-
 
 .header-content{
     
