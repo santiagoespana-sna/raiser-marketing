@@ -20,8 +20,26 @@ html, body {
 }
 
 /* ================= NAVBAR ================= */
+.menu {
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .menu {
+    background-color: #000000;
     position: absolute;
     top: 0;
     left: 0;
@@ -98,7 +116,7 @@ html, body {
     font-size: 18px;
     max-width: 500px;
     margin-bottom: 30px;
-    color: #e2e8f0;
+    color: #ffffff;
 }
 
 .header-buttons{
@@ -117,7 +135,7 @@ html, body {
 
 .btn-2:hover{
     background: white;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .header-img{
@@ -158,7 +176,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: #F28C28;
     z-index: -1;
 }
 
@@ -173,7 +191,7 @@ html, body {
 
 
 .logo img{
-    width: 70px; /* tamaño del logo */
+    width: 100px; /* tamaño del logo */
     height: auto;
     display: block;
 
@@ -205,16 +223,15 @@ html, body {
 
 /* aqui podemos cambiar el tamaño de la fuente del menu */
 .menu .navbar ul li a {
-    font-size: 13px;
-    padding: 20px;
+    font-size: 18px; /* Antes era 13px */
+    padding: 15px 25px; /* Ajustamos el espacio entre ellos */
     color: #FFFDFC;
     display: block;
-    font-weight: 600;
-    
+    font-weight: 700; /* Lo hacemos un poco más grueso */
+    transition: 0.3s;
 }
-
 .menu .navbar ul li a:hover{
-    color: #FF8C00;
+    color: #000000;
 }
 
 
@@ -240,12 +257,6 @@ html, body {
     text-transform: uppercase;
     margin-bottom: 35px;
 }
-
-
-
-
-
-
 .abrir-menu{
     display: none;
 
@@ -254,24 +265,49 @@ html, body {
 
 .btn-1 {
     display: inline-block;
-    padding: 11px 35px;
-    background-color: #FF8C00;
+    padding: 14px 40px;
+    background-color: #ff9800; /* Un naranja más brillante */
     color: white;
+    font-weight: 800;
     text-transform: uppercase;
+    border: 2px solid #ffffff; /* Borde blanco para que resalte del gris */
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
-/* Cuando pasas el cursor */
 .btn-1:hover {
-    background-color: #884c03;  /* tono más oscuro */
-    transform: translateY(-3px);
+    background-color: rgba(0, 0, 0, 0.836);
+    color: #f3f2f0;
+    transform: scale(1.05); /* Efecto de agrandado suave al pasar el mouse */
 }
-
 /* Cuando lo presionas */
 .btn-1:active {
     transform: translateY(0);
     background-color: #cc7000;
+}
+/* EFECTO DE MOVIMIENTO HACIA ARRIBA */
+
+.btn-1:hover, .btn-2:hover {
+    /* Mueve el botón 5 píxeles hacia arriba */
+    transform: translateY(-8px) scale(1.05) !important;
+    
+    /* Añade una sombra para que parezca que flota de verdad */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    
+    /* Mantenemos el color que ya elegiste para el hover */
+    background-color: rgba(0, 0, 0, 0.836);
+    color: #f3f2f0;
+}
+
+/* EFECTO PARA LOS LINKS DEL MENÚ (Inicio, Nosotros, etc) */
+.menu .navbar ul li a {
+    transition: 0.3s;
+    display: inline-block; /* Necesario para que el movimiento funcione */
+}
+
+.menu .navbar ul li a:hover {
+    transform: translateY(-3px); /* Un salto más pequeño para el menú */
+    color: #000000;
 }
 
 /* ================= ABOUT PREVIEW ================= */
@@ -343,7 +379,7 @@ html, body {
     margin: 0 auto 40px auto;
     font-size: 17px;
     line-height: 1.7;
-    color: #334155;
+    color: #000000;
 }
 
 
@@ -466,32 +502,6 @@ html, body {
     font-size: 16px;
 }
 
-/* ===== ANIMACIÓN SUAVE ===== */
-.feature-item {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 0.8s ease forwards;
-}
-
-.feature-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.feature-item:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.feature-item:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .feature-item {
@@ -588,133 +598,390 @@ html, body {
 
 
 .services-preview {
-    padding: 100px 0;
-    background: #eef2ff;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #F28C28, #df8f2e);
     text-align: center;
 }
 
 .services-preview h2 {
-    font-size: 40px;
-    margin-bottom: 50px;
-    color: #FF8C00;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 70px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
 }
 
 .services-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
-.services-1 {
+/* ===== NUEVA CARD ===== */
+
+.services-card {
     background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
-.services-1:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+.services-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
 }
 
-.services-1 h3 {
+/* Título */
+.services-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #202020;
+}
+
+/* Texto */
+.services-card p {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Lista */
+.services-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-card ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #334155;
+    position: relative;
+    padding-left: 20px;
+}
+
+.services-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #F28C28;
+    font-weight: bold;
+}
+
+/* ================= CTA GRANDE ================= */
+
+.cta-section {
+    padding: 120px 20px;
+}
+
+.cta-container {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 80px 60px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.cta-container h2 {
+    font-size: 42px;
+    color: #FF8C00;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.cta-item h3 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #1e293b;
 }
 
-.services-1 p {
-    font-size: 15px;
+.cta-item p {
+    font-size: 16px;
+    line-height: 1.6;
     color: #64748b;
-    line-height: 1.6;
 }
 
-/* ================= BENEFITS ================= */
-
-.benefits {
-    padding: 100px 0;
-    background: #eef2ff;
-    color: #FF8C00;
-    text-align: center;
-}
-
-.benefits h2 {
-    font-size: 40px;
-    margin-bottom: 60px;
-}
-
-.benefits-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-}
-
-.benefits-content h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #FF8C00;
-}
-
-.benefits-content p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #000000;
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
 }
 
 /* ================= FOOTER ================= */
 
-.footer {
+.footer{
     background: #FF8C00;
-    padding: 70px 0 30px 0;
+    padding: 90px 0 30px 0; /* más alto */
     color: #FFFDFC;
 }
 
-.footer-copy {
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 20px;
+.footer-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* más separación */
+    align-items: start;
+}
+
+/* TITULOS MÁS GRANDES */
+.footer h3{
+    font-size: 22px; /* antes 18px */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #FFFDFC;
+}
+
+/* TEXTO MÁS GRANDE */
+.footer p{
+    font-size: 16px; /* antes 14px */
+    line-height: 1.8;
+    color: #f3f3f3;
+    margin-bottom: 14px;
+}
+
+/* LINKS */
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li{
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a{
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 16px; /* antes 14px */
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover{
+    color: #FFFDFC;
+}
+
+/* REDES MÁS GRANDES */
+.footer-social{
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.footer-social a{
+    text-decoration: none;
+    color: #FFFDFC;
+    border: 1px solid #FFFDFC;
+    padding: 10px 16px; /* más grande */
+    border-radius: 12px;
+    font-size: 15px; /* antes 13px */
+    transition: 0.3s;
+}
+
+.footer-social a:hover{
+    background: #FFFDFC;
+    color: #006aff;
+}
+
+/* CONTACTO */
+.footer-contact b{
+    color: #FFFDFC;
+}
+
+/* MAPA MÁS GRANDE */
+.footer-map iframe{
+    width: 100%;
+    height: 280px; /* antes no tenía tamaño fijo */
+    border-radius: 15px;
+    border: 2px solid #FFFDFC;
+}
+
+/* COPYRIGHT */
+.footer-copy{
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 25px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px; /* antes 13px */
     color: #e2e8f0;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .footer-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-
-@media(max-width: 991px) {
-
-    .service-row {
-        flex-direction: column;
+@media(max-width: 600px){
+    .footer-box{
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
+    .footer-social{
+        justify-content: center;
+    }
+
+    .footer-map iframe{
+        height: 240px;
+    }
 }
-.reveal,
-.reveal-left,
-.reveal-right {
+
+
+/* Responsive */
+@media(max-width: 900px){
+    .footer-box{
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    .footer-social{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 600px){
+    .footer-box{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:991px) {
+    .menu{
+        padding: 30px;
+    }
+
+
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 100px 30px;
+    }
+
+
+
+    .coffee{
+        padding: 30px;
+    }
+
+    .coffee-content h2{
+        padding: 0;
+    }
+
+    .txt-p{
+        padding: 0;
+    }
+
+    .coffee-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .coffee-img{
+        display: none;
+    }
+
+    .services{
+        padding: 30px;
+    }
+
+    .services-content p {
+        padding: 0;
+    }
+
+    .services-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+
+    .services-1{
+        margin-bottom: 25px;
+    }
+
+    .general{
+        flex-direction: column;
+    }
+    
+    .general-1{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .general-2, .general-3{
+        display: none;
+    }
+
+    .blog{
+        padding: 30px;
+    }
+
+    .blog-content{
+        flex-direction: column;
+    }
+
+    .blog-1{
+        padding: 0;
+    }
+
+    .footer{
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+.reveal, .reveal-left, .reveal-right {
     opacity: 0;
+    /* 1. Usar 3D activa la tarjeta de video y quita el lag */
+    transform: translate3d(0, 30px, 0); 
     will-change: transform, opacity;
-    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.9s ease;
+    backface-visibility: hidden;
+    
+    /* 2. Una transición más rápida se siente menos pesada */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.5s linear;
 }
 
-.reveal {
-    transform: translateY(60px);
-}
+/* 3. Reduce la distancia del movimiento (menos píxeles = más fluidez) */
+.reveal-left { transform: translate3d(-30px, 0, 0); }
+.reveal-right { transform: translate3d(30px, 0, 0); }
 
-.reveal-left {
-    transform: translateX(-60px);
-}
-
-.reveal-right {
-    transform: translateX(60px);
-}
-
-.reveal.active,
-.reveal-left.active,
-.reveal-right.active {
-    opacity: 1;
-    transform: translate(0, 0);
+.active {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
 }
