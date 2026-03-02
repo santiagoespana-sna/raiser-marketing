@@ -1,3 +1,5 @@
+/* ================= RESET ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,11 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f7fc;
-    color: #333;
+    background: #ffffff;
+    color: #111;
 }
+
+/* ================= SECCIÓN ================= */
 
 .business-page {
     padding: 80px 0;
@@ -23,88 +27,126 @@ body {
 .section-title {
     text-align: center;
     font-size: 42px;
-    margin-bottom: 60px;
-    color: #1E90FF;
+    margin-bottom: 20px;
+    color: #FF8C00;
 }
 
-/* TARJETA */
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+}
+
+.result-count {
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #444;
+    font-size: 15px;
+}
+
+/* ================= FILTROS ================= */
+
+.top-bar {
+    background: #fff;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+    border: 1.5px solid #FF8C00;
+}
+
+.top-bar input,
+.top-bar select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: #f7f7f7;
+    transition: 0.3s;
+}
+
+.top-bar input:focus,
+.top-bar select:focus {
+    border-color: #FF8C00;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255,140,0,0.15);
+}
+
+/* ================= TARJETA ================= */
+
 .business-card {
     display: flex;
-    background: white;
+    align-items: stretch;
+    gap: 25px;
+    background: #ffffff;
     border-radius: 22px;
     overflow: hidden;
     margin-bottom: 50px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1.5px solid #FF8C00;
+    padding: 25px;
     transition: 0.3s;
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 0.6s forwards;
 }
 
 .business-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ===== IMAGEN IZQUIERDA ===== */
+
+.business-left {
+    width: 260px;
+    flex-shrink: 0;
 }
 
-/* IMAGEN ROTATIVA */
-.business-image {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.business-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.business-left img {
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
+    border-radius: 18px;
 }
 
-.business-image img.active {
-    opacity: 1;
-}
+/* ===== CONTENIDO CENTRO ===== */
 
-.business-content {
+.business-right {
     flex: 1;
-    padding: 30px 35px;
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    position: relative;
 }
 
-/* ESTADO */
+.business-right h2 {
+    font-size: 24px;
+}
+
+/* ===== ESTADO ===== */
+
 .status {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 0;
+    right: 0;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 12px;
-    color: white;
+    color: #fff;
 }
 
-.open {
-    background: #28a745;
-}
+.open { background: #FF8C00; }
+.closed { background: #000; }
 
-.closed {
-    background: #dc3545;
-}
+/* ===== BADGES ===== */
 
 .badges span {
-    background: #eee;
+    background: #f1f1f1;
     padding: 4px 10px;
     border-radius: 15px;
     font-size: 12px;
@@ -112,21 +154,23 @@ body {
 }
 
 .popular {
-    background: #ff9800;
+    background: #FF8C00;
     color: white;
 }
 
 .nuevo {
-    background: #2196f3;
+    background: #000;
     color: white;
 }
 
-/* BOTÓN PERFIL */
+/* ===== BOTÓN PERFIL ===== */
+
 .profile-btn {
+    margin-top: 10px;
     padding: 12px 25px;
-    background: linear-gradient(45deg, #1E90FF, #187bcd);
+    background: #FF8C00;
     border: none;
-    color: white;
+    color: #fff;
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
@@ -135,49 +179,67 @@ body {
 }
 
 .profile-btn:hover {
+    background: #e67600;
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* MAPA */
-.map {
-    height: 150px;
-    border-radius: 15px;
+/* ===== MAPA DERECHA ===== */
+
+.card-map {
+    width: 260px;
+    height: 220px;
+    border-radius: 18px;
     overflow: hidden;
-    margin-top: 10px;
+    flex-shrink: 0;
 }
 
-/* MODAL */
+.card-map .leaflet-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* ================= MODAL ================= */
+
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+    background: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 .modal-content {
-    background: white;
+    background: #fff;
     width: 700px;
     max-width: 95%;
     border-radius: 20px;
     padding: 40px;
     overflow-y: auto;
     max-height: 90vh;
+    position: relative;
 }
 
-.profile-header img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 25px;
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
 }
+
+.modal-close:hover {
+    background: #FF8C00;
+}
+
+/* ================= GALERÍA ================= */
 
 .gallery {
     display: flex;
@@ -191,15 +253,124 @@ body {
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-@media(max-width:768px) {
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
     .business-card {
         flex-direction: column;
     }
 
-    .business-image {
+    .business-left,
+    .card-map {
         width: 100%;
+    }
+
+    .business-left img,
+    .card-map {
         height: 220px;
     }
+
+    .status {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999; /* MUY ALTO */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    z-index: 10000; /* MÁS ALTO */
+}
+
+/* ===== BAJAR Z-INDEX DE LEAFLET ===== */
+.leaflet-container {
+    z-index: 1 !important;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+    z-index: 1 !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ===== GALERÍA DENTRO DEL MODAL ===== */
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* si no caben, bajan */
+}
+
+/* 🔥 ESTA ES LA CLAVE */
+.gallery img {
+    width: 120px;        /* tamaño fijo */
+    height: 90px;        /* altura fija */
+    object-fit: cover;   /* recorta sin deformar */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* efecto hover opcional */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: calc(33.33% - 10px);
+    height: 120px;
+    object-fit: cover;
+}
+
+/* ===== IMAGEN PRINCIPAL DEL MODAL ===== */
+
+.profile-header img{
+    width: 100%;
+    height: 250px;          /* 🔥 altura fija */
+    object-fit: cover;      /* recorta sin deformar */
+    border-radius: 15px;
+    display: block;
+}
+
+/* ===== LOGO SOLO ARRIBA IZQUIERDA ===== */
+
+.business-header{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.logo{
+    width: 80px;   /* 🔥 MUCHO más pequeño */
+    height: auto;
+    display: block;
 }

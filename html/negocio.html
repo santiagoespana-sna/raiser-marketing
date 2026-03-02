@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Negocios PRO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negocios PRO</title>
 
-<link rel="stylesheet" href="../estiloscss/negocio.css">
-
-<!-- Leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
+    <link rel="stylesheet" href="../estiloscss/negocio.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+
 <body>
 
-<section class="business-page">
-<div class="container">
+    <section class="business-page">
 
-<h1 class="section-title">Nuestros Negocios</h1>
+        <!-- 🔥 HEADER FUERA DEL CONTAINER -->
+        <div class="business-header">
+            <a href="index.html" class="logo-link">
+                <img src="../imagenes/image.png" alt="Logo" class="logo">
+            </a>
+        </div>
 
-<div class="top-bar">
-<input type="text" id="searchInput" placeholder="Buscar negocio...">
+        <div class="header-text">
+            <h1 class="section-title">Explora Nuestros Negocios</h1>
+            <p class="section-subtitle">
+                Descubre los mejores restaurantes, hoteles y tiendas mejor valoradas.
+            </p>
+        </div>
+        </div>
 
-<select id="categoryFilter">
-<option value="all">Todas las categorías</option>
-<option value="comida">Comida</option>
-<option value="hotel">Hotel</option>
-<option value="tienda">Tienda</option>
-</select>
+        <!-- 🔥 CONTENIDO CENTRADO -->
+        <div class="container">
 
-<select id="ratingFilter">
-<option value="0">Todas las estrellas</option>
-<option value="4">4⭐ o más</option>
-<option value="3">3⭐ o más</option>
-</select>
+            <div class="top-bar">
 
-<select id="sortFilter">
-<option value="rating">Mejor calificación</option>
-<option value="name">Alfabético</option>
-</select>
+                <div class="filter-box">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar negocio...">
+                </div>
 
-<button id="favoritesBtn">❤️ Favoritos</button>
-<button id="darkModeBtn">🌙</button>
-</div>
+                <div class="filter-box">
+                    <select id="categoryFilter">
+                        <option value="all">📂 Todas las categorías</option>
+                        <option value="comida">🍔 Comida</option>
+                        <option value="hotel">🏨 Hotel</option>
+                        <option value="tienda">🛍 Tienda</option>
+                    </select>
+                </div>
 
-<p id="resultCount" class="result-count"></p>
-<div id="businessContainer"></div>
+                <div class="filter-box">
+                    <select id="ratingFilter">
+                        <option value="0">⭐ Todas las estrellas</option>
+                        <option value="5">⭐ 5 estrellas</option>
+                        <option value="4">⭐ 4 o más</option>
+                        <option value="3">⭐ 3 o más</option>
+                        <option value="2">⭐ 2 o más</option>
+                        <option value="1">⭐ 1 o más</option>
+                    </select>
+                </div>
 
-</div>
-</section>
+                <div class="filter-box">
+                    <select id="sortFilter">
+                        <option value="rating">🏆 Mejor calificación</option>
+                        <option value="name">🔤 Orden alfabético</option>
+                    </select>
+                </div>
 
-<!-- MODAL PERFIL -->
-<div id="modal" class="modal">
-<div class="modal-content">
-<span id="closeModal">&times;</span>
-<div id="modalBody"></div>
-</div>
-</div>
+            </div>
 
-<script src="../archivosjs/negocio.js"></script>
+            <p id="resultCount" class="result-count"></p>
+
+            <div id="businessContainer" class="business-grid"></div>
+
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="imageViewer" class="image-viewer">
+        <button id="closeViewer" class="viewer-close">&times;</button>
+        <button id="prevImg" class="viewer-nav left">❮</button>
+        <img id="viewerImg">
+        <button id="nextImg" class="viewer-nav right">❯</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../archivosjs/negocio.js"></script>
+
 </body>
+
 </html>

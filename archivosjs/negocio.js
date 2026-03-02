@@ -1,4 +1,5 @@
-console.log("JS cargado");
+/* ================= DATOS ================= */
+
 const negocios = [
 {
 id:1,
@@ -11,10 +12,11 @@ abre:8,
 cierra:22,
 lat:2.4448,
 lng:-76.6147,
-imagenes:[
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg"
+portada:"../imagenes/quienes somos1.jpg",
+galeria:[
+"../imagenes/quienes somos1.jpg",
+"../imagenes/restaurante2.jpg",
+"../imagenes/restaurante3.jpg"
 ],
 descripcion:"Comida típica colombiana."
 },
@@ -29,10 +31,10 @@ abre:0,
 cierra:24,
 lat:2.4460,
 lng:-76.6130,
-imagenes:[
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg"
+portada:"../imagenes/hotel.jpg",
+galeria:[
+"../imagenes/hotel1.jpg",
+"../imagenes/hotel2.jpg"
 ],
 descripcion:"Hospedaje en el centro."
 },
@@ -47,10 +49,10 @@ abre:7,
 cierra:20,
 lat:2.4472,
 lng:-76.6120,
-imagenes:[
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg"
+portada:"../imagenes/tienda.jpg",
+galeria:[
+"../imagenes/tienda1.jpg",
+"../imagenes/tienda2.jpg"
 ],
 descripcion:"Productos diarios."
 },
@@ -65,10 +67,10 @@ abre:12,
 cierra:23,
 lat:2.4455,
 lng:-76.6155,
-imagenes:[
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg"
+portada:"../imagenes/parrilla.jpg",
+galeria:[
+"../imagenes/parrilla1.jpg",
+"../imagenes/parrilla2.jpg"
 ],
 descripcion:"Carnes y parrilla."
 },
@@ -83,87 +85,127 @@ abre:0,
 cierra:24,
 lat:2.4480,
 lng:-76.6165,
-imagenes:[
-"../imagenes/image.png",
-"../imagenes/nada.jpg",
-"../imagenes/nada.jpg"
+portada:"../imagenes/hotelpremium.jpg",
+galeria:[
+"../imagenes/hotelpremium1.jpg",
+"../imagenes/hotelpremium2.jpg",
+"../imagenes/hotelpremium3.jpg"
 ],
 descripcion:"Experiencia 5 estrellas."
 }
 ];
 
-const container=document.getElementById("businessContainer");
+/* ================= ELEMENTOS ================= */
+
+const container = document.getElementById("businessContainer");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const ratingFilter = document.getElementById("ratingFilter");
+const sortFilter = document.getElementById("sortFilter");
+const resultCount = document.getElementById("resultCount");
+const modal = document.getElementById("modal");
+const modalBody = document.getElementById("modalBody");
+const imageViewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+const prevBtn = document.getElementById("prevImg");
+const nextBtn = document.getElementById("nextImg");
+
+/* ================= MAPAS ================= */
+
+let map;
+let marker;
+let cardMaps = [];
+
+/* ================= UTILIDADES ================= */
 
 function isOpen(n){
-const hour=new Date().getHours();
-return hour>=n.abre&&hour<n.cierra;
+const hour = new Date().getHours();
+return hour >= n.abre && hour < n.cierra;
 }
 
 function renderStars(r){
 let s="";
 for(let i=1;i<=5;i++){
-s+=i<=Math.round(r)?"⭐":"☆";
+s += i <= Math.round(r) ? "⭐" : "☆";
 }
 return s;
 }
 
-/* CARRUSEL FUNCIONAL */
-function setupImageRotation(imageContainer){
+/* ================= FILTROS ================= */
 
-const imgs = imageContainer.querySelectorAll("img");
-if(imgs.length < 2) return;
+function getFilteredBusinesses(){
 
-let index = 0;
-let interval = null;
+let filtered = [...negocios];
 
-imageContainer.addEventListener("mouseenter",()=>{
-
-if(interval) return;
-
-interval = setInterval(()=>{
-
-imgs[index].classList.remove("active");
-index = (index + 1) % imgs.length;
-imgs[index].classList.add("active");
-
-},1200);
-
-});
-
-imageContainer.addEventListener("mouseleave",()=>{
-
-clearInterval(interval);
-interval = null;
-
-imgs.forEach(img=>img.classList.remove("active"));
-imgs[0].classList.add("active");
-
-index = 0;
-
-});
-
+const searchValue = searchInput.value.trim().toLowerCase();
+if(searchValue !== ""){
+filtered = filtered.filter(n =>
+n.nombre.toLowerCase().includes(searchValue)
+);
 }
 
+if(categoryFilter.value !== "all"){
+filtered = filtered.filter(n =>
+n.categoria === categoryFilter.value
+);
+}
+
+const ratingValue = parseFloat(ratingFilter.value);
+if(ratingValue > 0){
+filtered = filtered.filter(n =>
+n.rating >= ratingValue
+);
+}
+
+if(sortFilter.value === "rating"){
+filtered.sort((a,b)=>b.rating - a.rating);
+}
+
+if(sortFilter.value === "name"){
+filtered.sort((a,b)=>a.nombre.localeCompare(b.nombre));
+}
+
+return filtered;
+}
+
+/* ================= RENDER ================= */
+
 function renderBusinesses(){
+
+// 🔥 CERRAR TODO ANTES DE RENDERIZAR
+imageViewer.style.display="none";
+modal.style.display="none";
+document.body.classList.remove("modal-open");
+
 container.innerHTML="";
-const fragment=document.createDocumentFragment();
+cardMaps = [];
 
-negocios.forEach(n=>{
+let lista = getFilteredBusinesses();
 
-let abierto=isOpen(n);
+resultCount.textContent = `${lista.length} de ${negocios.length} negocios`;
 
-let card=document.createElement("div");
+if(lista.length === 0){
+container.innerHTML = `
+<div style="text-align:center;padding:40px;">
+<h3>No se encontraron negocios 😕</h3>
+</div>
+`;
+return;
+}
+
+lista.forEach(n=>{
+
+let abierto = isOpen(n);
+
+let card = document.createElement("div");
 card.className="business-card";
 
 card.innerHTML=`
-<div class="business-image">
-${n.imagenes.map((img,i)=>`
-<img src="${img}" class="${i===0?'active':''}">
-`).join("")}
+<div class="business-left">
+<img src="${n.portada}">
 </div>
 
-<div class="business-content">
-
+<div class="business-right">
 <span class="status ${abierto?"open":"closed"}">
 ${abierto?"🟢 Abierto":"🔴 Cerrado"}
 </span>
@@ -179,63 +221,150 @@ ${n.nuevo?"<span class='nuevo'>🆕 Nuevo</span>":""}
 
 <p>${n.descripcion}</p>
 
-<div class="map" id="map-${n.id}"></div>
-
 <button class="profile-btn" onclick="openModal(${n.id})">
 Ver perfil →
 </button>
 
 </div>
+
+<div class="card-map" id="map-${n.id}"></div>
 `;
 
-fragment.appendChild(card);
-
-const imageContainer=card.querySelector(".business-image");
-setupImageRotation(imageContainer);
+container.appendChild(card);
 
 setTimeout(()=>{
-const map=L.map(`map-${n.id}`).setView([n.lat,n.lng],14);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
-L.marker([n.lat,n.lng]).addTo(map);
-},200);
+
+let cardMap = L.map(`map-${n.id}`, {
+attributionControl:false,
+zoomControl:false,
+dragging:false,
+scrollWheelZoom:false,
+doubleClickZoom:false,
+boxZoom:false,
+keyboard:false
+}).setView([n.lat, n.lng], 15);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
+.addTo(cardMap);
+
+L.marker([n.lat, n.lng]).addTo(cardMap);
+
+cardMaps.push(cardMap);
+
+},100);
 
 });
 
-container.appendChild(fragment);
 }
 
-function openModal(id){
-let n=negocios.find(x=>x.id===id);
+/* ================= MODAL ================= */
 
-document.getElementById("modalBody").innerHTML=`
+let currentImages = [];
+let currentIndex = 0;
+
+function openModal(id){
+
+let n = negocios.find(x=>x.id===id);
+
+currentImages = n.galeria;
+currentIndex = 0;
+
+modalBody.innerHTML=`
 <div class="profile-header">
-<img src="${n.imagenes[0]}">
+<img src="${n.portada}">
 <h2>${n.nombre}</h2>
 <p>${renderStars(n.rating)}</p>
 </div>
 
-<p style="margin-bottom:15px;"><strong>Categoría:</strong> ${n.categoria}</p>
-<p style="margin-bottom:20px;"><strong>Horario:</strong> ${n.abre}:00 - ${n.cierra}:00</p>
-<p style="margin-bottom:25px;">${n.descripcion}</p>
+<p><strong>Categoría:</strong> ${n.categoria}</p>
+<p><strong>Horario:</strong> ${n.abre}:00 - ${n.cierra}:00</p>
+<p>${n.descripcion}</p>
 
-<div id="profile-map" style="height:350px;margin-bottom:25px;"></div>
+<div id="map" style="height:300px;margin:20px 0;border-radius:10px;"></div>
 
 <div class="gallery">
-${n.imagenes.map(img=>`<img src="${img}">`).join("")}
+${n.galeria.map((img,i)=>`
+<img src="${img}" data-index="${i}">
+`).join("")}
 </div>
 `;
 
-document.getElementById("modal").style.display="flex";
+modal.style.display="flex";
+document.body.classList.add("modal-open");
 
 setTimeout(()=>{
-const map=L.map("profile-map").setView([n.lat,n.lng],16);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
-L.marker([n.lat,n.lng]).addTo(map);
-},200);
+
+if(map){
+map.remove();
 }
 
-document.getElementById("closeModal").onclick=()=>{
+map = L.map("map").setView([n.lat, n.lng], 16);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
+.addTo(map);
+
+marker = L.marker([n.lat, n.lng])
+.addTo(map)
+.bindPopup(n.nombre)
+.openPopup();
+
+},100);
+
+}
+
+/* ================= CIERRE ================= */
+
+document.getElementById("closeModal").onclick = ()=>{
 modal.style.display="none";
+document.body.classList.remove("modal-open");
 };
+
+document.getElementById("closeViewer").onclick = ()=>{
+imageViewer.style.display="none";
+};
+
+/* ================= VISOR ================= */
+
+function openViewer(index){
+currentIndex = index;
+viewerImg.src = currentImages[currentIndex];
+imageViewer.style.display="flex";
+}
+
+function changeImage(direction){
+currentIndex += direction;
+
+if(currentIndex < 0) currentIndex = currentImages.length - 1;
+if(currentIndex >= currentImages.length) currentIndex = 0;
+
+viewerImg.src = currentImages[currentIndex];
+}
+
+document.addEventListener("click", function(e){
+if(e.target.closest(".gallery img")){
+let index = parseInt(e.target.dataset.index);
+openViewer(index);
+}
+});
+
+prevBtn.onclick = ()=> changeImage(-1);
+nextBtn.onclick = ()=> changeImage(1);
+
+document.addEventListener("keydown", function(e){
+if(imageViewer.style.display === "flex"){
+if(e.key === "ArrowRight") changeImage(1);
+if(e.key === "ArrowLeft") changeImage(-1);
+if(e.key === "Escape") imageViewer.style.display="none";
+}
+});
+
+/* ================= EVENTOS ================= */
+
+searchInput.addEventListener("input", renderBusinesses);
+categoryFilter.addEventListener("change", renderBusinesses);
+ratingFilter.addEventListener("change", renderBusinesses);
+sortFilter.addEventListener("change", renderBusinesses);
+
+/* ================= INIT ================= */
 
 renderBusinesses();
