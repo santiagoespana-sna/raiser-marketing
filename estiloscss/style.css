@@ -96,8 +96,11 @@
 
 
 .logo {
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
     color: #f28c28;
     font-weight: 700;
