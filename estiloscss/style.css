@@ -1129,8 +1129,8 @@
 }
 
 .footer-social a:hover{
-    background: #000000;
-    color: #00000011;
+    background: #d2cfcf3f;
+    color: #c62b2b11;
     transform: translateY(-3px);
 }
 
