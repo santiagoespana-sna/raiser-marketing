@@ -180,7 +180,7 @@ function irAlMapa() {
     localStorage.setItem("xp", xpActual + 200);
 
     // 4. REDIRIGIR
-    window.location.href = "../juego-biznova/mapa_niveles/index.html";
+    window.location.href = "/juego-biznova/mapa_niveles/index.html";
 }
 
 // --- IMPORTANTE: Cambia también la función de validación para que no sea infinito ---

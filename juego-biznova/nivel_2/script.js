@@ -111,7 +111,7 @@ function finalizarNivel2Exitoso(aciertos) {
     }
 
     alert("¡Felicidades! Estrategia Pro completada. Nivel 3 desbloqueado.");
-    window.location.href = "../juego-biznova/mapa_niveles/index.html";
+    window.location.href = "/juego-biznova/mapa_niveles/index.html";
 }
 
 // Botones de control
