@@ -93,12 +93,12 @@
     gap: 8px;
     color: #f28c28;
     font-weight: 700;
-    transform: translateX(-95px);
+    transform: translateX(-250px);
 }
 
 .logo img {
-    width: 70px;
-    height: auto;
+    width: 150px;
+    
 }
 
 .logo span {
@@ -135,7 +135,7 @@
 .header-content {
 
     background-color: #f28c28;
-    background-image: url("../imagenes/header.png");
+    background-image: url("../imagenes/equipo.png");
     background-repeat: no-repeat;
     background-position: 85% 10%;
     /* imagen a la derecha */

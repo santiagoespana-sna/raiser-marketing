@@ -92,21 +92,14 @@ body {
     gap: 8px;
     color: #f28c28;
     font-weight: 700;
-    transform: translateX(-195px);
-    /* más a la izquierda */
+    transform: translateX(-350px);
 }
 
 .logo img {
-    width: 70px;
-    height: auto;
+    width: 150px;
+    
 }
 
-.logo span {
-    color: #F28C28;
-    font-size: 20px;
-    font-weight: 800;
-    margin-left: 10px;
-}
 
 /* ================= HERO CENTRADO ================= */
 
