@@ -180,7 +180,7 @@
 .hero-text h1{
     font-size: 75px;
     color: #fff;
-    font-family: 'Brush Script MT', cursive;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .hero-text p{
@@ -1127,8 +1127,8 @@
 }
 
 .footer-social a:hover{
-    background: #FFFDFC;
-    color: #00ff08;
+    background: #000000;
+    color: #00000011;
     transform: translateY(-3px);
 }
 
