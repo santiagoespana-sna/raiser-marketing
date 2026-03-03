@@ -1,42 +1,157 @@
-/* Tipografía base */
-body {
-    font-family: 'Inter', sans-serif;
+* {
     margin: 0;
-    overflow-x: hidden;
-}
-text-white {
-    --tw-text-opacity: 1;
-    color: black;}
-
-/* Animación de fondo degradado naranja */
-.bg-animated-gradient {
-    background: linear-gradient(-45deg, #ff4d00, #ff8c00, #ffb347, #ff4d00);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+body {
+    min-height: 100vh;
+    background-color: #f97316; /* naranja */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Contenedor de las ondas blancas de fondo */
-.wave-container {
-    position: absolute;
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-container img {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 0;
-    opacity: 0.4;
+    object-fit: cover;
 }
 
-/* Efecto Glassmorphism para la tarjeta */
-.glass-card {
-    background: rgba(226, 106, 7, 0.979);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* MAIN */
+/* boton */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registro-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.btn-volver {
+    display: inline-block;
+    background-color: white;
+    color: #f97316;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #f97316;
+    color: white;
+    transform: translateY(-2px);
+}
+/* TITULO */
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #f97316;
+    outline: none;
+}
+
+/* BOTON */
+
+.btn-registrar {
+    padding: 14px;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-registrar:hover {
+    background-color: #ea580c;
+}
+
+/* LINK LOGIN */
+
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #f97316;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }
