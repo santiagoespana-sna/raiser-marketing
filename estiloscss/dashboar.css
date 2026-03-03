@@ -452,7 +452,7 @@ table button:hover{
 
 .sidebar{
     width: 220px;
-    background: #111827;
+    background: black;
     color: white;
     padding: 20px;
     min-height: 100vh;
