@@ -1,0 +1,67 @@
+.laptop-screen {
+    width: 480px;
+    height: 300px;
+}
+
+.slot {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.option-card {
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+
+.option-card.selected {
+    border-color: #f97316;
+    background-color: #fff7ed;
+    transform: translateY(-5px);
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+        .laptop-screen {
+            width: 400px;
+            height: 260px;
+            transition: all 0.5s ease;
+        }
+
+        .slot {
+            transition: all 0.4s ease;
+            border-width: 2px;
+        }
+
+        .selected {
+            border-color: #f97316 !important;
+            background-color: #fff7ed !important;
+            transform: scale(1.02);
+        }
+
+        .slot-active {
+            border-color: #f97316;
+            background-color: rgba(249, 115, 22, 0.1);
+            border-style: dashed;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }

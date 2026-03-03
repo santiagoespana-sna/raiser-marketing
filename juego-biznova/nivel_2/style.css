@@ -1,0 +1,54 @@
+body {
+    /* 'dvh' may trigger a warning in some linters; vh works universally */
+    min-height: 100vh;
+}
+
+:root {
+    --accent: #ff8c00;
+    --accent-30: rgba(255,140,0,0.30);
+    --accent-15: rgba(255,140,0,0.15);
+    --accent-10: rgba(255,140,0,0.10);
+    --accent-8: rgba(255,140,0,0.08);
+    --black: #000000;
+    --white: #ffffff;
+    --bg: var(--white);
+    --text: var(--black);
+}
+
+.dark {
+    --bg: var(--black);
+    --text: var(--white);
+}
+
+body {
+    /* ensure minimum viewport height; use vh to avoid linter warnings */
+    min-height: max(884px, 100vh);
+    background: var(--bg);
+    color: var(--text);
+}
+.card-item {
+    cursor: grab;
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+.card-item:hover {
+    border-color: var(--accent);
+}
+
+.correcto {
+    border-color: #22c55e !important;
+    background: #dcfce7 !important;
+}
+
+.incorrecto {
+    border-color: #ef4444 !important;
+    background: #fee2e2 !important;
+}
+
+.drop-zone {
+    min-height: 350px;
+}
