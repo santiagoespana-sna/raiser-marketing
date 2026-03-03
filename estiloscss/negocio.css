@@ -1,5 +1,3 @@
-/* ================= RESET ================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +10,25 @@ body {
     color: #111;
 }
 
-/* ================= SECCIÓN ================= */
+/* */
+.top-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #ff6a00;
+    /* tu naranja */
+    z-index: 9999;
+    transition: width 0.4s ease;
+}
 
+/* animación cuando está activa */
+.top-loader.active {
+    width: 100%;
+}
+
+/* ================= SECCIÓN ================= */
 .business-page {
     padding: 80px 0;
 }
@@ -48,12 +63,11 @@ body {
 }
 
 /* ================= FILTROS ================= */
-
 .top-bar {
     background: #fff;
     padding: 25px;
     border-radius: 22px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 18px;
@@ -77,11 +91,10 @@ body {
     border-color: #FF8C00;
     background: #fff;
     outline: none;
-    box-shadow: 0 0 0 4px rgba(255,140,0,0.15);
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.15);
 }
 
 /* ================= TARJETA ================= */
-
 .business-card {
     display: flex;
     align-items: stretch;
@@ -101,7 +114,6 @@ body {
 }
 
 /* ===== IMAGEN IZQUIERDA ===== */
-
 .business-left {
     width: 260px;
     flex-shrink: 0;
@@ -115,7 +127,6 @@ body {
 }
 
 /* ===== CONTENIDO CENTRO ===== */
-
 .business-right {
     flex: 1;
     display: flex;
@@ -129,7 +140,6 @@ body {
 }
 
 /* ===== ESTADO ===== */
-
 .status {
     position: absolute;
     top: 0;
@@ -140,11 +150,15 @@ body {
     color: #fff;
 }
 
-.open { background: #FF8C00; }
-.closed { background: #000; }
+.open {
+    background: #FF8C00;
+}
+
+.closed {
+    background: #000;
+}
 
 /* ===== BADGES ===== */
-
 .badges span {
     background: #f1f1f1;
     padding: 4px 10px;
@@ -164,7 +178,6 @@ body {
 }
 
 /* ===== BOTÓN PERFIL ===== */
-
 .profile-btn {
     margin-top: 10px;
     padding: 12px 25px;
@@ -184,7 +197,6 @@ body {
 }
 
 /* ===== MAPA DERECHA ===== */
-
 .card-map {
     width: 260px;
     height: 220px;
@@ -199,12 +211,11 @@ body {
 }
 
 /* ================= MODAL ================= */
-
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -240,7 +251,6 @@ body {
 }
 
 /* ================= GALERÍA ================= */
-
 .gallery {
     display: flex;
     gap: 10px;
@@ -261,9 +271,7 @@ body {
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 900px) {
-
     .business-card {
         flex-direction: column;
     }
@@ -291,7 +299,8 @@ body {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 9999; /* MUY ALTO */
+    z-index: 9999;
+    /* MUY ALTO */
     justify-content: center;
     align-items: center;
 }
@@ -303,7 +312,8 @@ body {
     border-radius: 20px;
     padding: 30px;
     position: relative;
-    z-index: 10000; /* MÁS ALTO */
+    z-index: 10000;
+    /* MÁS ALTO */
 }
 
 /* ===== BAJAR Z-INDEX DE LEAFLET ===== */
@@ -322,19 +332,22 @@ body.modal-open {
 }
 
 /* ===== GALERÍA DENTRO DEL MODAL ===== */
-
 .gallery {
     display: flex;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap; /* si no caben, bajan */
+    flex-wrap: wrap;
+    /* si no caben, bajan */
 }
 
 /* 🔥 ESTA ES LA CLAVE */
 .gallery img {
-    width: 120px;        /* tamaño fijo */
-    height: 90px;        /* altura fija */
-    object-fit: cover;   /* recorta sin deformar */
+    width: 120px;
+    /* tamaño fijo */
+    height: 90px;
+    /* altura fija */
+    object-fit: cover;
+    /* recorta sin deformar */
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
@@ -352,25 +365,120 @@ body.modal-open {
 }
 
 /* ===== IMAGEN PRINCIPAL DEL MODAL ===== */
-
-.profile-header img{
+.profile-header img {
     width: 100%;
-    height: 250px;          /* 🔥 altura fija */
-    object-fit: cover;      /* recorta sin deformar */
+    height: 250px;
+    /* 🔥 altura fija */
+    object-fit: cover;
+    /* recorta sin deformar */
     border-radius: 15px;
     display: block;
 }
 
 /* ===== LOGO SOLO ARRIBA IZQUIERDA ===== */
-
-.business-header{
+.business-header {
     position: absolute;
     top: 15px;
     left: 20px;
 }
 
-.logo{
-    width: 80px;   /* 🔥 MUCHO más pequeño */
+.logo {
+    width: 80px;
+    /* 🔥 MUCHO más pequeño */
     height: auto;
     display: block;
+}
+
+/* ================= SIDE PANEL ================= */
+/* ================= MODAL AGREGAR NEGOCIO ================= */
+/* ================= MODAL AGREGAR NEGOCIO ================= */
+.add-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 20000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.add-modal-content {
+    background: #fff;
+    width: 95%;
+    max-width: 1000px;
+    border-radius: 25px;
+    padding: 40px;
+    position: relative;
+    animation: fadeInScale 0.4s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes fadeInScale {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.add-modal-content input,
+.add-modal-content select,
+.add-modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.add-modal-content textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.save-btn {
+    margin-top: 30px;
+    background: #FF8C00;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.save-btn:hover {
+    background: #e67600;
+    transform: scale(1.02);
+}
+
+.mini-map {
+    height: 250px;
+    border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
 }

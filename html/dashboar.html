@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard </title>
+    <link rel="stylesheet" href="/estiloscss/dashboar.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">MiCRM</h2>
+
+            <ul>
+                <li class="active" data-section="dashboard">Dashboard</li>
+                <li data-section="contactos">Contactos</li>
+                <li data-section="companies">Empresas</li>
+                <li data-section="Negocios">Negocios</li>
+                <li data-section="Reportes">Reportes</li>
+                <li data-section="Configuración">Configuración</li>
+            </ul>
+
+            <!-- 👇 Logout abajo del todo -->
+            <div class="logout-container">
+                <button onclick="logout()" class="logout-btn">
+                    Cerrar sesión
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="main">
+            <div class="topbar">
+                <input type="text" placeholder="Buscar...">
+                <div class="account">👤 Cuenta</div>
+            </div>
+
+            <div id="content"></div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="/archivosjs/dashboar.js"></script>
+
+</body>
+
+</html>

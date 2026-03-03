@@ -1,31 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
 
-    const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    var elements = document.querySelectorAll(
+        ".team h2, .team .txt-p, .team-card, .team-extra-content"
+    );
 
-    const observer = new IntersectionObserver(function (entries) {
+    if (!elements.length) return;
 
-        entries.forEach(function (entry) {
+    var observer = new IntersectionObserver(function(entries) {
+
+        entries.forEach(function(entry) {
 
             if (entry.isIntersecting) {
-
-                // Cuando aparece en pantalla
-                entry.target.classList.add("active");
-
+                entry.target.classList.add("team-active");
             } else {
-
-                // Cuando sale de pantalla
-                entry.target.classList.remove("active");
-
+                entry.target.classList.remove("team-active");
             }
 
         });
 
     }, {
-        threshold: 0.2
+        threshold: 0.1   // 🔥 bajamos el threshold
     });
 
-    elements.forEach(function (el) {
+    elements.forEach(function(el) {
         observer.observe(el);
+
+        // 🔥 FORZAR que aparezca si ya está visible
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add("team-active");
+        }
     });
 
 });
