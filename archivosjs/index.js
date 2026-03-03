@@ -51,9 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/**
- * RAISE MARKETING - SCRIPT DE FLUIDEZ GLOBAL
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     
