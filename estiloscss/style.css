@@ -95,17 +95,19 @@
 /* ================= LOGO ================= */
 
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 8px;
     color: #f28c28;
     font-weight: 700;
-    transform: translateX(-95px);
+    transform: translateX(-250px);
 }
+
+
+
 .logo img {
-    width: 70px;
-    height: auto;
+    width: 150px;
 }
 
 .logo span {
