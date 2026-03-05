@@ -42,8 +42,10 @@ body {
     color: white;
 }
 
-.btn-home i {
-    font-size: 18px;
+.login-container {
+    width: 150%;
+    max-width: 500px;
+    padding: 40px;
 }
 
 .container {
