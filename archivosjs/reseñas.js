@@ -5,7 +5,7 @@ let rating = 0;
 // Crear las estrellas dinámicamente
 for (let i = 0; i < totalStars; i++) {
   const star = document.createElement('span');
-  star.className = "material-symbols-outlined cursor-pointer hover:scale-110 transition-transform";
+  star.clsassName = "material-symbols-outlined cursor-pointer hover:scale-110 transition-transform";
   star.textContent = "star_outline"; // por defecto vacía
   ratingContainer.appendChild(star);
 
