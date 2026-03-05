@@ -12,12 +12,13 @@
 
 <body>
 
+    <div class="top-loader"></div>
+
     <section class="business-page">
 
-        <!-- 🔥 HEADER FUERA DEL CONTAINER -->
         <div class="business-header">
             <a href="index.html" class="logo-link">
-                <img src="../imagenes/image.png" alt="Logo" class="logo">
+                <img src="../imagenes/logo-removebg-preview.png" alt="Logo" class="logo">
             </a>
         </div>
 
@@ -27,9 +28,7 @@
                 Descubre los mejores restaurantes, hoteles y tiendas mejor valoradas.
             </p>
         </div>
-        </div>
 
-        <!-- 🔥 CONTENIDO CENTRADO -->
         <div class="container">
 
             <div class="top-bar">
@@ -65,15 +64,23 @@
                     </select>
                 </div>
 
+                <div class="filter-box">
+                    <button id="openAddModal" class="profile-btn">
+                        + Agregar Negocio
+                    </button>
+                </div>
+
             </div>
 
             <p id="resultCount" class="result-count"></p>
-
             <div id="businessContainer" class="business-grid"></div>
 
         </div>
     </section>
 
+    <!-- ========================= -->
+    <!-- MODAL PERFIL EXISTENTE -->
+    <!-- ========================= -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <button id="closeModal" class="modal-close">&times;</button>
@@ -81,11 +88,84 @@
         </div>
     </div>
 
+    <!-- ========================= -->
+    <!-- VISOR DE IMAGEN -->
+    <!-- ========================= -->
     <div id="imageViewer" class="image-viewer">
         <button id="closeViewer" class="viewer-close">&times;</button>
         <button id="prevImg" class="viewer-nav left">❮</button>
         <img id="viewerImg">
         <button id="nextImg" class="viewer-nav right">❯</button>
+    </div>
+
+    <!-- ========================= -->
+    <!-- NUEVO MODAL CENTRADO -->
+    <!-- ========================= -->
+    <div id="addBusinessModal" class="add-modal">
+
+        <div class="add-modal-content">
+
+            <button id="closeAddBusiness" class="modal-close">&times;</button>
+
+            <h2>Registrar Nuevo Negocio</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" id="newNombre">
+                </div>
+
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <select id="newCategoria">
+                        <option value="comida">Comida</option>
+                        <option value="hotel">Hotel</option>
+                        <option value="tienda">Tienda</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Rating</label>
+                    <input type="number" id="newRating" step="0.1" min="1" max="5">
+                </div>
+
+                <div class="form-group">
+                    <label>Horario</label>
+                    <div class="double-input">
+                        <input type="number" id="newAbre" placeholder="Abre">
+                        <input type="number" id="newCierra" placeholder="Cierra">
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <label>Ubicación</label>
+                    <div id="miniMap" class="mini-map"></div>
+                </div>
+
+                <!-- 🔥 CAMBIO IMPORTANTE AQUÍ -->
+                <div class="form-group full">
+                    <label>Imágenes del Negocio</label>
+                    <small style="display:block;margin-bottom:8px;color:#777;">
+                        Puedes seleccionar múltiples imágenes.
+                        La primera será la portada automáticamente.
+                    </small>
+                    <input type="file" id="newImagesFile" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group full">
+                    <label>Descripción</label>
+                    <textarea id="newDescripcion"></textarea>
+                </div>
+
+            </div>
+
+            <button id="saveBusinessBtn" class="save-btn">
+                Crear Negocio
+            </button>
+
+        </div>
+
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -94,3 +174,5 @@
 </body>
 
 </html>
+
+<!--  -->

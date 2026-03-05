@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../estiloscss/login.css">
 </head>
+
 <body>
 
     <!-- Botón de inicio -->
     <a href="../html/index.html" class="home-btn">← Atras</a>
 
     <div class="login-container">
-        <form action="login.php" method="POST" class="login-form">
+        <form onsubmit="login(event)" class="login-form">
             <h2>Iniciar Sesión</h2>
 
             <div class="input-group">
@@ -31,6 +33,7 @@
             </p>
         </form>
     </div>
-
+    <script src="/archivosjs/login.js"></script>
 </body>
+
 </html>

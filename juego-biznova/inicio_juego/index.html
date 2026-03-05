@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Biznova Corp</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="/juego-biznova/inicio_juego/style.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex items-center justify-center p-6 overflow-hidden relative">
+
+    <div class="bg-orange-500 absolute inset-0 pattern-bg opacity-50"></div>
+    <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <header
+        class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-white/0 dark:bg-white backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+       
+        <nav class="flex items-center space-x-4">
+            <a href="/html/index.html"
+                class="flex items-center gap-2 bg-slate-100 hover:bg-orange-100 text-slate-700 hover:text-orange-600 px-4 py-2 rounded-xl transition-all font-bold text-sm border border-slate-200">
+                <span class="material-icons text-sm">home</span>
+                INICIO
+            </a>
+        </nav>
+        </div>
+    </header>
+    <main
+        class="w-full max-w-sm relative flex flex-col items-center justify-between min-h-[50vh] text-center z-10 card">
+        <div class="mt-8 flex flex-col items-center space-y-4">
+            <div
+                class="w-20 h-20 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center p-2 shadow-xl ring-4 ring-primary/10">
+                <img alt="Biznova Corp Logo" class="w-full h-full object-contain"
+                    src="/juego-biznova/img/WhatsApp Image 2026-02-28 at 7.03.12 PM.jpeg"
+                    onerror="this.src='https://placehold.co/100x100/ff8c00/ffffff?text=B'">
+            </div>
+            <div>
+                <h2 class="text-lg font-bold tracking-tight text-slate-800  uppercase">Biznova Corp</h2>
+                <p class="text-[10px] font-bold text-orange-600  tracking-[0.25em] mt-1">
+                    SUBE DE NIVEL TU MARCA
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-1 flex flex-col items-center justify-center px-4">
+            <h1 class="text-4xl font-extrabold text-slate-900  mb-4 tracking-tight">¡Bienvenidos!</h1>
+            <p class="text-slate-600 dark:text-slate-600 leading-relaxed max-w-[280px]">
+                Tu camino al éxito digital comienza aquí. Aprende, crece y domina en el mercado.
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-4 my-8 w-full border-y border-[#ff8c00] py-6">
+            <div class="flex flex-col items-center text-center">
+                <span class="material-icons text-primary mb-1">visibility</span>
+                <span class="text-[10px] font-bold text-slate-700  uppercase">Visibilidad</span>
+            </div>
+            <div class="flex flex-col items-center text-center border-x border-[#ff8c00]">
+                <span class="material-icons text-primary mb-1">trending_up</span>
+                <span class="text-[10px] font-bold text-slate-700  uppercase">Crecimiento</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <span class="material-icons text-primary mb-1">groups</span>
+                <span class="text-[10px] font-bold text-slate-700  uppercase">Conexión</span>
+            </div>
+        </div>
+        <div class="w-full space-y-8 mb-8">
+            <button id="btnEmpezar"
+                class="group relative w-full bg-primary hover:bg-[#ff7a00] text-white font-bold py-5 rounded-2xl ios-shadow transition-all duration-300 active:scale-[0.98] flex items-center justify-center space-x-2">
+                <span class="text-lg tracking-wide uppercase">Empezar Juego</span>
+                <span class="material-icons text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+            <footer class="text-[10px] text-slate-400  font-medium uppercase tracking-widest">
+                © 2025 Biznova Corp - Todos los derechos reservados.
+            </footer>
+        </div>
+    </main>
+
+
+    <script src="/juego-biznova/inicio_juego/script.js"></script>
+</body>
+
+</html>

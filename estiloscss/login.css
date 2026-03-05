@@ -7,7 +7,11 @@
 
 body {
     height: 100vh;
+<<<<<<< ours
     /* background: linear-gradient(135deg, #ff8c00, #ffd700); */
+=======
+    background: linear-gradient(135deg, #ff8c00, #ffb515);
+>>>>>>> theirs
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +22,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
+<<<<<<< ours
     background: linear-gradient(135deg, #ff8c00, #ffa733);
     color: #fff;
     font-size: 15px;
@@ -28,10 +33,21 @@ body {
     letter-spacing: 0.5px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+=======
+    background: #ffffff;
+    color: #ff8c00;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 199, 31, 0.2);
+    transition: 0.3s;
+>>>>>>> theirs
     z-index: 1000;
 }
 
 .home-btn:hover {
+<<<<<<< ours
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     background: linear-gradient(135deg, #ffa733, #ff8c00);
@@ -45,14 +61,28 @@ body {
     width: 300%;
     max-width: 450px;
     padding: 20px;
+=======
+    background: #ff8c00;
+    color: #ffffff;
+}
+
+.login-container {
+    width: 190%;
+    max-width: 500px;
+    padding: 40px;
+>>>>>>> theirs
 }
 
 .login-form {
     background: #ffffff;
+<<<<<<< ours
     padding: 90px 40px;
     /* más altura */
+=======
+    padding: 80px 30px;
+>>>>>>> theirs
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(255, 195, 15, 0.2);
 }
 
 .login-form h2 {
@@ -69,15 +99,22 @@ body {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
-    color: #555;
+    color: #ff8c00;
 }
 
 .input-group input {
     width: 100%;
+<<<<<<< ours
     padding: 14px;
     border-radius: 5px;
+=======
+
+    
+    padding: 15px;
+    border-radius: 10px;
+>>>>>>> theirs
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 30px;
 }
 
 .input-group input:focus {
@@ -85,6 +122,7 @@ body {
     outline: none;
 }
 
+<<<<<<< ours
 .btn-login{
     width:100%;
     padding:16px;
@@ -99,6 +137,22 @@ body {
 
 .btn-login:hover{
     background:linear-gradient(135deg,#ffa733,#ff8c00);
+=======
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff8c00;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ff8c00;
+>>>>>>> theirs
 }
 
 .registro-link {

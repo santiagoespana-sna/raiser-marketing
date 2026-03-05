@@ -51,9 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/**
- * RAISE MARKETING - SCRIPT DE FLUIDEZ GLOBAL
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -96,4 +94,62 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     console.log("🚀 Fluidez optimizada: Lazy loading activo y eventos suavizados.");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loader = document.querySelector(".top-loader");
+
+    if (!loader) return;
+
+    document.querySelectorAll("a").forEach(link => {
+
+        const isInternal =
+            link.hostname === window.location.hostname &&
+            !link.hasAttribute("target") &&
+            !link.href.includes("#");
+
+        if (isInternal) {
+            link.addEventListener("click", (e) => {
+
+                e.preventDefault();
+
+                loader.classList.add("active");
+
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 400); // duración corta y elegante
+            });
+        }
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loader = document.querySelector(".top-loader");
+
+    if (!loader) return;
+
+    document.querySelectorAll("a").forEach(link => {
+
+        const isInternal =
+            link.hostname === window.location.hostname &&
+            !link.hasAttribute("target") &&
+            !link.href.includes("#");
+
+        if (isInternal) {
+            link.addEventListener("click", (e) => {
+
+                e.preventDefault();
+
+                loader.classList.add("active");
+
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 400); // duración corta y elegante
+            });
+        }
+    });
+
 });
