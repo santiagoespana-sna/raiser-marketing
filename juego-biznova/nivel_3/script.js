@@ -154,7 +154,7 @@ function mostrarBotonFinal() {
         <div style="text-align: center; padding: 20px; animation: fadeIn 0.5s;">
             <div style="font-size: 50px; color: #22c55e; margin-bottom: 10px;">✅</div>
             <h2 style="font-weight: 900; color: #1e293b; margin-bottom: 10px;">¡MISIÓN CUMPLIDA!</h2>
-            <p style="color: #64748b; margin-bottom: 25px;">Has completado la infraestructura de tu negocio con éxito.</p>
+            <p style="color: #64748b; margin-bottom: 25px;">Has completado la estructura de tu negocio con éxito.</p>
             <button onclick="irAlMapa()" 
                 style="background-color: #f97316; color: white; font-weight: bold; padding: 18px 40px; border-radius: 15px; border: none; cursor: pointer; box-shadow: 0 4px 10px rgba(249,115,22,0.3); width: 100%; transition: 0.3s;">
                 VOLVER AL MAPA
@@ -180,7 +180,7 @@ function irAlMapa() {
     localStorage.setItem("xp", xpActual + 200);
 
     // 4. REDIRIGIR
-    window.location.href = "/juego-biznova/mapa_niveles/index.html";
+    window.location.href = "/mapa_niveles/index.html";
 }
 
 // --- IMPORTANTE: Cambia también la función de validación para que no sea infinito ---

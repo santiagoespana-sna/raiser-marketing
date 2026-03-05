@@ -14,10 +14,7 @@
     --text: var(--black);
 }
 
-.dark {
-    --bg: var(--black);
-    --text: var(--white);
-}
+
 
 .grid-bg {
     background-image: radial-gradient(circle, var(--accent-10) 1px, transparent 1px);
@@ -30,4 +27,30 @@ body {
     color: var(--text);
 }
 
-/* Puedes agregar aquí más reglas si deseas reducir la dependencia de Tailwind */
+.btn-home {
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e08728;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.btn-home:hover {
+    background-color: #e49d1a;
+    transform: scale(1.05);
+    color: white;
+}
+
+.btn-home i {
+    font-size: 18px;
+}

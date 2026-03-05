@@ -1,3 +1,141 @@
+<<<<<<< HEAD
+<<<<<<< ours
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    /* background: linear-gradient(135deg,#ff8c00,#ffa733); */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* botón atrás */
+
+.home-btn{
+    position: fixed;
+    top:20px;
+    left:20px;
+    background: linear-gradient(135deg,#ff8c00,#ffb347);
+    color:#fff;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:500;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.home-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* contenedor */
+
+.login-container{
+    width:100%;
+    max-width:420px;
+    padding:20px;
+}
+
+/* card */
+
+.login-form{
+    background:#fff;
+    padding:70px 40px;
+    border-radius:12px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+    animation: aparecer 0.6s ease;
+}
+
+.login-form h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+    font-size:28px;
+}
+
+/* inputs */
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+    color:#555;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+.input-group input:focus{
+    border-color:#ff8c00;
+    outline:none;
+}
+
+/* botón */
+
+.btn-login{
+    width:100%;
+    padding:16px;
+    border:none;
+    background:linear-gradient(135deg,#ff8c00,#ffa733);
+    color:#fff;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-login:hover{
+    background:linear-gradient(135deg,#ffa733,#ff8c00);
+}
+
+/* link */
+
+.registro-link{
+    text-align:center;
+    margin-top:18px;
+    font-size:14px;
+}
+
+.registro-link a{
+    color:#ff8c00;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.registro-link a:hover{
+    text-decoration:underline;
+}
+
+/* animación */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+=======
 * {
     margin: 0;
     padding: 0;
@@ -5,45 +143,44 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+=======
+/* Tipografía base */
+>>>>>>> 39e5d54b05d4484a5d59c762799cb494168ce484
 body {
-    min-height: 100vh;
-    background-color: #f97316; /* naranja */
-    display: flex;
-    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+text-white {
+    --tw-text-opacity: 1;
+    color: black;}
+
+/* Animación de fondo degradado naranja */
+.bg-animated-gradient {
+    background: linear-gradient(-45deg, #ff4d00, #ff8c00, #ffb347, #ff4d00);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
-/* NAVBAR */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.back-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.logo-container {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.logo-container img {
+/* Contenedor de las ondas blancas de fondo */
+.wave-container {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.4;
 }
 
+<<<<<<< HEAD
 /* MAIN */
 /* boton */
 .main-container {
@@ -154,4 +291,13 @@ body {
 
 .login-link a:hover {
     text-decoration: underline;
+>>>>>>> theirs
+=======
+/* Efecto Glassmorphism para la tarjeta */
+.glass-card {
+    background: rgba(226, 106, 7, 0.979);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+>>>>>>> 39e5d54b05d4484a5d59c762799cb494168ce484
 }

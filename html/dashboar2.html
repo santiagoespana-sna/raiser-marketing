@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dashboard Pro - Final</title>
+    <link rel="stylesheet" href="../estiloscss/dashboar2.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>MiProyecto</h2>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active" data-section="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-section="contactos">Contactos</a></li>
+                    <li><a href="#" data-section="empresas">Empresas</a></li>
+                    <li><a href="#" data-section="negocios">Negocios</a></li>
+                    <li><a href="#" data-section="reportes">Reportes</a></li>
+                    <li><a href="#" data-section="configuracion">Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="logout" onclick="location.reload()">Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1 id="main-title">Dashboard</h1>
+            </header>
+
+            <section id="section-dashboard" class="view-section">
+                <div class="filter-bar">
+                    <select id="filter-periodo">
+                        <option value="all">Todo el tiempo</option>
+                        <option value="month">Este Mes</option>
+                    </select>
+                    <button class="btn-secondary" onclick="window.print()">📥 Imprimir Vista</button>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Contactos Totales</h3>
+                        <p class="number" id="dash-total-contactos">0</p>
+                        <span class="trend positive">↑ Activo</span>
+                    </div>
+                    <div class="card">
+                        <h3>Pipeline Total</h3>
+                        <p class="number" id="dash-total-ventas">$0</p>
+                        <span class="trend">Monto en negociación</span>
+                    </div>
+                    <div class="card">
+                        <h3>Ticket Promedio</h3>
+                        <p class="number" id="dash-ticket-promedio">$0</p>
+                        <span class="trend">Valor por negocio</span>
+                    </div>
+                    <div class="card alert-card" id="alert-container">
+                        <h3>Alertas de Cierre</h3>
+                        <p class="number" id="dash-alertas-count">0</p>
+                        <span id="alert-text">Próximos 7 días</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-charts">
+                    <div class="report-card">
+                        <h3>Origen de Prospectos</h3>
+                        <div id="chart-origen" class="pie-chart"></div>
+                        <div id="origen-legend" class="pie-legend"></div>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>Progreso Meta Mensual</h3>
+                        <div class="gauge-container">
+                            <div class="gauge-bar">
+                                <div id="gauge-fill" class="gauge-fill" style="width: 0%;"></div>
+                            </div>
+                            <p id="gauge-text">0% de la meta ($10k)</p>
+                        </div>
+                        <div class="bar-chart" id="bar-sectores" style="margin-top: 20px;"></div>
+                    </div>
+                </div>
+
+                <div class="table-container" style="margin-top: 20px;">
+                    <h3>Alertas de Negocios Críticos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Negocio</th>
+                                <th>Cliente</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-alertas"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="section-reportes" class="view-section" style="display: none;">
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>Eficiencia de Conversión</h3>
+                        <div id="report-pie-conversion" class="pie-chart"></div>
+                        <ul class="pie-legend" id="report-conversion-legend"></ul>
+                    </div>
+                    <div class="report-card">
+                        <h3>Valor por Cliente</h3>
+                        <div class="bar-chart" id="report-bar-empresas" style="height: 150px; margin-top: 20px;"></div>
+                    </div>
+                    <div class="report-card" style="grid-column: span 2;">
+                        <h3>Proyección de Crecimiento (+10%)</h3>
+                        <table>
+                            <thead>
+                                <tr><th>Métrica</th><th>Actual</th><th>Proyectado</th><th>Estado</th></tr>
+                            </thead>
+                            <tbody id="report-tabla-proyeccion"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-contactos" class="view-section" style="display: none;">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Listado de Contactos</h2>
+                        <button class="btn-add" onclick="abrirModal('modal-contacto')">+ Nuevo Contacto</button>
+                    </div>
+                    <table>
+                        <thead><tr><th>Nombre</th><th>Empresa</th><th>Cargo</th><th>Origen</th><th>Acción</th></tr></thead>
+                        <tbody id="tabla-contactos-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="section-empresas" class="view-section" style="display: none;">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Directorio de Empresas</h2>
+                        <button class="btn-add" onclick="abrirModal('modal-empresa')">+ Nueva Empresa</button>
+                    </div>
+                    <table>
+                        <thead><tr><th>Empresa</th><th>Sector</th><th>Tamaño</th><th>Estado</th></tr></thead>
+                        <tbody id="tabla-empresas-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="section-negocios" class="view-section" style="display: none;">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Oportunidades</h2>
+                        <button class="btn-add" onclick="abrirModal('modal-negocio')">+ Nuevo Negocio</button>
+                    </div>
+                    <table>
+                        <thead><tr><th>Negocio</th><th>Cliente</th><th>Monto</th><th>Cierre</th></tr></thead>
+                        <tbody id="tabla-negocios-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="section-configuracion" class="view-section" style="display: none;">
+                <div class="report-card">
+                    <h3>Configuración del Sistema</h3>
+                    <p>Gestiona las preferencias de tu Dashboard.</p>
+                    <button class="btn-cancel" onclick="localStorage.clear(); location.reload();" style="margin-top:20px; color:red;">Borrar todos los datos (Reset)</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="modal-contacto" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Nuevo Contacto</h2>
+            <form id="form-contacto">
+                <div class="form-row">
+                    <div class="form-group"><label>Nombre</label><input type="text" id="c-nombre" required></div>
+                    <div class="form-group"><label>Cargo</label><input type="text" id="c-cargo"></div>
+                </div>
+                <div class="form-group"><label>Empresa</label><input type="text" id="c-empresa" required></div>
+                <div class="form-group"><label>Origen</label><input type="text" id="c-origen" placeholder="LinkedIn, Instagram, etc." required></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" onclick="cerrarModal('modal-contacto')">Cancelar</button>
+                    <button type="submit" class="btn-save">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-empresa" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Nueva Empresa</h2>
+            <form id="form-empresa">
+                <div class="form-group"><label>Nombre Empresa</label><input type="text" id="e-nombre" required></div>
+                <div class="form-row">
+                    <div class="form-group"><label>Sector</label><input type="text" id="e-sector" required></div>
+                    <div class="form-group"><label>Tamaño</label><select id="e-tamano"><option>Startup</option><option>Pyme</option><option>Corporativo</option></select></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" onclick="cerrarModal('modal-empresa')">Cancelar</button>
+                    <button type="submit" class="btn-save">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-negocio" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Nuevo Negocio</h2>
+            <form id="form-negocio">
+                <div class="form-group"><label>Título</label><input type="text" id="n-titulo" required></div>
+                <div class="form-row">
+                    <div class="form-group"><label>Cliente</label><input type="text" id="n-cliente" required></div>
+                    <div class="form-group"><label>Monto ($)</label><input type="number" id="n-monto" required></div>
+                </div>
+                <div class="form-group"><label>Fecha Cierre</label><input type="date" id="n-fecha" required></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" onclick="cerrarModal('modal-negocio')">Cancelar</button>
+                    <button type="submit" class="btn-save">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../archivosjs/dashboar2.js"></script>
+</body>
+</html>
