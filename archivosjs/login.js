@@ -2,7 +2,6 @@ const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
-// Solo agregar eventos si los elementos existen en el HTML
 if (registerBtn && loginBtn && container) {
     registerBtn.addEventListener('click', () => {
         container.classList.add("active");
@@ -16,26 +15,30 @@ if (registerBtn && loginBtn && container) {
 function login(event) {
     event.preventDefault();
 
-    // Asegúrate de que estos IDs existan en tu HTML
-    const emailInput = document.getElementById("correo");
-    const passInput = document.getElementById("password");
+    // 1. DEFINIR LAS VARIABLES PRIMERO
+    const emailEl = document.getElementById("correo");
+    const passEl = document.getElementById("password");
 
-    if (!emailInput || !passInput) {
-        console.error("No se encontraron los inputs de login en el HTML");
+    // 2. VERIFICAR QUE EXISTAN
+    if (!emailEl || !passEl) {
+        alert("Error técnico: No se encuentran los campos en el HTML.");
         return;
     }
 
-    const correo = emailInput.value;
-    const password = passInput.value;
+    // 3. OBTENER LOS VALORES
+    const correo = emailEl.value;
+    const password = passEl.value;
 
     const correoCorrecto = "biznova@gmail.com";
-    const passwordCorrecta = "12345678";
+    const passwordCorrecta = "123456";
 
+    // 4. COMPARAR
     if (correo === correoCorrecto && password === passwordCorrecta) {
-
+        console.log("Login exitoso. Redirigiendo...");
         localStorage.setItem("isLogged", "true");
         
-        window.location.href = "dashboard.html";
+        // Verifica que el archivo se llame exactamente así en tu carpeta
+        window.location.href = "dashboar2.html"; 
     } else {
         alert("Correo o contraseña incorrectos");
     }
@@ -59,8 +62,7 @@ function validarRegistro(event) {
 
     if (pass !== passConfirm) {
         alert("Las contraseñas no coinciden.");
-        document.getElementById("regPass").value = "";
-        document.getElementById("regPassConfirm").value = "";
+
         return;
     }
 
