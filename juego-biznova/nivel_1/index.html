@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biznova - Nivel 1</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { primary: "#ff8c00" },
+                    fontFamily: { display: ["Plus Jakarta Sans", "sans-serif"] }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="/juego-biznova/nivel_1/style.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex">
+
+    <!-- SIDEBAR -->
+    <aside
+        class="w-82 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hidden md:flex">
+
+        <div>
+            <div class="flex items-center space-x-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="/juego-biznova/img/WhatsApp Image 2026-02-28 at 7.03.12 PM.jpeg" alt="Logo Biznova" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Biznova Corp</h3>
+                    <p class="text-sm text-slate-400">Nivel 1</p>
+                </div>
+            </div>
+
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Jugador</p>
+
+            <div class="space-y-4 mb-10">
+                <div class="flex items-center space-x-3">
+                    <span class="material-icons-round text-rose-500">favorite</span>
+                    <span>Vidas: <b id="panelVidas">3</b></span>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <span class="material-icons-round text-amber-500">error_outline</span>
+                    <span>Errores: <b id="panelErrores">0</b></span>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <span class="material-icons-round text-emerald-500">bar_chart</span>
+                    <span>Progreso: <b id="panelProgreso">0%</b></span>
+                </div>
+            </div>
+
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Configuración</p>
+
+            <button onclick="toggleDark()" class="mb-4 flex items-center space-x-2 hover:text-primary transition">
+                <span class="material-icons-round">dark_mode</span>
+                <span>Modo Oscuro</span>
+            </button>
+            <button id="abrirAjustes"
+                class="w-full flex items-center space-x-3 p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span class="material-icons-round text-lg text-slate-500">settings</span>
+                <span class="text-sm font-medium">Ajustes</span>
+            </button>
+        </div>
+        <!-- MINI JUEGO -->
+        <div>
+            <div id="miniJuego" class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                <p class="text-[15px] font-bold uppercase tracking-wider text-slate-400 mb-9 ">
+                    Desafío Semanal
+                </p>
+            </div>
+            <div id="miniAhorcado"
+                class="bg-primary/10 dark:bg-primary/15 rounded-2xl p-5 border border-primary dark:border-primary/30 w-full max-w-[290px] transition-all duration-300">
+
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-bold text-primary uppercase tracking-tight">Mini Ahorcado</span>
+
+
+                </div>
+
+                <div class="mb-4">
+                    <p class="text-[10px] text-slate-400 mb-2 uppercase tracking-tight">
+                        Palabra Secreta: Gana preguntas para revelar
+                    </p>
+                    <div id="contenedorPalabra" class="flex gap-1.5 justify-center">
+                        <span class="word-letter">_</span>
+                        <span class="word-letter">_</span>
+                        <span class="word-letter">_</span>
+                        <span class="word-letter">_</span>
+                        <span class="word-letter text-primary">E</span>
+                        <span class="word-letter">_</span>
+                        <span class="word-letter">_</span>
+                        <span class="word-letter">_</span>
+                    </div>
+                </div>
+
+                <div class="space-y-1.5">
+                    <div class="flex justify-between items-center text-[10px] font-medium text-slate-500">
+                        <span>Progreso de revelación</span>
+                        <span id="contadorRevelacion">0/0</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary w-0 rounded-full transition-all duration-500"
+                            id="barraRevelacion">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="volverMapa()" class="bg-primary/10 text-primary font-bold py-3 rounded-xl">
+            ← Volver al mapa
+        </button>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="flex-1 flex flex-col">
+
+        <!-- HEADER SUPERIOR -->
+        <header class="w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-8 py-6">
+
+            <div class="max-w-5xl mx-auto flex justify-between items-center">
+
+                <div>
+                    <h1 class="text-2xl font-bold">Nivel 1 - Presencia Digital</h1>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 text-sm">
+                        Aprende cómo mejorar la visibilidad online de tu negocio y atraer más clientes.
+                    </p>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <div class="bg-primary/10 text-primary px-4 py-2 rounded-xl font-semibold text-sm">
+                        Etapa Inicial
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- CONTENIDO CENTRAL -->
+        <div class="flex-1 flex items-center justify-center p-8">
+
+            <div class="w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl shadow-2xl p-8">
+
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="font-bold text-sm uppercase tracking-widest text-slate-400">
+                        Sube de Nivel
+                    </h2>
+
+                    <div class="flex items-center space-x-1 text-rose-500">
+                        <span class="material-icons-round text-sm">favorite</span>
+                        <span id="vidasTop" class="font-bold">3</span>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex justify-between text-xs text-slate-400 mb-2">
+                        <span>Nivel 1: Presencia Digital</span>
+                        <span id="contador">1 / 2</span>
+                    </div>
+                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div id="barra" class="h-full bg-primary w-0 transition-all duration-500"></div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-6">
+                    <div
+                        class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons-round text-primary text-2xl">help_center</span>
+                    </div>
+                    <h2 id="pregunta" class="text-lg font-bold leading-tight"></h2>
+                </div>
+
+                <div id="opciones" class="space-y-3 mb-6"></div>
+
+                <p id="mensaje" class="text-center font-bold"></p>
+
+                <button id="btnConfirmar" disabled
+                    class="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg disabled:opacity-40">
+                    Confirmar respuesta
+                </button>
+
+            </div>
+    </main>
+    <!-- MODAL AJUSTES -->
+    <div id="modalAjustes" class="modal hidden">
+
+        <div class="modal-contenido">
+
+            <div class="modal-header">
+                <h2>Ajustes</h2>
+                <button id="cerrarAjustes">✕</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="ajuste-item">
+                    <span>🌙 Modo Oscuro</span>
+                    <button id="toggleDarkModal" class="btn-ajuste">
+                        Activar / Desactivar
+                    </button>
+                </div>
+
+                <div class="ajuste-item">
+                    <span>🔄 Reiniciar progreso</span>
+                    <button id="reiniciarProgreso" class="btn-ajuste rojo">
+                        Reiniciar
+                    </button>
+                </div>
+
+                <div class="ajuste-item">
+                    <span>🔊 Sonido</span>
+                    <button class="btn-ajuste">
+                        Próximamente
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="modalResultado" class="modal hidden">
+        <div class="modal-card">
+            <div id="resultadoAnimacion" class="animacion"></div>
+            <h2 id="resultadoTitulo"></h2>
+            <p id="resultadoTexto"></p>
+
+            <button class="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-lg"
+                id="btnReiniciar">Reiniciar progreso</button>
+            <button onclick="volverMapa()"
+                class="w-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white font-bold py-4 rounded-2xl shadow-lg mt-2"
+                id="btnVolverMapa">Volver al mapa</button>
+        </div>
+    </div>
+
+    <script src="/juego-biznova/nivel_1/script.js"></script>
+</body>
+
+</html>

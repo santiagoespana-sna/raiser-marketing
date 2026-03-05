@@ -1,27 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+document.addEventListener("DOMContentLoaded", function() {
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    var elements = document.querySelectorAll(
+        ".team h2, .team .txt-p, .team-card, .team-extra-content"
+    );
+
+    if (!elements.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+
+        entries.forEach(function(entry) {
+
             if (entry.isIntersecting) {
-                // Usamos requestAnimationFrame para que la animación 
-                // ocurra justo cuando el monitor se refresca
-                requestAnimationFrame(() => {
-                    entry.target.classList.add("active");
-                });
+                entry.target.classList.add("team-active");
             } else {
-                requestAnimationFrame(() => {
-                    entry.target.classList.remove("active");
-                });
+                entry.target.classList.remove("team-active");
             }
+
         });
+
     }, {
-        // 0.2 significa que debe verse el 20% para activarse. 
-        // Evita que se dispare por error en los bordes.
-        threshold: 0.2 
+        threshold: 0.1   // 🔥 bajamos el threshold
     });
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach(function(el) {
+        observer.observe(el);
+
+        // 🔥 FORZAR que aparezca si ya está visible
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add("team-active");
+        }
+    });
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {

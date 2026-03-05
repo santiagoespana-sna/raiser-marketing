@@ -9,47 +9,53 @@
 </head>
 
 <body>
+    <!-- MENU FUERA DEL HEADER -->
+    <div class="menu">
+        <div class="menu-content container">
 
-    <!-- ================= HEADER ================= -->
-    <header class="header">
-
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="/animaciones/172170-846731303_small.mp4" type="video/mp4">
-        </video>
-
-        <div class="menu ">
-            <div class="container menu-content">
-                <a href="#" class="logo">
-                    <img src="/imagenes/logo.jpeg" alt="Biznova logo">
-                    <span>Biznova Corp</span>
-                </a>
-            </div>
-
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="imagenes/menu.png" class="menu-icono" alt="Menú">
-            </label>
+            <a href="index.html" class="logo">
+                <img src="/imagenes/logo-removebg-preview.png" alt="logo">
+                <span>Biznova corp</span>
+            </a>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="servicios.html" class="active">SERVICIOS</a></li>
+                    <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
+                    <li><a href="reseñas.html">RESEÑAS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="negocio.html">NEGOCIOS</a></li>
                 </ul>
             </nav>
-        </div>
 
-        <div class="header-content container">
-            <div class="header-text">
-                <h1 class="reveal">Fortalecemos la visibilidad y presencia digital de tu negocio</h1>
-                <p class="reveal">
-                    Biznova Corp es una plataforma diseñada para que emprendimientos y empresas de Popayán
-                    puedan posicionarse digitalmente mediante perfiles empresariales organizados,
-                    métricas básicas y reseñas.
-                </p>
-                <a href="servicios.html" class="btn-1 reveal">Ver Servicios</a>
+        </div>
+    </div>
+
+
+    <!-- HEADER SOLO CON HERO -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="hero-container container">
+
+                <div class="hero-text">
+                    <h1>Biznova Corp</h1>
+                    <p>
+                        Impulsamos marcas con estrategias digitales modernas,
+                        creativas y enfocadas en resultados reales.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="login.html" class="btn-1">INICIA SESION</a>
+                        <a href="/juego-biznova/inicio_juego/index.html" class="btn-2">Juego</a>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
     </header>
@@ -62,7 +68,7 @@
             <h2 class="reveal">¿Quiénes Somos?</h2>
 
             <div class="about-img reveal-left">
-                <img src="../imagenes/quienes somos1.jpg" alt="Quiénes somos">
+                <img src="/imagenes/logo.jpeg" alt="logo">
             </div>
 
             <p class="reveal">
@@ -87,7 +93,7 @@
 
                 <div class="service-media reveal-left">
                     <div class="card">
-                        <img src="../imagenes/servicios.jpg" alt="Servicio Biznova">
+                        <img src="/imagenes/servicios4.jpeg" alt="Servicio Biznova">
                         <div class="card-content">
                             <h4>Perfil Empresarial Profesional</h4>
                             <p>
@@ -130,7 +136,7 @@
 
             <div class="feature-item reveal-left">
                 <div class="feature-img">
-                    <img src="../imagenes/servicio2.jpg" alt="Funcionamiento">
+                    <img src="/imagenes/servicios1.jpeg" alt="Funcionamiento">
                 </div>
                 <div class="feature-content">
                     <h3>Funcionamiento</h3>
@@ -148,7 +154,7 @@
 
             <div class="feature-item reverse reveal-right">
                 <div class="feature-img">
-                    <img src="../imagenes/servicio3.jpg" alt="Estructura empresarial">
+                    <img src="/imagenes/servicios3.jpeg" alt="Estructura empresarial">
                 </div>
                 <div class="feature-content">
                     <h3>Estructura Profesional</h3>
@@ -283,7 +289,7 @@
 
                 <!-- Columna 1 -->
                 <div class="footer-info">
-                    <h3>Raise Marketing</h3>
+                    <h3>Biznova Corp</h3>
                     <p>
                         Impulsamos tu marca con estrategias digitales modernas, creativas y enfocadas en resultados
                         reales.
@@ -313,29 +319,25 @@
                     <h3>Contacto</h3>
                     <p><b>📍 Ubicación:</b> Colombia</p>
                     <p><b>📞 Teléfono:</b> +57 300 000 0000</p>
-                    <p><b>✉ Correo:</b> contacto@raisemarketing.com</p>
+                    <p><b>✉ Correo:</b> biznovaCp@gmail.com</p>
                 </div>
 
                 <!-- Columna 4 (Mapa) -->
                 <div class="footer-map">
                     <h3>Ubicación SENA</h3>
-
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.916333573657!2d-74.079987!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a1a3b6c3c7%3A0x6b3f9c1f9c1f9c1f!2sSENA!5e0!3m2!1ses!2sco!4v1234567890"
                         width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
-
                 </div>
-
             </div>
-
             <div class="footer-copy">
-                <p>© 2026 Raise Marketing - Todos los derechos reservados.</p>
+                <p>© 2026 Biznova Corp- Todos los derechos reservados.</p>
             </div>
-
         </div>
     </footer>
 
+    <div class="top-loader"></div>
     <script src="/archivosjs/servicios.js"></script>
 
 </body>

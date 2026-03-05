@@ -1,0 +1,33 @@
+/* ============================================= */
+/* Estilos personalizados fuera de Tailwind      */
+/* ============================================= */
+
+:root {
+    --accent: #ff8c00;
+    --accent-30: rgba(255,140,0,0.30);
+    --accent-15: rgba(255,140,0,0.15);
+    --accent-10: rgba(255,140,0,0.10);
+    --accent-8: rgba(255,140,0,0.08);
+    --black: #000000;
+    --white: #ffffff;
+    --bg: var(--white);
+    --text: var(--black);
+}
+
+.dark {
+    --bg: var(--black);
+    --text: var(--white);
+}
+
+.grid-bg {
+    background-image: radial-gradient(circle, var(--accent-10) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+body {
+    min-height: max(884px, 100dvh);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Puedes agregar aquí más reglas si deseas reducir la dependencia de Tailwind */

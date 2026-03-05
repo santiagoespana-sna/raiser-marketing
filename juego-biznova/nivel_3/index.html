@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biznova - Infrastructure Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="/juego-biznova/nivel_3/style.css">
+
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col items-center p-4">
+
+    <div class="w-full max-w-4xl flex justify-between items-center mb-6 bg-white p-4 rounded-2xl shadow-sm">
+        <div>
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Nivel 2: Infraestructura</p>
+            <h2 id="tituloSesion" class="text-lg font-black text-slate-800">Sesión 1: Identidad</h2>
+        </div>
+        <div class="flex gap-2" id="indicadorSesiones">
+            <div class="w-3 h-3 rounded-full bg-orange-500"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+        </div>
+    </div>
+
+
+    <main class="flex-1 w-full max-w-4xl flex flex-col items-center">
+        <div class="relative mb-8">
+            <div class="laptop-screen bg-white border-[8px] border-slate-800 rounded-t-2xl relative shadow-2xl">
+                <div id="slot-1"
+                    class="absolute top-4 left-4 w-16 h-16 border-2 border-dashed border-orange-400 rounded-lg flex items-center justify-center bg-orange-50/50">
+                    <span class="material-icons-round text-orange-200">add_a_photo</span>
+                </div>
+                <div id="slot-2"
+                    class="absolute top-24 left-4 right-4 h-12 border-2 border-dashed border-orange-400 rounded-lg flex items-center justify-center bg-orange-50/50">
+                    <span class="material-icons-round text-orange-200">notes</span>
+                </div>
+                <div id="slot-3"
+                    class="absolute bottom-6 left-4 w-[45%] h-10 border-2 border-dashed border-orange-400 rounded-lg flex items-center justify-center bg-orange-50/50">
+                    <span class="material-icons-round text-orange-200">call</span>
+                </div>
+                <div id="slot-4"
+                    class="absolute bottom-6 right-4 w-[45%] h-10 border-2 border-dashed border-orange-400 rounded-lg flex items-center justify-center bg-orange-50/50">
+                    <span class="material-icons-round text-orange-200">local_offer</span>
+                </div>
+            </div>
+            <div class="bg-slate-800 h-3 w-[110%] -ml-[5%] rounded-b-xl"></div>
+        </div>
+
+        <div id="game-ui" class="w-full max-w-2xl bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+        
+        <div class="mb-4">
+            <h3 id="preguntaTitulo" class="text-orange-500 font-bold text-sm">1. El Hero Section</h3>
+            <p id="preguntaTexto" class="text-slate-600 text-xs">Selecciona la imagen que conectará mejor con tu
+                audiencia local.</p>
+        </div>
+
+        <div id="opcionesContainer" class="grid grid-cols-2 gap-4 mb-6">
+        </div>
+
+        <button id="btnConfirmar" disabled
+            class="w-full bg-orange-500 text-white font-bold py-4 rounded-2xl shadow-lg opacity-50 transition-all active:scale-[0.98]">
+            Confirmar Selección
+        </button>
+        </div>
+    </main>
+
+    <script src="/juego-biznova/nivel_3/script.js"></script>
+</body>
+
+</html>

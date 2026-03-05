@@ -1,0 +1,48 @@
+/* Estilos generales */
+:root {
+    --accent: #ff8c00;
+    --accent-30: rgba(255,140,0,0.30);
+    --accent-15: rgba(255,140,0,0.15);
+    --accent-10: rgba(255,140,0,0.10);
+    --accent-8: rgba(255,140,0,0.08);
+    --black: #000000;
+    --white: #ffffff;
+    --bg: var(--white);
+    --card-bg: var(--white);
+    --text: var(--black);
+}
+
+
+body {
+    background: #f8fafc; /* Color base claro */
+    background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.1), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+}
+
+/* Patrón de puntos más sutil */
+.pattern-bg {
+    background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+
+/* Evitar que el fondo naranja del HTML moleste */
+.bg-orange-500 {
+    background-color: transparent !important; /* El naranja fuerte distrae del profesionalismo */
+}
+
+/* Card genérica para secciones interior */
+.card {
+    
+    border: 1px solid rgba(226, 232, 240, 0.8);
+
+    background: rgba(255, 255, 255, 0.85); /* Fondo blanco con transparencia */
+    backdrop-filter: blur(12px); /* Efecto de desenfoque detrás */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem; /* Bordes más redondeados para un look moderno */
+    padding: 2.5rem 1.5rem;
+}
+

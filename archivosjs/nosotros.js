@@ -1,27 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
     const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
             if (entry.isIntersecting) {
-                // Usamos requestAnimationFrame para que la animación 
-                // ocurra justo cuando el monitor se refresca
-                requestAnimationFrame(() => {
-                    entry.target.classList.add("active");
-                });
+                entry.target.classList.add("active");
             } else {
-                requestAnimationFrame(() => {
-                    entry.target.classList.remove("active");
-                });
+                entry.target.classList.remove("active");
             }
+
         });
+
     }, {
-        // 0.2 significa que debe verse el 20% para activarse. 
-        // Evita que se dispare por error en los bordes.
-        threshold: 0.2 
+        threshold: 0.3
     });
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach(function (el) {
+        observer.observe(el);
+    });
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
