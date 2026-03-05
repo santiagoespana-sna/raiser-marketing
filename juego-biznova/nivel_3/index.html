@@ -7,9 +7,31 @@
     <title>Biznova - Infrastructure Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link rel="stylesheet" href="/juego-biznova/nivel_3/style.css">
+    <link rel="stylesheet" href="../nivel_3/style.css">
 
 </head>
+<header class="w-full sticky top-0 z-20 bg-orange-200 backdrop-blur-md border-b border-slate-200 p-4 mb-4">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-slate-100">
+                <img src="/juego-biznova/img/WhatsApp Image 2026-02-28 at 7.03.12 PM.jpeg" alt="Logo Biznova"
+                    class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h1 class="text-md font-black text-slate-800 uppercase tracking-tight">Sube de Nivel</h1>
+                <p class="text-[10px] font-bold text-orange-500 tracking-widest uppercase">Biznova Corp</p>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <a href="../mapa_niveles/index.html"
+                class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold transition-all active:scale-95">
+                <span class="material-icons-round text-sm">home</span>
+                Volver a Inicio
+            </a>
+        </div>
+    </div>
+</header>
 
 <body class="bg-slate-50 min-h-screen flex flex-col items-center p-4">
 
@@ -51,24 +73,24 @@
         </div>
 
         <div id="game-ui" class="w-full max-w-2xl bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
-        
-        <div class="mb-4">
-            <h3 id="preguntaTitulo" class="text-orange-500 font-bold text-sm">1. El Hero Section</h3>
-            <p id="preguntaTexto" class="text-slate-600 text-xs">Selecciona la imagen que conectará mejor con tu
-                audiencia local.</p>
-        </div>
 
-        <div id="opcionesContainer" class="grid grid-cols-2 gap-4 mb-6">
-        </div>
+            <div class="mb-4">
+                <h3 id="preguntaTitulo" class="text-orange-500 font-bold text-sm">1. El Hero Section</h3>
+                <p id="preguntaTexto" class="text-slate-600 text-xs">Selecciona la imagen que conectará mejor con tu
+                    audiencia local.</p>
+            </div>
 
-        <button id="btnConfirmar" disabled
-            class="w-full bg-orange-500 text-white font-bold py-4 rounded-2xl shadow-lg opacity-50 transition-all active:scale-[0.98]">
-            Confirmar Selección
-        </button>
+            <div id="opcionesContainer" class="grid grid-cols-2 gap-4 mb-6">
+            </div>
+
+            <button id="btnConfirmar" disabled
+                class="w-full bg-orange-500 text-white font-bold py-4 rounded-2xl shadow-lg opacity-50 transition-all active:scale-[0.98]">
+                Confirmar Selección
+            </button>
         </div>
     </main>
 
-    <script src="/juego-biznova/nivel_3/script.js"></script>
+    <script src="../nivel_3/script.js"></script>
 </body>
 
 </html>
