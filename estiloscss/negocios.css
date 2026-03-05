@@ -1,8 +1,8 @@
 /* 1. VARIABLES Y BASE */
 :root {
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --dark: #1e293b;
+    --primary: #F28C28;
+    --primary-hover: #f5b217;
+    --dark: black;
     --light: #f8fafc;
     --gray: #64748b;
     --white: #ffffff;
@@ -20,7 +20,7 @@ body {
     background-color: var(--light);
     color: var(--dark);
     line-height: 1.6;
-    overflow-x: hidden; /* Evita cualquier desborde global */
+    overflow-x: hidden;
 }
 
 /* 2. NAVEGACIÓN */
@@ -29,13 +29,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: var(--white);
+    background: black;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
+.logo { color: #F28C28; }
 .logo span { color: var(--primary); font-weight: bold; }
 
 .nav-links {
@@ -176,7 +177,7 @@ body {
     font-size: 0.7rem;
 }
 
-/* 6. BOTONES DE LA CARD (SIMÉTRICOS) */
+/* 6. BOTONES DE LA CARD */
 .card-buttons {
     display: flex;
     gap: 10px;
@@ -200,7 +201,7 @@ body {
 .btn-view { background: var(--primary); color: white; }
 .btn-view:hover { background: var(--primary-hover); }
 
-/* 7. FORMULARIO */
+/* 7. FORMULARIO MODIFICADO */
 .section-form {
     max-width: 600px;
     margin: 0 auto;
@@ -211,26 +212,35 @@ body {
 }
 
 .form-group { margin-bottom: 15px; }
-.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #334155; }
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 2px solid #e2e8f0;
     border-radius: 8px;
+    color: #1e293b;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
 }
 
 .btn-submit {
     width: 100%;
     padding: 14px;
-    background: var(--dark);
+    background: var(--primary);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* 8. MODAL (PERFIL DESPLEGABLE) - CORREGIDO */
+.btn-submit:hover { background: var(--primary-hover); }
+
+/* 8. MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -246,20 +256,17 @@ body {
 .modal-content {
     background: white;
     margin: 2vh auto;
-    padding: 0; /* Quitamos padding aquí para que la imagen toque arriba si queremos */
+    padding: 0;
     border-radius: 16px;
     width: 95%;
     max-width: 650px;
     position: relative;
     max-height: 95vh;
     overflow-y: auto;
-    overflow-x: hidden; /* Elimina scroll horizontal */
+    overflow-x: hidden;
 }
 
-/* Estenedor interno para el texto del modal */
-.modal-body {
-    padding: 25px;
-}
+.modal-body { padding: 25px; }
 
 #detalle-negocio img {
     width: 100%;
@@ -275,7 +282,6 @@ body {
     border: none;
 }
 
-/* BOTÓN CERRAR MEJORADO */
 .close-modal {
     position: absolute;
     top: 15px;
@@ -303,116 +309,28 @@ body {
 }
 
 /* Footer */
-.footer{
-    width: 100%;
-    background: #FF8C00;
-    padding: 90px 0 10px 0;
-    color: #FFFDFC;
-}
+.footer{ width: 100%; background: #F28C28; padding: 90px 0 10px 0; color: #bd511b; }
+.footer-content{ max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+.footer-box{ display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; align-items: start; }
+.footer h3{ font-size: 22px; margin-bottom: 20px; text-transform: uppercase; color: #FFFDFC; }
+.footer p{ font-size: 16px; line-height: 1.8; color: #cbd5e1; margin-bottom: 14px; }
+.footer-links ul{ list-style: none; padding: 0; margin: 0; }
+.footer-links ul li{ margin-bottom: 12px; }
+.footer-links ul li a{ text-decoration: none; color: #cbd5e1; font-size: 16px; transition: 0.3s; }
+.footer-links ul li a:hover{ color: #FFFDFC; padding-left: 5px; }
+.footer-social{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 15px; }
+.footer-social a{ text-decoration: none; color: #FFFDFC; border: 1px solid #FFFDFC; padding: 10px 16px; border-radius: 12px; font-size: 15px; transition: 0.3s; }
+.footer-social a:hover{ background: #F28C28; color: #F28C28; transform: translateY(-3px); }
+.footer-map iframe{ width: 100%; height: 260px; border-radius: 15px; border: 2px solid #FFFDFC; }
+.footer-copy{ margin-top: 60px; border-top: 1px solid rgba(190, 3, 3, 0.3); padding-top: 25px; text-align: center; font-size: 15px; color: #e2e8f0; }
 
-/* Contenedor centrado */
-.footer-content{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* Grid adaptable */
-.footer-box{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    align-items: start;
-}
-
-/* TITULOS */
-.footer h3{
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #FFFDFC;
-}
-
-/* TEXTO */
-.footer p{
-    font-size: 16px;
-    line-height: 1.8;
-    color: #cbd5e1;
-    margin-bottom: 14px;
-}
-
-/* LINKS */
-.footer-links ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links ul li{
-    margin-bottom: 12px;
-}
-
-.footer-links ul li a{
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    color: #cbd5e1;
-    font-size: 16px;
-    transition: 0.3s;
+    display: inline-block;
 }
 
-.footer-links ul li a:hover{
-    color: #FFFDFC;
-    padding-left: 5px;
-}
-
-/* REDES */
-.footer-social{
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-.footer-social a{
-    text-decoration: none;
-    color: #FFFDFC;
-    border: 1px solid #FFFDFC;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.footer-social a:hover{
-    background: #d2cfcf3f;
-    color: #c62b2b11;
-    transform: translateY(-3px);
-}
-
-/* CONTACTO */
-.footer-contact b{
-    color: #FFFDFC;
-}
-
-/* MAPA */
-.footer-map iframe{
-    width: 100%;
-    height: 260px;
-    border-radius: 15px;
-    border: 2px solid #FFFDFC;
-}
-
-/* COPYRIGHT */
-.footer-copy{
-    margin-top: 60px;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    padding-top: 25px;
-    text-align: center;
-    font-size: 15px;
-    color: #e2e8f0;
-}
-
-.footer-content{
-    max-width: 1600px; /* más ancho que tu container normal */
-    margin: 0 auto;
-    padding: 0 60px;
-}
+.btn-primary:hover { background-color: var(--primary-hover); }
