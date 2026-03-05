@@ -22,7 +22,7 @@
 
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="/juego-biznova/mapa_niveles/style.css">
+    <link rel="stylesheet" href="../mapa_niveles/style.css">
 </head>
 
 <body
@@ -41,9 +41,11 @@
                 <p class="text-xs text-slate-500 dark:text-slate-400">BIZNOVA CORP</p>
             </div>
         </div>
-        <div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full border border-primary/20">
-            <span class="material-symbols-outlined text-primary text-sm">stars</span>
-            <span id="xpTexto" class="text-sm font-bold text-primary">0 XP</span>
+        <div class="flex items-center gap-2 bg-primary/10 hover:bg-primary/30 px-3 py-1.5 rounded-full border border-primary/20">
+            <a href="../inicio_juego/index.html"
+                class="flex items-center gap-2 text-slate-700 px-4 py-2 rounded-full text-xs font-bold transition-all active:scale-95">
+                <span class="material-icons-round text-sm">inicio</span>
+            </a>
         </div>
     </header>
 
@@ -73,7 +75,7 @@
             <!-- Camino gamificado (niveles) -->
             <div id="contenedor-niveles" class="relative flex flex-col items-center gap-16 py-8">
                 <div id="nivel-3" class="level-node relative z-10 flex flex-col items-center group translate-x-12"
-                    data-url="/juego-biznova/nivel_3/index.html">
+                    data-url="../nivel_3/index.html">
                     <div
                         class="lock-icon hidden absolute -top-2 -right-2 bg-slate-400 text-white rounded-full p-1 border-2 border-white dark:border-slate-800">
                         <span class="material-symbols-outlined text-sm">lock</span>
@@ -89,7 +91,7 @@
                 </div>
 
                 <div id="nivel-2" class="level-node relative z-10 flex flex-col items-center group -translate-x-10"
-                    data-url="/juego-biznova/nivel_2/index.html">
+                    data-url="../nivel_2/index.html">
                     <div
                         class="main-card w-24 h-24 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center shadow-md border-2 border-slate-300">
                         <span class="material-symbols-outlined text-4xl text-slate-400">share_reviews</span>
@@ -99,7 +101,7 @@
                 </div>
 
                 <div id="nivel-1" class="level-node relative z-10 flex flex-col items-center group"
-                    data-url="/juego-biznova/nivel_1/index.html">
+                    data-url="../nivel_1/index.html">
                     <div
                         class="main-card w-24 h-24 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center shadow-md border-2 border-slate-300">
                         <span class="material-symbols-outlined text-4xl text-slate-400">language</span>
@@ -129,7 +131,8 @@
                     <span class="material-symbols-outlined text-3xl">play_arrow</span>
                 </button>
             </div>
-            <a href="/juego-biznova/logros/index.html" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+            <a href="/juego-biznova/logros/index.html"
+                class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
                 <div class="h-10 flex items-center justify-center">
                     <span class="material-symbols-outlined text-2xl">emoji_events</span>
                 </div>

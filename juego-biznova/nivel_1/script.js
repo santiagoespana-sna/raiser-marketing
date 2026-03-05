@@ -214,7 +214,9 @@ document.getElementById("abrirAjustes").onclick = () => modalAjustes.classList.r
 document.getElementById("cerrarAjustes").onclick = () => modalAjustes.classList.add("hidden");
 
 btnReiniciar.onclick = () => location.reload();
-btnVolverMapa.onclick = () => window.location.href = "/juego-biznova/mapa_niveles/index.html";
+
+btnVolverMapa.onclick = () => window.location.href = "mapa_niveles/index.html";
+
 
 // Inicialización
 elegirPalabraAleatoria();
