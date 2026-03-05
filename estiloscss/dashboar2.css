@@ -2,8 +2,8 @@
    1. VARIABLES Y ESTILOS GENERALES 
    ========================================= */
 :root {
-    --primary: #2c3e50;
-    --accent: #3498db;
+    --primary: black;
+    --accent: #F28C28;
     --bg: #f4f7f6;
     --white: #ffffff;
     --text: #333;
@@ -217,7 +217,7 @@ header {
     transition: background 0.3s;
 }
 
-.bar:hover { background: #2980b9; }
+.bar:hover { background: #ffbc21; }
 
 .bar::after {
     content: attr(data-name);
@@ -241,7 +241,7 @@ header {
 
 .gauge-fill {
     height: 100%;
-    background: var(--success);
+    background: #F28C28;
     transition: width 1s ease-in-out;
 }
 
@@ -282,7 +282,7 @@ th {
 
 .status.active {
     background: #e8f8f0;
-    color: var(--success);
+    color: #F28C28;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -349,7 +349,7 @@ th {
    8. BOTONES
    ========================================= */
 .btn-add {
-    background: var(--success);
+    background: #F28C28;
     color: white;
     border: none;
     padding: 10px 15px;

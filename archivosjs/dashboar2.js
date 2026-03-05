@@ -52,7 +52,7 @@ function renderizarGraficas() {
     if (baseDeDatos.contactos.length > 0) {
         const conteo = {};
         baseDeDatos.contactos.forEach(c => conteo[c.origen] = (conteo[c.origen] || 0) + 1);
-        const colores = ['#3498db', '#2ecc71', '#e67e22', '#f1c40f'];
+        const colores = ['#F28C28', '#2ecc71', '#e67e22', '#f1c40f'];
         let acumulado = 0;
         let grad = Object.keys(conteo).map((key, i) => {
             const p = (conteo[key] / baseDeDatos.contactos.length) * 100;
@@ -84,8 +84,8 @@ function actualizarReportes() {
 
     const pieConv = document.getElementById('report-pie-conversion');
     if(pieConv) {
-        pieConv.style.background = `conic-gradient(#3498db 0% ${conv}%, #eee ${conv}% 100%)`;
-        document.getElementById('report-conversion-legend').innerHTML = `<li><span class="dot" style="background:#3498db"></span>Conversión: ${conv}%</li>`;
+        pieConv.style.background = `conic-gradient(#F28C28 0% ${conv}%, #2ecc71 ${conv}% 100%)`;
+        document.getElementById('report-conversion-legend').innerHTML = `<li><span class="dot" style="background:#F28C28"></span>Conversión: ${conv}%</li>`;
     }
 
     const totalVentas = baseDeDatos.negocios.reduce((acc, neg) => acc + parseFloat(neg.monto || 0), 0);

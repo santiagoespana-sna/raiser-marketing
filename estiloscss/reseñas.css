@@ -1,0 +1,71 @@
+:root {
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --primary: #F28C28;
+    --text-main: #1e293b;
+    --text-secondary: black;
+    --black: black;
+    --color-exito: #2563eb;
+    --color-error: #dc2626;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background: var(--bg-body); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+}
+
+/* Header */
+header { 
+    background: var(--black); 
+    padding: 20px 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 4px solid var(--primary);
+}
+header .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+header nav ul { display: flex; list-style: none; gap: 20px; }
+header nav a { color: white; text-decoration: none; font-weight: 500; }
+
+/* Sección Testimonios */
+.testimonials { padding: 80px 10%; text-align: center; }
+.testimonials h2 { font-size: 38px; margin-bottom: 15px; color: var(--black); }
+.testimonials p { color: var(--text-secondary); margin-bottom: 50px; }
+.testimonials-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+/* Tarjetas con Borde Brillante */
+.testimonial-card { 
+    background: var(--bg-card); 
+    padding: 30px; 
+    border-radius: 16px; 
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover { 
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(242, 140, 40, 0.6);
+}
+.testimonial-card h3 { margin-top: 15px; color: var(--black); }
+.testimonial-card span { color: var(--primary); font-weight: bold; }
+
+/* CRUD */
+.crud-reviews { padding: 50px 10%; background: #ffffff; }
+.crud-container { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.crud-form, .crud-table { background: #f1f5f9; padding: 30px; border-radius: 16px; }
+
+/* Inputs y Botones */
+input, select, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e1; border-radius: 8px; }
+.crud-form button { width: 100%; padding: 14px; background: var(--primary); border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.crud-form button:hover { background: #d97706; }
+
+/* Tabla */
+table { width: 100%; border-collapse: separate; border-spacing: 0; }
+table th { background: var(--black); color: white; padding: 15px; border-radius: 8px 8px 0 0; }
+table td { padding: 15px; border-bottom: 1px solid #e2e8f0; text-align: center; }
+.edit { background: var(--color-exito); border: none; padding: 8px 12px; color: white; border-radius: 6px; cursor: pointer; }
+.delete { background: var(--color-error); border: none; padding: 8px 12px; color: white; border-radius: 6px; cursor: pointer; }

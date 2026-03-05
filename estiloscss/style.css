@@ -20,6 +20,9 @@
     flex-direction: column;
 }
 
+
+
+
 /* ================= MENU CORREGIDO ================= */
 
 .menu {
@@ -128,7 +131,7 @@
     left: 0;
     height: 3px;
     width: 0%;
-    background: #ff6a00; /* tu naranja */
+    background: #F28C28; /* tu naranja */
     z-index: 9999;
     transition: width 0.4s ease;
 }
@@ -222,16 +225,16 @@
     padding: 14px 40px;
     border-radius: 50px;
     background: white;
-    color: #FF8C00;
+    color: #F28C28;
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid #FF8C00;
+    border: 1px solid #F28C28;
     transition: all 0.3s ease;
 }
 
 .btn-1:hover,
 .btn-2:hover {
-    background: #FF8C00;
+    background: #F28C28;
     color: white;
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
@@ -251,7 +254,7 @@
 .coffee-content h2 {
     font-size: 45px;
     line-height: 60px;
-    color: #FF8C00;
+    color: #F28C28;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
@@ -282,7 +285,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #FF8C00, #f28c28);
+    background: linear-gradient(90deg, #F28C28, #f28c28);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -292,7 +295,7 @@
 
 .coffee-1 {
     background: #fff;
-    border: 2px solid #FF8C00;
+    border: 2px solid #F28C28;
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.06);
@@ -353,7 +356,7 @@
 .btn-1 {
     display: inline-block;
     padding: 12px 30px;
-    background: #FF8C00;
+    background: #F28C28;
     color: white;
     font-weight: 600;
     text-decoration: none;
@@ -362,7 +365,7 @@
 }
 
 .btn-1:hover {
-    background: #FF8C00;
+    background: #F28C28;
     transform: scale(1.05);
 }
 
@@ -379,7 +382,7 @@
 
 .services {
     padding: 140px 0;
-    background: linear-gradient(135deg, #FF8C00, #ea580c);
+    background: linear-gradient(135deg, #F28C28, #F28C28);
     color: white;
 }
 
@@ -483,7 +486,7 @@
     padding: 15px 45px;
     border-radius: 50px;
     background: white;
-    color: #FF8C00;
+    color: #F28C28;
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -562,7 +565,7 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    background: #ea580c;
+    background: #F28C28;
     opacity: 0.05;
     border-radius: 50%;
     top: -200px;
@@ -586,7 +589,7 @@
     font-size: 52px;
     margin-bottom: 20px;
     font-weight: 800;
-    color: #ea580c;
+    color: #F28C28;
     line-height: 1.2;
 }
 
@@ -615,7 +618,7 @@
     content: "✔";
     position: absolute;
     left: 0;
-    color: #ea580c;
+    color: #F28C28;
     font-weight: bold;
 }
 
@@ -629,7 +632,7 @@
     display: inline-block;
     padding: 15px 40px;
     border-radius: 50px;
-    background: #ea580c;
+    background: #F28C28;
     color: white;
     font-weight: 700;
     text-decoration: none;
@@ -637,7 +640,7 @@
 }
 
 .btn-benefits:hover {
-    background: #c2410c;
+    background: #F28C28;
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
@@ -676,7 +679,7 @@
 /* Raise destacada */
 
 .compare-card.raise {
-    border: 2px solid #ea580c;
+    border: 2px solid #F28C28;
     background: linear-gradient(145deg, #ffffff, #fff3e6);
     transform: scale(1.05);
 }
@@ -701,7 +704,7 @@
     position: absolute;
     top: -12px;
     right: 20px;
-    background: #ea580c;
+    background: #F28C28;
     color: white;
     font-size: 12px;
     padding: 6px 12px;
@@ -721,7 +724,7 @@
 .vs {
     font-weight: 800;
     font-size: 20px;
-    background: #ea580c;
+    background: #F28C28;
     color: white;
     width: 60px;
     height: 60px;
@@ -833,7 +836,7 @@
 .team {
     width: 100%;
     padding: 100px 8%;
-    background: linear-gradient(135deg, #FF8C00, #ea580c);
+    background: linear-gradient(135deg, #F28C28, #F28C28);
     color: white;
     position: relative;
     overflow: hidden;
@@ -978,7 +981,7 @@
     backdrop-filter: blur(25px);
     border-radius: 26px;
     padding: 40px 30px;
-    border: 2px solid #fe8300;
+    border: 2px solid #F28C28;
     box-shadow: 0 30px 80px rgba(0,0,0,0.08);
     text-align: left;
     /* Dejamos solo las transiciones de interacción aquí */
@@ -1010,14 +1013,14 @@
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #FF8C00;
+    color: #F28C28;
 }
 
 .btn-1 {
     display: inline-block;
     padding: 16px 45px;
     border-radius: 50px;
-    background: #FF8C00;
+    background: #F28C28;
     color: white;
     font-weight: 700;
     text-decoration: none;
@@ -1026,7 +1029,7 @@
 }
 
 .btn-1:hover {
-    background: #FF8C00;
+    background: #F28C28;
     color: white;
     transform: translateY(-6px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
@@ -1045,7 +1048,7 @@
     opacity: 1;
     transform: translateY(0) scale(1);
 }
-/*  */
+
 /* ================= FOOTER ================= */
 
 .footer-orange {

@@ -1,313 +1,114 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Biznova Corp - Customer Reviews</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#0a0a0a",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .material-symbols-outlined.unfilled {
-            font-variation-settings: 'FILL' 0;
-        }
-    </style>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estiloscss/reseñas.css">
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-
-    <body>
-        <div id="rating" class="flex gap-2 text-primary"></div>
-        <script src="rating.js"></script>
-    </body>
-    <header
-        class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-        <div id="rating" class="flex gap-2 text-primary">
-            <!-- Generamos las estrellas con un bucle en JS, en vez de repetir manualmente -->
-        </div>
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="bg-primary p-1.5 rounded-lg">
-                    <span class="material-symbols-outlined text-background-dark">rocket_launch</span>
-                </div>
-                <h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Biznova <span
-                        class="text-primary">Corp</span></h1>
-            </div>
-            <nav class="hidden md:flex gap-8 text-sm font-medium">
-                <a class="text-primary" href="#">Testimonios</a>
-            </nav>
-            <a href="index.html">
-                <button
-                    class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all">
-                    Inicio
-                </button>
-            </a>
-        </div>
+<body>
+    <header>
+        <div class="logo">Biznova Corp</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                
+            </ul>
+        </nav>
     </header>
-    <main class="max-w-5xl mx-auto px-4 py-12">
-        <section class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Nuestra reputacion es <span
-                    class="text-primary">Importante.</span></h2>
-            <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-                Biznova Corp la estrategia es descubrir cómo ganar, pero la visualización es ver la victoria antes de
-                que ocurra..
-            </p>
-        </section>
-        <section
-            class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 items-center bg-primary/5 border border-primary/10 p-8 rounded-2xl">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <p class="text-primary text-6xl font-black leading-tight tracking-tighter">4.9</p>
-                <div class="flex gap-1 text-primary">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                </div>
-                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">4 vista</p>
-            </div>
-            <div class="md:col-span-2 space-y-3">
-                <div class="grid grid-cols-[30px_1fr_45px] items-center gap-4">
-                    <p class="text-sm font-bold">5</p>
-                    <div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary" style="width: 85%;"></div>
-                    </div>
-                    <p class="text-xs text-slate-500 text-right">85%</p>
-                </div>
-                <div class="grid grid-cols-[30px_1fr_45px] items-center gap-4">
-                    <p class="text-sm font-bold">4</p>
-                    <div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary" style="width: 11%;"></div>
-                    </div>
-                    <p class="text-xs text-slate-500 text-right">11%</p>
-                </div>
-                <div class="grid grid-cols-[30px_1fr_45px] items-center gap-4">
-                    <p class="text-sm font-bold">3</p>
-                    <div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary" style="width: 2%;"></div>
-                    </div>
-                    <p class="text-xs text-slate-500 text-right">2%</p>
-                </div>
-                <div class="grid grid-cols-[30px_1fr_45px] items-center gap-4">
-                    <p class="text-sm font-bold">2</p>
-                    <div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary" style="width: 1%;"></div>
-                    </div>
-                    <p class="text-xs text-slate-500 text-right">1%</p>
-                </div>
-                <div class="grid grid-cols-[30px_1fr_45px] items-center gap-4">
-                    <p class="text-sm font-bold">1</p>
-                    <div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary" style="width: 1%;"></div>
-                    </div>
-                    <p class="text-xs text-slate-500 text-right">1%</p>
-                </div>
-            </div>
-        </section>
-        <section class="space-y-6 mb-24">
-            <h3 class="text-2xl font-bold mb-8">Lo que dicen de nosotros</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-50 dark:bg-white/5 p-6 rounded-xl border border-transparent dark:border-white/10">
-                    <div class="flex gap-1 text-primary mb-4">
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                    </div>
-                    <p class="text-lg italic mb-6 leading-relaxed">
-                        "Biznova Corp “Gracias a la visualización que nos implementaron, nuestros productos ahora se
-                        muestran de manera clara y atractiva. Los clientes encuentran lo que buscan más rápido y eso ha
-                        aumentado nuestras ventas."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                            JD</div>
-                        <div>
-                            <p class="font-bold">Jhoana Jaramillo</p>
-                            <p class="text-sm text-slate-500">Empresaria</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-50 dark:bg-white/5 p-6 rounded-xl border border-transparent dark:border-white/10">
-                    <div class="flex gap-1 text-primary mb-4">
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                    </div>
-                    <p class="text-lg italic mb-6 leading-relaxed">
-                        "Desde que implementamos las soluciones de Biznova Corp, hemos visto una mejora significativa en
-                        la eficiencia de nuestros procesos internos. La visualización de datos nos ha permitido tomar
-                        decisiones más informadas y estratégicas."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                            SM</div>
-                        <div>
-                            <p class="font-bold">Marielena Peldaño</p>
-                            <p class="text-sm text-slate-500">Empresaria</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-50 dark:bg-white/5 p-6 rounded-xl border border-transparent dark:border-white/10">
-                    <div class="flex gap-1 text-primary mb-4">
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                    </div>
-                    <p class="text-lg italic mb-6 leading-relaxed">
-                        "BizNova Corp ha transformado la forma en que presentamos nuestros productos en línea. La
-                        visualización de alta calidad ha aumentado la confianza de nuestros clientes y ha impulsado
-                        nuestras ventas a niveles que nunca imaginamos."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                            AW</div>
-                        <div>
-                            <p class="font-bold">Luis Fernado</p>
-                            <p class="text-sm text-slate-500">Empresario</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-50 dark:bg-white/5 p-6 rounded-xl border border-transparent dark:border-white/10">
-                    <div class="flex gap-1 text-primary mb-4">
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                        <span class="material-symbols-outlined text-sm">star</span>
-                    </div>
-                    <p class="text-lg italic mb-6 leading-relaxed">
-                        "La visualización de datos que nos proporcionó Biznova Corp ha sido un cambio de juego para
-                        nuestra empresa. Ahora podemos identificar tendencias y oportunidades de mercado con mayor
-                        facilidad, lo que nos ha permitido crecer y expandirnos rápidamente."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                            RB</div>
-                        <div>
-                            <p class="font-bold">Santiago España</p>
-                            <p class="text-sm text-slate-500">Empresario</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center pt-8">
-                <button class="text-primary font-bold hover:underline"> vistas (4)</button>
-            </div>
-        </section>
-        <section
-            class="max-w-2xl mx-auto bg-white dark:bg-background-dark border border-primary/20 p-8 rounded-2xl shadow-xl shadow-primary/5">
-            <h3 class="text-2xl font-bold mb-2">Comparte tu experiencia</h3>
-            <p class="text-slate-500 dark:text-slate-400 mb-8">Con nuestra visualización, no solo se ve mejor: se vende
-                mejor.</p>
-            <form class="space-y-6">
-                <div class="flex flex-col gap-2">
-                    <label class="text-sm font-semibold uppercase tracking-wider text-slate-500">Rango</label>
-                    <div class="flex gap-2 text-primary">
 
-                        <span
-                            class="material-symbols-outlined unfilled cursor-pointer hover:scale-110 transition-transform">star</span>
-                        <span
-                            class="material-symbols-outlined unfilled cursor-pointer hover:scale-110 transition-transform">star</span>
-                        <span
-                            class="material-symbols-outlined unfilled cursor-pointer hover:scale-110 transition-transform">star</span>
-                        <span
-                            class="material-symbols-outlined unfilled cursor-pointer hover:scale-110 transition-transform">star</span>
-                        <span
-                            class="material-symbols-outlined unfilled cursor-pointer hover:scale-110 transition-transform">star</span>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-500">Nombre y Apellido</label>
-                        <input
-                            class="bg-slate-50 dark:bg-white/5 border-primary/20 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                            placeholder=" Nombre y Apellido" type="text" />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-500">Ocupacion</label>
-                        <input
-                            class="bg-slate-50 dark:bg-white/5 border-primary/20 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                            placeholder="Ocupacion" type="text" />
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-sm font-semibold text-slate-500">Comentario</label>
-                    <textarea
-                        class="bg-slate-50 dark:bg-white/5 border-primary/20 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                        placeholder="Escriba su experiencia con Biznova Corp..." rows="4"></textarea>
-                </div>
-                <button
-                    class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]"
-                    type="submit">
-                    Enviar reseña
-                </button>
-            </form>
-        </section>
-    </main>
-    <footer class="mt-24 border-t border-primary/10 bg-slate-50 dark:bg-background-dark/50 py-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-2">
-                <div class="bg-primary/20 p-1 rounded-lg">
-                </div>
-                <p class="font-bold text-slate-900 dark:text-slate-100">Biznova Corp</p>
+    <section class="testimonials">
+        <h2 class="reveal">Reseñas de nuestros usuarios</h2>
+        <p class="reveal">
+            Conoce lo que opinan emprendedores y comerciantes que ya usan Biznova Corp.
+        </p>
+        <div class="testimonials-content">
+            <div class="testimonial-card reveal">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Gracias a Biznova mi negocio aparece en el mapa y ahora más clientes nos encuentran fácilmente."</p>
+                <h3>Carlos Ramírez</h3>
+                <span>Restaurante</span>
             </div>
-            <p class="text-slate-500 text-sm">© 2026 Biznova Corp. Todos los derechos reservados.</p>
-            <div class="flex gap-6">
+            <div class="testimonial-card reveal">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"La plataforma es muy intuitiva. Pudimos registrar nuestro negocio en pocos minutos."</p>
+                <h3>María Fernández</h3>
+                <span>Tienda de ropa</span>
             </div>
-    </footer>
-    <nav
-        class="fixed bottom-0 left-0 right-0 md:hidden bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 py-2 z-50">
-        <div class="flex justify-around items-center">
+            <div class="testimonial-card reveal">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Biznova nos ayudó a mejorar nuestra presencia digital en Popayán."</p>
+                <h3>Jorge López</h3>
+                <span>Cafetería</span>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Excelente herramienta para promocionar pequeños negocios locales."</p>
+                <h3>Andrea Torres</h3>
+                <span>Emprendedora</span>
+            </div>
         </div>
-    </nav>
-</body>
+    </section>
 
+    <section class="crud-reviews">
+        <h2>Administrar Reseñas</h2>
+        <div class="crud-container">
+            <div class="crud-form">
+                <h3>Agregar nueva reseña</h3>
+                <form id="reviewForm">
+                    <input type="text" id="nombreCliente" placeholder="Nombre del cliente">
+                    <input type="text" id="tipoNegocio" placeholder="Tipo de negocio">
+                    <select id="estrellas">
+                        <option>⭐⭐⭐⭐⭐</option>
+                        <option>⭐⭐⭐⭐</option>
+                        <option>⭐⭐⭐</option>
+                        <option>⭐⭐</option>
+                        <option>⭐</option>
+                    </select>
+                    <textarea id="comentario" placeholder="Escribe la reseña..."></textarea>
+                    <button type="submit">Agregar Reseña</button>
+                </form>
+            </div>
+
+            <div class="crud-table">
+                <h3>Lista de reseñas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Negocio</th>
+                            <th>Estrellas</th>
+                            <th>Comentario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaReseñas">
+                        <tr>
+                            <td>Laura Pérez</td>
+                            <td>Panadería</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>Muy buena plataforma.</td>
+                            <td>
+                                <button class="edit">Editar</button>
+                                <button class="delete">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Gómez</td>
+                            <td>Barbería</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>Nos ayudó a tener más clientes.</td>
+                            <td>
+                                <button class="edit">Editar</button>
+                                <button class="delete">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
 </html>

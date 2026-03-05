@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #6a5acd;
+    background-color: #F28C28;
     color: white;
     padding: 10px 15px;
     border-radius: 50px;
@@ -37,7 +37,7 @@ body {
 }
 
 .btn-home:hover {
-    background-color: #5c4db1;
+    background-color: #F28C28;
     transform: scale(1.05);
     color: white;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .container button {
-    background-color: #6a5acd;
+    background-color: #F28C28;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -185,9 +185,9 @@ body {
 }
 
 .toggle {
-    background-color: #6a5acd;
+    background-color: #F28C28;
     height: 100%;
-    background: linear-gradient(to right, #5c4db1, #6a5acd);
+    background: linear-gradient(to right, #F28C28, #F28C28);
     color: #fff;
     position: relative;
     left: -100%;
@@ -253,8 +253,8 @@ body {
 
 
 .social-icons a:hover {
-    background-color: #6a5acd;
-    border-color: #6a5acd;
+    background-color: #F28C28;
+    border-color: #F28C28;
 }
 
 .social-icons a:hover i {
