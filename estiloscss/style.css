@@ -54,6 +54,7 @@
 .logo img {
     width: 100px; /* Tamaño de logo más razonable para un menú */
     height: auto;
+    
 }
 
 .logo span {
@@ -1180,9 +1181,9 @@
 
 /* Logo */
 .logo-img-footer {
-    width: 60px;
-    height: auto;
-    border-radius: 50%;
+    width: 100px;
+    height: 70px;
+    border-radius: 100%;
 }
 /* Bottom bar */
 .footer-bottom-white {
