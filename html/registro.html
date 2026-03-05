@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Registro - BizNova Corp</title>
 
-    <link rel="stylesheet" href="../estiloscss/registro.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="config.js"></script>
 </head>
-
-<body>
-
-    <nav class="navbar">
-        <a href="index.html" class="btn-volver">
-            ← Volver
+<body class="min-h-screen flex flex-col font-sans text-slate-800 bg-orange-600">
+    <nav class="p-4 flex items-center justify-between">
+        <a class="text-white flex items-center gap-1 hover:text-slate-300 transition-colors" href="#">
+            <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20">
+                <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+            </svg>
+            <span>Atrás</span>
         </a>
-
-        <div class="logo-container">
-            <img src="../imagenes/logo-removebg-preview.png" alt="Logo">
+        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl border border-white/20 overflow-hidden">
+            <img alt="Logo" class="w-full h-full object-cover" src="/imagenes/WhatsApp Image 2026-02-28 at 7.03.12 PM.jpeg"/>
         </div>
     </nav>
 
-    <main class="main-container">
-        <div class="registro-card">
-
-            <div class="title">
-                <h1>Crear Cuenta</h1>
+    <main class="flex-grow flex items-center justify-center px-6 pb-12">
+        <div class="bg-verde /35 rounded-[32px] shadow-[0_32px_64px_rgba(0,0,0,0.2)] w-full max-w-md p-10 md:p-12 backdrop-blur-sm">
+            
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Crear Cuenta</h1>
             </div>
 
-            <form class="formulario" method="POST" action="../basedatos/registro.php">
-
-                <div class="input-group">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <form action="#" class="space-y-6" method="POST">
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-slate-700 ml-1" for="nombre">Nombre completo</label>
+                    <input class="w-full px-5 py-4 rounded-[16px] border border-slate-200 focus:ring-2 focus:ring-brandOrange focus:border-transparent transition-all outline-none bg-slate-50/50" id="nombre" placeholder="Tu nombre" required type="text"/>
                 </div>
 
-                <div class="input-group">
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-slate-700 ml-1" for="correo">Correo electrónico</label>
+                    <input class="w-full px-5 py-4 rounded-[16px] border border-slate-200 focus:ring-2 focus:ring-brandOrange focus:border-transparent transition-all outline-none bg-slate-50/50" id="correo" placeholder="ejemplo@correo.com" required type="email"/>
                 </div>
 
-                <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="****" required>
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-slate-700 ml-1" for="password">Contraseña</label>
+                    <input class="w-full px-5 py-4 rounded-[16px] border border-slate-200 focus:ring-2 focus:ring-brandOrange focus:border-transparent transition-all outline-none bg-slate-50/50" id="password" placeholder="********" required type="password"/>
                 </div>
 
-                <div class="input-group">
-                    <label for="confirmar">Confirmar contraseña</label>
-                    <input type="password" id="confirmar" name="confirmar" placeholder="****" required>
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-slate-700 ml-1" for="confirmar">Confirmar contraseña</label>
+                    <input class="w-full px-5 py-4 rounded-[16px] border border-slate-200 focus:ring-2 focus:ring-brandOrange focus:border-white transition-all outline-none bg-slate-50/50" id="confirmar" placeholder="********" required type="password"/>
                 </div>
 
-                <button type="submit" class="btn-registrar">
+                <button class="w-full py-4 bg-brandOrange hover:bg-brandOrangeHover text-white font-bold rounded-[16px] shadow-lg shadow-brandOrange/30 transition-all active:scale-[0.98] mt-2" type="submit">
                     Registrarse
                 </button>
 
+                <p class="text-center   text-white ext-slate-900 text-sm pt-4">
+                    ¿Ya tienes cuenta? <a class="text-brandOrange font-semibold hover:underline" href="#">Inicia sesión</a>
+                </p>
             </form>
         </div>
     </main>
 
+    <footer class="h-4"></footer>
 </body>
-
 </html>
