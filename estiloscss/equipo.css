@@ -29,58 +29,98 @@
 /* ================= MENU CORREGIDO ================= */
 .menu {
     width: 100%;
-    background: #111;
+    background: #121212f3; /* Fondo oscuro sólido */
     position: sticky;
+    padding: 10px;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-
 
 .menu-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    position: relative;
+    justify-content: space-between; /* Esto separa Logo - Nav - Botón */
+    padding: 15px 0;
 }
 
-/* Logo controlado */
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Eliminamos el transform negativo que tenías antes */
+    transition: 0.3s;
+}
 
+.logo img {
+    width: 100px; /* Tamaño de logo más razonable para un menú */
+    height: auto;
+    
+}
 
 .logo span {
-    font-size: 18px;
-    font-weight: 700;
-    margin-left: 8px;
-
+    color: #F28C28;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* NAV centrado correctamente */
-
-
-.menu .navbar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu ul {
+.menu .navbar ul {
     display: flex;
-    gap: 35px;
-    flex-wrap: nowrap;
-    /* 🔥 importante */
+    align-items: center;
+    gap: 25px; /* Espacio entre links */
 }
 
 .menu .navbar ul li a {
     color: #fff;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     transition: 0.3s;
-    white-space: nowrap;
-    /*  */
+    text-transform: uppercase;
 }
 
 .menu .navbar ul li a:hover {
     color: #F28C28;
+}
+
+/* Link Activo */
+.menu .navbar ul li a.active {
+    color: #F28C28;
+    position: relative;
+}
+
+.menu .navbar ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background: #F28C28;
+}
+
+/* --- BOTÓN INICIAR SESIÓN (ÚNICO) --- */
+.menu .navbar ul li a.btn-1 {
+    background: transparent;
+    color: #F28C28;
+    border: 2px solid #F28C28;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-left: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu .navbar ul li a.btn-1:hover {
+    background: #F28C28;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
+    border-color: #F28C28;
 }
 
 
@@ -401,117 +441,149 @@
 }
 
 /* FOOTER */
-.footer {
-    width: 100%;
-    background: #FF8C00;
-    padding: 70px 0 10px 0;
-    color: #FFFDFC;
+.footer-orange {
+    background-color: #F28C28; /* Tu naranja original */
+    color: #ffffff;
+    padding: 70px 0 30px 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Contenedor centrado */
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* Grid adaptable */
-.footer-box {
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    align-items: start;
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
-/* TITULOS */
-.footer h3 {
-    font-size: 22px;
+/* Logo Estilo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #FFFDFC;
 }
 
-/* TEXTO */
-.footer p {
+.logo-box-white {
+    background: #ffffff;
+    color: #F28C28;
+    font-weight: 900;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Descripción y Links */
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-col h3 {
     font-size: 16px;
-    line-height: 1.8;
-    color: #cbd5e1;
-    margin-bottom: 14px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-/* LINKS */
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links ul li {
+.footer-links-white li {
     margin-bottom: 12px;
 }
 
-.footer-links ul li a {
+.footer-links-white li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #cbd5e1;
-    font-size: 16px;
+    opacity: 0.8;
     transition: 0.3s;
 }
 
-.footer-links ul li a:hover {
-    color: #FFFDFC;
-    padding-left: 5px;
+.footer-links-white li a:hover {
+    opacity: 1;
+    padding-left: 8px;
 }
 
-/* REDES */
-.footer-social {
+/* Íconos de contacto */
+.contact-item-white {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.footer-social a {
+.icon-circle {
+    background: rgba(255, 255, 255, 0.2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+}
+
+.contact-item-white strong {
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Redes Sociales */
+/* Redes Sociales */
+.social-icons-white {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-icons-white a {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #F28C28; /* Icono naranja sobre fondo blanco */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Tamaño del icono de Bootstrap */
     text-decoration: none;
-    color: #FFFDFC;
-    border: 1px solid #FFFDFC;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-size: 15px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.footer-social a:hover {
-    background: #FFFDFC;
-    color: #00ff08;
-    transform: translateY(-3px);
+.social-icons-white a:hover {
+    transform: scale(1.1);
+    background-color: #333; /* Opcional: cambia a oscuro al pasar el mouse */
+    color: #ffffff;
 }
 
-/* CONTACTO */
-.footer-contact b {
-    color: #FFFDFC;
+/* Iconos de contacto */
+.icon-circle i {
+    color: #ffffff;
+    font-size: 18px;
 }
 
-/* MAPA */
-.footer-map iframe {
-    width: 100%;
-    height: 260px;
-    border-radius: 15px;
-    border: 2px solid #FFFDFC;
+/* Logo */
+.logo-img-footer {
+    width: 100px;
+    height: 70px;
+    border-radius: 100%;
 }
-
-/* COPYRIGHT */
-.footer-copy {
-    margin-top: 60px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+/* Bottom bar */
+.footer-bottom-white {
+    border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 25px;
-    text-align: center;
-    font-size: 15px;
-    color: #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
 }
 
-.footer-content {
-    max-width: 1600px;
-    /* más ancho que tu container normal */
-    margin: 0 auto;
-    padding: 0 60px;
+.legal-links-white a {
+    color: #ffffff;
+    text-decoration: underline;
 }
