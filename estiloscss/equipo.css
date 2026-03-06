@@ -1,3 +1,6 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +24,7 @@
 .header {
     background-color: #F28C28;
     /* naranja */
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -37,11 +40,12 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
+
 .menu-content {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Esto separa Logo - Nav - Botón */
-    padding: 15px 0;
+    padding: 5px 0;
 }
 
 /* --- LOGO --- */
@@ -105,8 +109,8 @@
 
 /* --- BOTÓN INICIAR SESIÓN (ÚNICO) --- */
 .menu .navbar ul li a.btn-1 {
-    background: transparent;
-    color: #F28C28;
+    background: #F28C28;
+    color: #ffffff;
     border: 2px solid #F28C28;
     padding: 10px 22px;
     border-radius: 50px;
@@ -116,7 +120,7 @@
 }
 
 .menu .navbar ul li a.btn-1:hover {
-    background: #F28C28;
+    background: #f89633;
     color: #fff;
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
@@ -175,11 +179,11 @@
 .header-content {
 
     background-color: #f28c28;
-    background-image: url("../imagenes/equipo.png");
+    background-image: url("../imagenes/img_pagina/Midjourney\ Feed.jpg");
     background-repeat: no-repeat;
-    background-position: 85% 10%;
+    background-position: 85% 50%;
     /* imagen a la derecha */
-    background-size: 750px;
+    background-size: 450px;
     /* controla el tamaño */
 
     padding: 160px 0;
@@ -220,7 +224,7 @@
 .hero-text h1 {
     font-size: 75px;
     color: #fff;
-    font-family: 'Brush Script MT', cursive;
+
 }
 
 .hero-text p {
@@ -445,7 +449,7 @@
     background-color: #F28C28; /* Tu naranja original */
     color: #ffffff;
     padding: 70px 0 30px 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-grid {

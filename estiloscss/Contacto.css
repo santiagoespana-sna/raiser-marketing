@@ -8,22 +8,112 @@ body {
 
 .contact-section {
     max-width: 900px;
-    margin: 90px auto 40px; /* espacio superior extra para la barra de navegación fija */
+    margin: 90px auto 40px;
+    /* espacio superior extra para la barra de navegación fija */
     background: rgba(#F28C28);
     padding: 36px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
 
+.menu {
+    width: 100%;
+    background: #000000f3;
+    /* Fondo oscuro sólido */
+    position: sticky;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Esto separa Logo - Nav - Botón */
+    padding: 15px 0;
+}
+
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Eliminamos el transform negativo que tenías antes */
+    transition: 0.3s;
+}
+
+.logo img {
+    width: 100px;
+    /* Tamaño de logo más razonable para un menú */
+    height: auto;
+
+}
+
+.logo span {
+    color: #F28C28;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Espacio entre links */
+}
+
+.menu .navbar ul li a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li a:hover {
+    color: #F28C28;
+}
+
+/* Link Activo */
+.menu .navbar ul li a.active {
+    color: #F28C28;
+    position: relative;
+}
+
+.menu .navbar ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background: #F28C28;
+}
+
+
+.menu .navbar ul li a.btn-1:hover {
+    background: #F28C28;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
+    border-color: #F28C28;
+}
+
 .contact-section h2 {
     text-align: center;
     font-size: 50px;
     font-style: normal;
-    color:white;
+    color: white;
     /* heading styles */
 }
 
@@ -38,7 +128,8 @@ body {
     flex: 1;
     margin: 0 10px;
     padding: 20px;
-    background: rgba(255,255,255,0.95); /* ligero blanco con transparencia para armonizar con el fondo naranja */
+    background: rgba(255, 255, 255, 0.95);
+    /* ligero blanco con transparencia para armonizar con el fondo naranja */
     border-radius: 10px;
     transition: transform 0.3s ease, background-color 0.25s ease;
     -webkit-transition: -webkit-transform 0.3s ease, background-color 0.25s ease;
@@ -53,7 +144,8 @@ body {
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
-    background: hsl(180, 4%, 95%); /* light sky-blue */
+    background: hsl(180, 4%, 95%);
+    /* light sky-blue */
     cursor: pointer;
 }
 
@@ -64,12 +156,14 @@ body {
 .contact-card:focus-within i {
     color: rgb(0, 0, 0);
 }
-.contact-section{
+
+.contact-section {
     background-color: #ff8c00;
 }
+
 .contact-card i {
     font-size: 40px;
-    color: #000000;
+    
     margin-bottom: 10px;
 }
 
@@ -85,11 +179,13 @@ body {
     font-size: 14px;
     transition: background 0.2s ease, transform 0.12s ease;
 }
+
 .contact-action:hover,
 .contact-action:focus {
     background: #F28C28;
     transform: translateY(-2px);
 }
+
 .contact-action:active {
     transform: translateY(0);
 }
@@ -103,7 +199,7 @@ body {
 .contact-form textarea {
     margin: 10px 0;
     padding: 12px;
-    border: 1px solid rgb(#F28C28);
+    
     border-radius: 8px;
     font-size: 16px;
 }
@@ -119,6 +215,7 @@ body {
     margin-bottom: 10px;
 
 }
+
 .contact-form button:hover {
     background: #000000;
 }
@@ -131,7 +228,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2; /* behind scrim and content */
+    z-index: -2;
+    /* behind scrim and content */
 }
 
 /* Dark scrim overlay to keep content readable */
@@ -139,8 +237,9 @@ body {
     position: fixed;
     inset: 0;
     /* tintar ligeramente el video con naranja suave para coherencia */
-    background: rgba(255,165,50,0.06);
-    z-index: -1; /* between video and content */
+    background: rgba(255, 165, 50, 0.06);
+    z-index: -1;
+    /* between video and content */
     pointer-events: none;
 }
 
@@ -155,16 +254,41 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 8px 20px;
-    background: rgba(255,255,255,0.9),transparent;
+    background: rgba(255, 255, 255, 0.9), transparent;
     backdrop-filter: blur(6px);
-    
+
     z-index: 1000;
 }
-.top-nav .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0b2a3b; }
-.top-nav .logo-text { font-weight: 700; font-size: 18px; }
-.top-nav .nav-right { display: flex; gap: 14px; align-items: center; }
-.top-nav .nav-link { color: #000000; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
-.top-nav .nav-link:hover { background: rgba(3,49,86,0.06); }
+
+.top-nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #0b2a3b;
+}
+
+.top-nav .logo-text {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.top-nav .nav-right {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.top-nav .nav-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.top-nav .nav-link:hover {
+    background: rgba(3, 49, 86, 0.06);
+}
 
 /* Back button styling (left of logo) */
 .back-btn {
@@ -179,16 +303,24 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
-.back-btn:hover { background: rgba(3,49,86,0.04); }
-.back-btn svg { display: block; }
-.top-nav{
+
+.back-btn:hover {
+    background: rgba(3, 49, 86, 0.04);
+}
+
+.back-btn svg {
+    display: block;
+}
+
+.top-nav {
     background-color: #000000;
 }
-.top-nav .nav-left { 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    
+
+.top-nav .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
 }
 
 /* Logo image sizing */
@@ -198,94 +330,24 @@ body {
     display: block;
     border-radius: 6px;
 }
-.top-nav .logo-text { margin-left: 8px; font-size: 16px; color: #0b2a3b; }
+
+.top-nav .logo-text {
+    margin-left: 8px;
+    font-size: 16px;
+}
 
 /* Make cards look a bit cleaner */
-.contact-card { box-shadow: 0 6px 18px rgba(14, 16, 141, 0.06); }
+.contact-card {
+    box-shadow: 0 6px 18px rgba(14, 16, 141, 0.06);
+}
 
 @media (max-width: 700px) {
-    .contact-options { flex-direction: column; gap: 12px; }
-    .contact-section { margin: 110px 16px 24px; }
-}
+    .contact-options {
+        flex-direction: column;
+        gap: 12px;
+    }
 
-/* Chat widget styles */
-.chat-widget {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 320px;
-    max-width: calc(100% - 40px);
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.95));
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    overflow: hidden;
-    z-index: 9999;
-    display: none; /* shown when active */
-    flex-direction: column;
-    font-family: 'Segoe UI', sans-serif;
-}
-.chat-widget[aria-hidden="false"] { display: flex; }
-.chat-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 12px;
-    background: #000000;
-    color: white;
-    font-weight: 600;
-}
-.chat-close {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-.chat-messages {
-    padding: 12px;
-    height: 260px;
-    overflow-y: auto;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.chat-message {
-    max-width: 82%;
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 1.3;
-}
-.chat-message.user {
-    align-self: flex-end;
-    background: #000000;
-    color: white;
-}
-.chat-message.bot {
-    align-self: flex-start;
-    background: #f1f3f5;
-    color: #111;
-}
-.chat-input {
-    display: flex;
-    gap: 8px;
-    padding: 10px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    background: rgba(255,255,255,0.9);
-}
-.chat-input input[type="text"] {
-    flex: 1;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.12);
-    font-size: 14px;
-}
-.chat-input .contact-action {
-    padding: 8px 12px;
-    font-size: 14px;
-}
-
-@media (max-width: 420px) {
-    .chat-widget { width: 100%; right: 0; left: 0; bottom: 0; border-radius: 12px 12px 0 0; }
+    .contact-section {
+        margin: 110px 16px 24px;
+    }
 }

@@ -1,3 +1,6 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
 *{
     margin: 0;
     padding: 0;
@@ -14,8 +17,8 @@
 /* ================= HEADER ESTILO MINIMALISTA ================= */
 
 .header {
-    background-color: #F28C28; /* naranja */
-    min-height: 90vh;
+    background-color: #ff9029; /* naranja */
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -144,12 +147,12 @@
 
 .header-content{
     
-    background-color: #f28c28;
-    background-image: url("../imagenes/header.png");
+    background-color: #f1871d;
+    background-image: url("../imagenes/img_pagina/WhatsApp\ Image\ 2026-03-05\ at\ 8.25.39\ PM.jpeg");
     background-repeat: no-repeat;
-    background-position: 85% 10%; /* imagen a la derecha */
-    background-size: 750px; /* controla el tamaño */
-    
+    background-position: 85% 20%; /* imagen a la derecha */
+    background-size: 500px; /* controla el tamaño */
+    border-radius: 20%;
     padding: 160px 0;
 }
 
@@ -185,7 +188,7 @@
 .hero-text h1{
     font-size: 75px;
     color: #fff;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-text p{
@@ -841,7 +844,7 @@
     color: white;
     position: relative;
     overflow: hidden;
-    font-family: sans-serif; /* Asegúrate de usar tu fuente preferida */
+    font-family: 'Segoe UI', sans-serif;/* Asegúrate de usar tu fuente preferida */
 }
 
 /* Header */
@@ -1056,7 +1059,7 @@
     background-color: #F28C28; /* Tu naranja original */
     color: #ffffff;
     padding: 70px 0 30px 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-grid {

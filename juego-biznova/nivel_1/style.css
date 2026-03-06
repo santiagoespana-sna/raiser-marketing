@@ -1,5 +1,5 @@
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: var(--bg);
     color: var(--text);
 }
@@ -39,7 +39,7 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* Estilos para los espacios de la palabra */

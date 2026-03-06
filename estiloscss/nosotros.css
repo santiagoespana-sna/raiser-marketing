@@ -1,4 +1,6 @@
-
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@
 .header {
     background-color: #F28C28;
     /* naranja */
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -148,14 +150,13 @@
 .header-content {
 
     background-color: #f28c28;
-    background-image: url("/imagenes/nuestros.png");
+    background-image: url("../imagenes/img_pagina/My\ pin.jpg");
     background-repeat: no-repeat;
-    background-position: 85% 10%;
-    /* imagen a la derecha */
-    background-size: 700px 500px ;
+    background-position: 85% 50%;
+    background-size: 500px 400px ;
     /* controla el tamaño */
 
-    padding: 160px 0;
+    padding: 150px 0;
 }
 
 
@@ -193,7 +194,7 @@
 .hero-text h1 {
     font-size: 75px;
     color: #fff;
-    font-family: 'Brush Script MT', cursive;
+
 }
 
 .hero-text p {
@@ -303,11 +304,11 @@
 }
 
 .about-card {
-    background: white;
+    background: rgb(245, 160, 56);
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
-    border: 1px solid black;
+    border: 1px solid rgb(255, 176, 72);
     transition: 0.3s ease;
 }
 
@@ -326,13 +327,13 @@
 
 .about-card h3 {
     font-size: 22px;
-    color: #1e293b;
+    color: #000000;
     margin-bottom: 12px;
 }
 
 .about-card p {
     font-size: 15px;
-    color: #64748b;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -397,7 +398,7 @@
     background-color: #F28C28; /* Tu naranja original */
     color: #ffffff;
     padding: 70px 0 30px 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-grid {

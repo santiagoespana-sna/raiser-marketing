@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="/estiloscss/Contacto.css">
+    <link rel="stylesheet" href="../estiloscss/Contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-    <nav class="top-nav" role="navigation" aria-label="Barra de navegación">
-        <div class="nav-left">
-            <!-- Back button to return to previous page -->
-            <button class="back-btn" type="button" onclick="history.back()" aria-label="Volver">
-                <!-- left arrow SVG -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="#0b2a3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <!-- Use the provided Biznova logo image (save the attached image as 'biznova-logo.png' in this folder) -->
-            <a href="#" class="logo" aria-label="Biznova Corp">
-                <img src="/imagenes/WhatsApp Image 2026-02-28 at 7.03.12 PM.jpeg" alt="Biznova Corp logo" class="logo-img">
-                <span class="logo-text">Biznova Corp</span>
+
+    <div class="menu">
+        <div class="menu-content container">
+
+            <a href="index.html" class="logo">
+                <img src="../imagenes/logo-removebg-preview.png" alt="">
+                <span>Biznova corp</span>
             </a>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">INICIO</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="equipo.html">NUESTRO EQUIPO</a></li>
+                    <li><a href="reseñas.html">RESEÑAS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="negocios.html">NEGOCIOS</a></li>
+
+                </ul>
+            </nav>
+
         </div>
-        <div class="nav-right">
-            <a href="#" class="nav-link">Inicio</a>
-        </div>
-    </nav>
-    <!-- Background video (local file). If you prefer YouTube embed, tell me and I can switch. -->
-    <video id="bgVideo" autoplay muted loop playsinline>
-        <source src="" type="video/mp4">
-        Tu navegador no soporta video en HTML5.
-    </video>
+    </div>
+
+
     <!-- Scrim / overlay to keep content readable -->
     <div class="bg-scrim" aria-hidden="true"></div>
     <section class="contact-section">
-    <h2>CONTACTANOS</h2>
-    <div class="contact-options">
-    <div class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email</h3>
-    <p>biznovacorp@gmail.com</p>
-    <a class="contact-action" href="mailto:raisemarketing@gmail.com" aria-label="Enviar correo a raisemarketing@gmail.com">Enviar correo</a>
-    </div>
-    <div class="contact-card">
-    <i class="fab fa-whatsapp"></i> <h3>WhatsApp</h3>
-    <p>+57 310 392 6113</p>
-    <a class="contact-action" href="https://wa.me/573103926113" target="_blank" aria-label="Escribir al WhatsApp +57 310 392 6113">Enviar Mensaje</a>
-</div>
-    <!-- "Disponible 24/7" tarjeta eliminada según petición del usuario -->
-    </div>
+        <h2>CONTACTANOS</h2>
+        <div class="contact-options">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>biznovacorp@gmail.com</p>
+                <a class="contact-action" href="mailto:raisemarketing@gmail.com"
+                    aria-label="Enviar correo a raisemarketing@gmail.com">Enviar correo</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+57 310 392 6113</p>
+                <a class="contact-action" href="https://wa.me/573103926113" target="_blank"
+                    aria-label="Escribir al WhatsApp +57 310 392 6113">Enviar Mensaje</a>
+            </div>
+            <!-- "Disponible 24/7" tarjeta eliminada según petición del usuario -->
+        </div>
 
-    <form class="contact-form" id="contactForm">
-    <input type="text" id="name" placeholder="Tu nombre" required>
-    <input type="email" id="email" placeholder="Tu correo" required>
-    <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
-    <button type="submit">Enviar</button>
-    </form>
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <input type="email" id="email" placeholder="Tu correo" required>
+            <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
 
-    <!-- Widget de chat removido para simplificar la interfaz -->
-    <script src="/archivosjs/contacto.js" defer></script>
+        <!-- Widget de chat removido para simplificar la interfaz -->
+        <script src="/archivosjs/contacto.js" defer></script>
     </section>
 </body>
+
 </html>

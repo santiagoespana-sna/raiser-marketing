@@ -17,7 +17,7 @@ body {
     background: #f8fafc; /* Color base claro */
     background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.1), transparent 40%),
                 radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     color: var(--text);
 }
 

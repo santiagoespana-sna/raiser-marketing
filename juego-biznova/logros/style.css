@@ -1,5 +1,5 @@
         /* Estilos personalizados para que no se vea "feo" */
-        body { background-color: #ff8c00; font-family: 'Inter', sans-serif; }
+        body { background-color: #ff8c00; font-family: 'Segoe UI', sans-serif; }
         .logro-card { transition: all 0.3s ease; border: 2px solid #f1f5f9; }
         .unlocked { border-color: #ff8c00 !important; background-color: #fff7ed !important; opacity: 1 !important; }
         .locked { opacity: 0.6; }

@@ -215,7 +215,7 @@ document.getElementById("cerrarAjustes").onclick = () => modalAjustes.classList.
 
 btnReiniciar.onclick = () => location.reload();
 
-btnVolverMapa.onclick = () => window.location.href = "mapa_niveles/index.html";
+btnVolverMapa.onclick = () => window.location.href = "../mapa_niveles/index.html";
 
 
 // Inicialización
