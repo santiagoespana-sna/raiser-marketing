@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biznova Corp</title>
     <link rel="stylesheet" href="../estiloscss/servicios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="login.html" class="btn-1">INICIA SESION</a>
+
                         <a href="/juego-biznova/inicio_juego/index.html" class="btn-2">Juego</a>
                     </div>
                 </div>
@@ -169,7 +170,7 @@
                         Esto no solo mejora la imagen digital del negocio, sino que también optimiza
                         la conversión, ya que los usuarios encuentran fácilmente lo que buscan y
                         pueden tomar decisiones con mayor seguridad.
-                    
+
                     </p>
                 </div>
             </div>
@@ -282,61 +283,89 @@
 
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <div class="footer-content container">
+    <footer class="footer-orange" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
 
-            <div class="footer-box">
-
-                <!-- Columna 1 -->
-                <div class="footer-info">
-                    <h3>Biznova Corp</h3>
-                    <p>
-                        Impulsamos tu marca con estrategias digitales modernas, creativas y enfocadas en resultados
-                        reales.
+                <div class="footer-col branding">
+                    <div class="footer-logo">
+                        <img src="../imagenes/logo-removebg-preview.png" alt="Biznova Logo" class="logo-img-footer">
+                        <span class="logo-text">Biznova corp</span>
+                    </div>
+                    <p class="footer-description">
+                        Impulsamos tu marca con estrategias digitales modernas y creativas en Popayán.
                     </p>
 
-                    <div class="footer-social">
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">WhatsApp</a>
+                    <div class="social-icons-white">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- Columna 2 -->
-                <div class="footer-links">
-                    <h3>Enlaces</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Equipo</a></li>
-                        <li><a href="#">Testimonios</a></li>
-                        <li><a href="#">Contacto</a></li>
+                <div class="footer-col">
+                    <h3>ENLACES RÁPIDOS</h3>
+                    <ul class="footer-links-white">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="equipo.html">Nuestro Equipo</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 3 -->
-                <div class="footer-contact">
-                    <h3>Contacto</h3>
-                    <p><b>📍 Ubicación:</b> Colombia</p>
-                    <p><b>📞 Teléfono:</b> +57 300 000 0000</p>
-                    <p><b>✉ Correo:</b> biznovaCp@gmail.com</p>
+                <div class="footer-col contact-info">
+                    <h3>CONTÁCTANOS</h3>
+                    <div class="contact-item-white">
+                        <div class="icon-circle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <strong>UBICACIÓN</strong>
+                            <p>Cl. 4 #2-80, Centro, Popayán, Cauca</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-white">
+                        <div class="icon-circle">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <strong>TELÉFONO</strong>
+                            <p>+57 300 000 0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-white">
+                        <div class="icon-circle">
+                            <i class="bi bi-envelope-at-fill"></i>
+                        </div>
+                        <div>
+                            <strong>EMAIL</strong>
+                            <p>biznovaCp@gmail.com</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Columna 4 (Mapa) -->
-                <div class="footer-map">
-                    <h3>Ubicación SENA</h3>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.916333573657!2d-74.079987!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a1a3b6c3c7%3A0x6b3f9c1f9c1f9c1f!2sSENA!5e0!3m2!1ses!2sco!4v1234567890"
-                        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                <div class="footer-col">
+                    <h3>ENCUÉNTRANOS</h3>
+                    <div class="map-box-white">
+                        <p>SENA - Centro de Comercio y Servicios</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.197040071313!2d-76.6054087247084!3d2.4413215975376477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30030589955553%3A0xd69716d2be93c1df!2sSENA%20Centro%20De%20Comercio%20Y%20Servicios!5e0!3m2!1ses-419!2sco!4v1772744896036!5m2!1ses-419!2sco"
+                            width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
                 </div>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Biznova Corp- Todos los derechos reservados.</p>
+
+            <div class="footer-bottom-white">
+                <p>© 2026 BIZNOVA CORP. Todos los derechos reservados.</p>
+                <div class="legal-links-white">
+                    <a href="/html/pdf/terminos_condiciones.pdf" target="_blank" class="contact-action">Términos y
+                        Condiciones</a>
+                </div>
+
             </div>
         </div>
     </footer>
-
     <div class="top-loader"></div>
     <script src="/archivosjs/servicios.js"></script>
 

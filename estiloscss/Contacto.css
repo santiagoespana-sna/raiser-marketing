@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* Suave fondo naranja claro (fallback si no hay video) */
-    background: #F28C28;
+    background: #ffffff;
 }
 
 .contact-section {
@@ -64,7 +64,9 @@ body {
 .contact-card:focus-within i {
     color: rgb(0, 0, 0);
 }
-
+.contact-section{
+    background-color: #ff8c00;
+}
 .contact-card i {
     font-size: 40px;
     color: #000000;
@@ -155,7 +157,7 @@ body {
     padding: 8px 20px;
     background: rgba(255,255,255,0.9),transparent;
     backdrop-filter: blur(6px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    
     z-index: 1000;
 }
 .top-nav .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0b2a3b; }
@@ -179,8 +181,15 @@ body {
 }
 .back-btn:hover { background: rgba(3,49,86,0.04); }
 .back-btn svg { display: block; }
-
-.top-nav .nav-left { display: flex; align-items: center; gap: 8px; }
+.top-nav{
+    background-color: #000000;
+}
+.top-nav .nav-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    
+}
 
 /* Logo image sizing */
 .logo-img {
