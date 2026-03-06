@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +24,68 @@
     flex-direction: column;
 }
 
+
+.menu {
+    width: 100%;
+    background: #121212f3; /* Fondo oscuro sólido */
+    position: sticky;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto separa Logo - Nav - Botón */
+    padding: 15px 0;
+}
+
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Eliminamos el transform negativo que tenías antes */
+    transition: 0.3s;
+}
+
+.logo img {
+    width: 100px; /* Tamaño de logo más razonable para un menú */
+    height: auto;
+    
+}
+
+.logo span {
+    color: #F28C28;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre links */
+}
+
+.menu .navbar ul li a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li a:hover {
+    color: #F28C28;
+}
+
+/* Link Activo */
 .menu .navbar ul li a.active {
     color: #F28C28;
     position: relative;
@@ -31,92 +94,34 @@
 .menu .navbar ul li a.active::after {
     content: "";
     position: absolute;
+    bottom: -5px;
     left: 0;
-    bottom: -8px;
+
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: #F28C28;
-    border-radius: 5px;
 }
 
-/* ================= MENU CORREGIDO ================= */
-.menu {
-    width: 100%;
-    background: #111;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-
-.menu-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    position: relative;
-}
-
-/* Logo controlado */
-
-
-.logo span {
-    font-size: 18px;
-    font-weight: 700;
-    margin-left: 8px;
-
-}
-
-/* NAV centrado correctamente */
-
-.menu .navbar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu ul {
-    display: flex;
-    gap: 35px;
-    flex-wrap: nowrap;
-    /* 🔥 importante */
-}
-
-.menu .navbar ul li a {
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    white-space: nowrap;
-    /*  */
-}
-
-.menu .navbar ul li a:hover {
+/* --- BOTÓN INICIAR SESIÓN (ÚNICO) --- */
+.menu .navbar ul li a.btn-1 {
+    background: transparent;
     color: #F28C28;
-}
-
-/* ================= LOGO ================= */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #f28c28;
+    border: 2px solid #F28C28;
+    padding: 10px 22px;
+    border-radius: 50px;
     font-weight: 700;
-    transform: translateX(-250px);
-}
-
-.logo img {
-    width: 150px;
-    
-}
-
-.logo span {
-    color: #F28C28;
-    font-size: 20px;
-    font-weight: 800;
     margin-left: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.menu .navbar ul li a.btn-1:hover {
+    background: #F28C28;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
+    border-color: #F28C28;
+}
+
 
 .top-loader {
     position: fixed;
@@ -125,7 +130,7 @@
     height: 3px;
     width: 0%;
     background: #ff6a00;
-    /* tu naranja */
+   
     z-index: 9999;
     transition: width 0.4s ease;
 }
@@ -147,7 +152,7 @@
     background-repeat: no-repeat;
     background-position: 85% 10%;
     /* imagen a la derecha */
-    background-size: 700px 500px;
+    background-size: 700px 500px ;
     /* controla el tamaño */
 
     padding: 160px 0;

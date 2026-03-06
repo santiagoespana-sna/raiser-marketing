@@ -1,6 +1,4 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 * {
     margin: 0;
@@ -29,79 +27,103 @@ body {
 /* ================= MENU CORREGIDO ================= */
 .menu {
     width: 100%;
-    background: #111;
+    background: #121212f3; /* Fondo oscuro sólido */
     position: sticky;
+    padding: 10px;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 
 .menu-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    position: relative;
+    justify-content: space-between; /* Esto separa Logo - Nav - Botón */
+    padding: 15px 0;
 }
 
-/* Logo controlado */
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Eliminamos el transform negativo que tenías antes */
+    transition: 0.3s;
+}
 
+.logo img {
+    width: 100px; /* Tamaño de logo más razonable para un menú */
+    height: auto;
+    
+}
 
 .logo span {
-    font-size: 18px;
-    font-weight: 700;
-    margin-left: 8px;
-
+    color: #F28C28;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* NAV centrado correctamente */
-
-
-.menu .navbar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu ul {
+.menu .navbar ul {
     display: flex;
-    gap: 35px;
-    flex-wrap: nowrap;
-    /* 🔥 importante */
+    align-items: center;
+    gap: 25px; /* Espacio entre links */
 }
 
 .menu .navbar ul li a {
     color: #fff;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     transition: 0.3s;
-    white-space: nowrap;
-    /*  */
+    text-transform: uppercase;
 }
 
 .menu .navbar ul li a:hover {
     color: #F28C28;
 }
 
+/* Link Activo */
+.menu .navbar ul li a.active {
+    color: #F28C28;
+    position: relative;
+}
 
-/* ================= LOGO ================= */
+.menu .navbar ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #f28c28;
+    width: 100%;
+    height: 2px;
+    background: #F28C28;
+}
+
+/* --- BOTÓN INICIAR SESIÓN (ÚNICO) --- */
+.menu .navbar ul li a.btn-1 {
+    background: transparent;
+    color: #F28C28;
+    border: 2px solid #F28C28;
+    padding: 10px 22px;
+    border-radius: 50px;
     font-weight: 700;
-    transform: translateX(-350px);
+    margin-left: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.logo img {
-    width: 150px;
-    
+.menu .navbar ul li a.btn-1:hover {
+    background: #F28C28;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(242, 140, 40, 0.4);
+    border-color: #F28C28;
 }
 
 
-/* ================= HERO CENTRADO ================= */
+
 
 /* ============================= */
 /* TOP LOADING BAR */
@@ -113,7 +135,7 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
-    background: #ff6a00; /* tu naranja */
+    background: #ff6a00; 
     z-index: 9999;
     transition: width 0.4s ease;
 }
@@ -124,13 +146,13 @@ body {
 }
 
 .header-content {
-    font-family: Arial, Helvetica, sans-serif;
+    
     background-color: #f28c28;
     background-image: url("/imagenes/servicios5.png");
     background-repeat: no-repeat;
     background-position: 85% 10%;
     /* imagen a la derecha */
-    background-size: 700px;
+    background-size: 700px ;
     /* controla el tamaño */
     padding: 160px 0;
 }
@@ -139,7 +161,7 @@ body {
 
 .hero-container {
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    
     align-items: center;
     justify-content: flex-start;
     position: relative;
@@ -162,7 +184,7 @@ body {
     text-align: left;
     position: relative;
     z-index: 2;
-font-family: Arial, Helvetica, sans-serif;
+
     transform: translateX(-200px);
     /* 🔥 mueve todo el bloque */
 }
@@ -170,7 +192,7 @@ font-family: Arial, Helvetica, sans-serif;
 .hero-text h1 {
     font-size: 75px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif
+    
 }
 
 .hero-text p {
