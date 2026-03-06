@@ -36,8 +36,24 @@ body {
     z-index: 100;
 }
 
-.logo { color: #F28C28; }
-.logo span { color: var(--primary); font-weight: bold; }
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img{
+    width: 90px;
+    height: auto;
+}
+
+.logo span{
+    color: #F28C28;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
 .nav-links {
     list-style: none;
@@ -50,6 +66,22 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #F28C28;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
 }
 
 /* 3. CONTENEDORES */

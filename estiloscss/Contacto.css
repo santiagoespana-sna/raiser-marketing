@@ -25,32 +25,32 @@ body {
     background: #000000f3;
     /* Fondo oscuro sólido */
     position: sticky;
-    padding: 10px;
+    padding: 30px;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Esto separa Logo - Nav - Botón */
-    padding: 15px 0;
+
 }
 
 /* --- LOGO --- */
-.logo {
+.logo{
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Eliminamos el transform negativo que tenías antes */
-    transition: 0.3s;
+    text-decoration: none; /* evita línea en el logo */
 }
 
-.logo img {
+.logo img{
     width: 100px;
-    /* Tamaño de logo más razonable para un menú */
+
     height: auto;
 
 }
@@ -63,20 +63,37 @@ body {
     letter-spacing: 1px;
 }
 
+/* Reset del menú */
 .menu .navbar ul {
+    list-style: none;   /* quita los puntos */
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     gap: 25px;
-    /* Espacio entre links */
+
 }
 
 .menu .navbar ul li a {
+    text-decoration: none;
     color: #fff;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: 0.3s;
+    
     text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+}
+.menu .navbar ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #F28C28;
+    border-radius: 2px;
 }
 
 .menu .navbar ul li a:hover {

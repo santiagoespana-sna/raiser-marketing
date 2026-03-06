@@ -89,7 +89,16 @@ body{
 .menu .navbar ul li a:hover {
     color: #F28C28;
 }
-
+.menu .navbar ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #F28C28;
+    border-radius: 2px;
+}
 /* Link Activo */
 .menu .navbar ul li a.active {
     color: #F28C28;
